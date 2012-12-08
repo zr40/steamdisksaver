@@ -1,24 +1,43 @@
-apps.json categorizes the deletable files for each supported game.
+Steam Disk Saver definition
+===========================
 
-Here's a fictious example for Spacewar, app id 480:
+This is where Steam Disk Saver looks to determine which files are deletable. `apps.json` contains all the data; it categorizes the deletable files for each supported game.
+
+Feel free to submit a pull request or issue if you want to contribute!
+
+apps.json structure
+===================
+
+Here's a fictious app.json containing only Spacewar, app id 480:
 
 	{
-		"480": { /* Spacewar */
-			"redist": [
-				"directxsetup.exe",
-			],
-		},
-		/* more games */
+		"version": 1,
+		
+		"apps": {
+			"480": { /* Spacewar */
+				"redist": [
+					"DirectX\\",
+				],
+				"nonenglish": [
+					"language\\french.txt",
+				],
+			},
+			/* more games */
+		}
 	}
+
+If a file name ends with a backslash (like the DirectX entry in the example), it will match that directory and everything in it.
 
 Categories
 ==========
+
+Deletable files belong to a single category. Categories have requirements for files to be included, listed below.
 
 redist
 ------
 This contains installers and redistibutables, which are run only when the game is first started.
 
-This also includes Steam install scripts if the install script only executes the installers.
+This does not includes Steam install scripts.
 
 intro
 -----
