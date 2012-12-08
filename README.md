@@ -52,7 +52,7 @@ This also includes intro movies which aren't related to the game itself (like de
 
 Options
 =======
-Some unnecessary files can't simply be deleted. For example, some games crash if an intro movie is deleted. These options support those cases.
+Options can be specified for a file match. Some affect matching, some affect deletion.
 
 For a file, options are declared by wrapping the file name in an array, and appending the options.
 
@@ -63,6 +63,10 @@ Example:
 		  - regularfile.dat
 			- - startupmovie.dat
 			  - empty
+
+contains
+--------
+Instead of an exact name match, file names only needs to contain the match name.
 
 empty
 -----

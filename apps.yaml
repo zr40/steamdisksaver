@@ -195,6 +195,22 @@ apps:
       - fr\
       - it\
       - ja\
+  63000: {} # HOARD
+  219150: # Hotline Miami
+    redist:
+      - redist\
+    other:
+      - README.txt
+  110800: # L.A. Noire
+    redist:
+      - 3rd\
+    other:
+      - readmeDEU.txt
+      - readmeENG.txt
+      - readmeESP.txt
+      - readmeFRA.txt
+      - readmeITA.txt
+      - readmeRUS.txt
   97330: # Magic 2013
     redist:
       - PreReqs\
@@ -214,6 +230,39 @@ apps:
       - Movies\Stainless_Movie.wmv
       - Movies\WotC_Movie.wmv
       - Movies\WotC_Movie_R.wmv
+  43110: # Metro 2033
+    redist:
+      - install\
+    nonenglish:
+      - sounds.de.vfs0
+      - sounds.es.vfs0
+      - sounds.fr.vfs0
+      - sounds.it.vfs0
+      - sounds.jp.vfs0
+      - sounds.ru.vfs0
+  200390: # Oil Rush
+    other:
+      - bin\launcher_x86.exe
+      - bin\QtCoreUnigine_x864.dll
+      - bin\QtGuiUnigine_x864.dll
+      - bin\QtNetworkUnigine_x864.dll
+      - bin\QtWebKitUnigine_x864.dll
+      - bin\QtXmlUnigine_x864.dll
+      - data\launcher\
+      - data\oilrush\video\nvidia_twimtbp.ogv
+      - data\oilrush\video\oil_rush_logo.ogv
+      - data\oilrush\video\raknet_logo.ogv
+      - data\oilrush\video\unigine_logo.ogv
+      - documentation\
+      - launcher_x86.bat
+      - ost\
+    nonenglish:
+      - - .de.
+        - contains
+      - - .fr.
+        - contains
+      - - .ru.
+        - contains
   105800: # PixelJunk Eden
     other:
       - doc\
