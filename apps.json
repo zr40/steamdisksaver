@@ -1,0 +1,418 @@
+﻿{
+	"version": 1,
+
+	"apps": {
+		"207650": { /* A Virus Named TOM */
+			"redist": [
+				"dotNetFx40_Client_x86_x64.exe",
+				"xnafx40_redist.msi"
+			]
+		},
+		"40400": { /* AI War: Fleet Command */
+			"other": [
+				"AIWarLicense.txt",
+				"AIWarAutoUpdater-windows.exe"
+			]
+		},
+		"206500": {}, /* AirMech */
+		"204140": { /* All Zombies Must Die! */
+			"redist": [
+				"Prerequisites\\"
+			],
+			"other": [
+				"Binaries\\Redist\\",
+				"BuildLog.txt",
+				"Engine\\EditorResources\\"
+			],
+			"nonenglish": [
+				"Bzb2Game\\PCTOC_DEU.txt",
+				"Bzb2Game\\PCTOC_ESN.txt",
+				"Bzb2Game\\PCTOC_FRA.txt",
+				"Bzb2Game\\PCTOC_ITA.txt",
+				"Bzb2Game\\Localization\\DEU\\",
+				"Bzb2Game\\Localization\\ESN\\",
+				"Bzb2Game\\Localization\\FRA\\",
+				"Bzb2Game\\Localization\\ITA\\",
+				"Engine\\Localization\\DEU\\",
+				"Engine\\Localization\\ESN\\",
+				"Engine\\Localization\\FRA\\",
+				"Engine\\Localization\\ITA\\"
+			]
+		},
+		"209370": { /* Analogue: A Hate Story */
+			"redist": [
+				"lib\\dxwebsetup.exe"
+			],
+			"other": [
+				"traceback.txt"
+			]
+		},
+		"91200": { /* Anomaly Warzone Earth */
+			"redist": [
+				"DirectX\\",
+				"Redist\\"
+			],
+			"other": [
+				"AnomalyWarzoneEarth.ico"
+			]
+		},
+		"204300": { /* Awesomenauts */
+			"redist": [
+				"Data\\DirectXRedist\\",
+				"Data\\VCRedist\\"
+			],
+			"intro": [
+				"Data\\Video\\intro.ogg",
+				"Data\\Video\\introLowQuality.ogg"
+			]
+		},
+		"57400": { /* Batman: Arkham City */
+			"redist": [
+				"Setup\\"
+			],
+			"other": [
+				"BmGame\\Movies\\bac_logo.usm",
+				"BmGame\\Movies\\bac_logo_fra.usm",
+				"BmGame\\Movies\\Startup.swf",
+				"BmGame\\Movies\\StartupNV.swf",
+				"BmGame\\MoviesStereo\\NVIDIA_TWIMTBP_Bats.usm",
+				"readme.rtf",
+				"readme_DEU.rtf",
+				"readme_ESN.rtf",
+				"readme_FRA.rtf",
+				"readme_ITA.rtf",
+				"readme_LAS.rtf",
+				"readme_POL.rtf",
+				"readme_POR.rtf",
+				"readme_RUS.rtf"
+			],
+			"nonenglish": [
+				"BmGame\\CookedPCConsole\\French(France)\\",
+				"BmGame\\CookedPCConsole\\German\\",
+				"BmGame\\CookedPCConsole\\Italian\\",
+				"BmGame\\CookedPCConsole\\Spanish(Spain)\\",
+				"BmGame\\Localization\\DEU\\",
+				"BmGame\\Localization\\ESM\\",
+				"BmGame\\Localization\\ESN\\",
+				"BmGame\\Localization\\FRA\\",
+				"BmGame\\Localization\\ITA\\",
+				"BmGame\\Localization\\POL\\",
+				"BmGame\\Localization\\POR\\",
+				"BmGame\\Localization\\RUS\\",
+			]
+		},
+		"63710": { /* BIT.TRIP RUNNER */
+			"redist": [
+				"Dependencies\\"
+			],
+			"other": [
+				"README.html",
+				"ThirdPartyLicenses.txt"
+			]
+		}
+		,
+		"80330": {}, /* The Blackwell Legacy */
+		"80340": {}, /* Blackwell Unbound */
+		"80350": {}, /* Blackwell Convergence */
+		"15390": { /* Brothers in Arms: Hell's Highway */
+			"redist": [
+				"Redist\\"
+			],
+			"other": [
+				"SumacGame\\Movies\\",
+				"Support\\",
+				"Binaries\\uninst.exe"
+			]
+		},
+		"204360": { /* Castle Crashers */
+			"redist": [
+				"directx\\"
+			]
+		},
+		"200900": {}, /* Cave Story+ */
+		"73010": { /* Cities in Motion */
+			"other": [
+				"manual-english.pdf",
+				"manual-french.pdf",
+				"manual-german.pdf",
+				"manual-spanish.pdf",
+			]
+		},
+		"211900": { /* Conquest of Elysium 3 */
+			"other": [
+				"manual_mapeditor.pdf",
+				"installscript_linux.vdf",
+				"installscript_osx.vdf",
+				"coe3.sh",
+				"coe3_amd64",
+				"coe3_x86",
+				"coe3.app\\"
+			]
+		},
+		"203560": { /* Containment: The Zombie Puzzler */
+			"redist": [
+				"VCRedist\\"
+			]
+		},
+		"115100": { /* Costume Quest */
+			"redist": [
+				"Redist\\"
+			]
+		},
+		"28050": { /* Deus Ex: Human Revolution */
+			"redist": [
+				"redist\\"
+			]
+		},
+		"201280": { /* Deus Ex: Human Revolution - The Missing Link */
+			"redist": [
+				"redist\\"
+			]
+		},
+		"208200": { /* DOOM 3: BFG Edition */
+			"redist": [
+				"directx\\",
+				"msvc2010"
+			],
+			"other": [
+				"base\\video\\loadvideo.bik"
+			]
+		},
+		"98800": { /* Dungeons of Dredmor */
+			"other": [
+				"amd64\\",
+				"Dungeons of Dredmor.app\\",
+				"x86\\",
+				"Dredmor",
+				"Dredmor-amd64",
+				"Dredmor-x86"
+			]
+		},
+		"41210": { /* Eufloria */
+			"redist": [
+				"vcredist_x64.exe",
+				"vcredist_x86.exe"
+			],
+			"other": [
+				"Readme.txt",
+				"Manual.pdf",
+				"Install.iss",
+				"Eufloria.ico",
+				"readmes\\"
+			]
+		},
+		"8400": { /* Geometry Wars: Retro Evolved */
+			"other": [
+				"testapp.exe"
+			]
+		},
+		"223220": { /* Giana Sisters: Twisted Dreams */
+			"redist": [
+				"Extras\\",
+			],
+			"other": [
+				"data_common\\BFG Logo 1080p.wmv",
+				"7z_copying.txt",
+				"7z_license.txt",
+				"7z_readme.txt",
+				"EULA_DE.docx",
+				"EULA_DE.pdf",
+				"EULA_EN.docx",
+				"EULA_EN.pdf",
+				"launcher\\NVIDIA_Texture_Tools_LICENSE.txt",
+				"launcher\\de",
+				"launcher\\en",
+				"launcher\\es",
+				"launcher\\fr",
+				"launcher\\it"
+			]
+		},
+		"48950": { /* Greed Corp */
+			"redist": [
+				"DirectX\\"
+			] /* intro isn't deletable :( */
+		},
+		"214830": { /* Half Minute Hero */
+			"redist": [
+				"DirectX\\"
+			],
+			"intro": [
+				"res\\logomovie.wmv"
+			],
+			"other": [
+				"res\\mapdata\\yushaMap\\mapconv\\"
+			]
+		},
+		"205230": { /* Hell Yeah! */
+			"redist": [
+				"Redist\\"
+			],
+			"other": [
+				["Content\\LOGO\\LOGO_Arkedo.wmv", "empty"],
+				["Content\\LOGO\\LOGO_Sega.wmv", "empty"],
+			],
+			"nonenglish": [
+				"de\\",
+				"es\\",
+				"fr\\",
+				"it\\",
+				"ja\\",
+			]
+		},
+		"97330": { /* Magic 2013 */
+			"redist": [
+				"PreReqs\\"
+			],
+			"intro": [
+				"Movies\\INTRO_BR-PT.wmv",
+				"Movies\\INTRO_DE.wmv",
+				"Movies\\INTRO_EN.wmv",
+				"Movies\\INTRO_FR.wmv",
+				"Movies\\INTRO_IT.wmv",
+				"Movies\\INTRO_JP.wmv",
+				"Movies\\INTRO_KO.wmv",
+				"Movies\\INTRO_RU.wmv",
+				"Movies\\INTRO_SP.wmv",
+				"Movies\\INTRO_.wmv",
+				"Movies\\INTRO_.wmv"
+			],
+			"other": [
+				"Movies\\Stainless_Movie.wmv",
+				"Movies\\WotC_Movie.wmv",
+				"Movies\\WotC_Movie_R.wmv"
+			]
+		},
+		"105800": { /* PixelJunk Eden */
+			"other": [
+				"doc\\",
+			]
+		},
+		"102600": { /* Orcs Must Die! */
+			"redist": [
+				"installer\\"
+			]
+		},
+		"201790": { /* Orcs Must Die! 2 */
+			"redist": [
+				"installer\\"
+			],
+			"other": [
+				"data\\ui\\video\\Robot.usm"
+			]
+		},
+		"6120": { /* Shank */
+			"redist": [
+				"bin\\DirectX\\"
+			],
+			"other": [
+				"bin\\GDF\\"
+			]
+		},
+		"107200": {}, /* Space Pirates and Zombies */
+		"221640": { /* Super Hexagon */
+			"other": [
+				"licence.txt",
+				"readme.txt",
+				"data\\license.txt"
+			]
+		},
+		"72850": { /* The Elder Scrolls V: Skyrim */
+			"redist": [
+				"DirectX10\\",
+				"DotNetFX\\",
+				"VCRedist\\"
+			],
+			"other": [
+				"readme.txt",
+				"Data\\Video\\BGS_Logo.bik"
+			]
+		},
+		"18120": { /* Unstoppable Gorg */
+			"redist": [
+				"DirectX\\"
+			]
+		},
+		"200510": { /* XCOM: Enemy Unknown */
+			"redist": [
+				"AMD Dual Core Optimizer\\",
+				"DirectX\\",
+				"VCRedist"
+			],
+			"other": [
+				"ReadMe_English.rtf",
+				"ReadMe_French.rtf",
+				"ReadMe_German.rtf",
+				"ReadMe_Italian.rtf",
+				"ReadMe_Japanese.rtf",
+				"ReadMe_Korean.rtf",
+				"ReadMe_Polish.rtf",
+				"ReadMe_Russian.rtf",
+				"ReadMe_Spanish.rtf",
+				"XComGame\\Movies\\Logo_2KFiraxis.bik",
+				"XComGame\\Movies\\1080_Logo_2KFiraxis.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_DEU.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_ESN.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_FRA.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_INT.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_ITA.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_JPN.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_KOR.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_POL.bik",
+				"XComGame\\Movies\\LogoLegal_PCConsole_RUS.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_DEU.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_ESN.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_FRA.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_INT.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_ITA.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_JPN.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_KOR.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_POL.bik",
+				"XComGame\\Movies\\1080_LogoLegal_PCConsole_RUS.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_DEU.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_ESN.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_FRA.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_INT.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_ITA.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_JPN.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_KOR.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_POL.bik",
+				"XComGame\\Movies\\LogoLegal_PS3_RUS.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_DEU.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_ESN.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_FRA.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_INT.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_ITA.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_JPN.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_KOR.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_POL.bik",
+				"XComGame\\Movies\\LogoLegal_Xbox360_RUS.bik",
+				"XComGame\\Movies\\1080_UE3TechLogo.bik",
+				"XComGame\\Movies\\UE3TechLogo.bik"
+			],
+			"nonenglish": [
+				"Engine\\Localization\\DEU\\",
+				"Engine\\Localization\\ESN\\",
+				"Engine\\Localization\\FRA\\",
+				"Engine\\Localization\\ITA\\",
+				"Engine\\Localization\\JPN\\",
+				"Engine\\Localization\\KOR\\",
+				"Engine\\Localization\\POL\\",
+				"Engine\\Localization\\RUS\\",
+				"XComGame\\PCConsoleTOC_DEU.txt",
+				"XComGame\\PCConsoleTOC_ESN.txt",
+				"XComGame\\PCConsoleTOC_FRA.txt",
+				"XComGame\\PCConsoleTOC_ITA.txt",
+				"XComGame\\PCConsoleTOC_JPN.txt",
+				"XComGame\\PCConsoleTOC_KOR.txt",
+				"XComGame\\PCConsoleTOC_POL.txt",
+				"XComGame\\PCConsoleTOC_RUS.txt",
+				"XComGame\\CookedPCConsole\\XComGame_LOC_DEU.upk",
+				"XComGame\\CookedPCConsole\\XComGame_LOC_ESN.upk",
+				"XComGame\\CookedPCConsole\\XComGame_LOC_FRA.upk",
+				"XComGame\\CookedPCConsole\\XComGame_LOC_ITA.upk",
+				"XComGame\\CookedPCConsole\\XComGame_LOC_POL.upk",
+				"XComGame\\CookedPCConsole\\XComGame_LOC_RUS.upk",
+			]
+		}
+	}
+}
