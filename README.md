@@ -46,13 +46,13 @@ For a file, options are declared by wrapping the file name in an array, and appe
 
 Example:
 
-{
-	"480": { /* Spacewar */
-		"intro": [
-			["startupmovie.dat", "empty"],
-		],
-	}
-}
+		{
+			"480": { /* Spacewar */
+				"intro": [
+					["startupmovie.dat", "empty"],
+				],
+			}
+		}
 
 empty
 -----
