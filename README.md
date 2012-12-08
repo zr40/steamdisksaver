@@ -1,30 +1,23 @@
 Steam Disk Saver definition
 ===========================
 
-This is where Steam Disk Saver looks to determine which files are deletable. `apps.json` contains all the data; it categorizes the deletable files for each supported game.
+This is where Steam Disk Saver looks to determine which files are deletable. `apps.yaml` contains all the data; it categorizes the deletable files for each supported game. `buildjson.rb` converts the YAML to JSON.
 
 Feel free to submit a pull request or issue if you want to contribute!
 
 apps.json structure
 ===================
 
-Here's a fictious app.json containing only Spacewar, app id 480:
+Here's a fictious apps.yaml containing only Spacewar, app id 480:
 
-	{
-		"version": 1,
-		
-		"apps": {
-			"480": { /* Spacewar */
-				"redist": [
-					"DirectX\\",
-				],
-				"nonenglish": [
-					"language\\french.txt",
-				],
-			},
-			/* more games */
-		}
-	}
+	version: 1
+	apps:
+		480: # Spacewar
+			redist:
+				- DirectX\
+			nonenglish:
+				- language\french.txt
+				- language\spanish.txt
 
 If a file name ends with a backslash (like the DirectX entry in the example), it will match that directory and everything in it.
 
@@ -65,13 +58,11 @@ For a file, options are declared by wrapping the file name in an array, and appe
 
 Example:
 
-	{
-		"480": { /* Spacewar */
-			"intro": [
-				["startupmovie.dat", "empty"],
-			],
-		}
-	}
+	480: # Spacewar
+		intro:
+		  - regularfile.dat
+			- - startupmovie.dat
+			  - empty
 
 empty
 -----
