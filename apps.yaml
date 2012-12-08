@@ -420,46 +420,12 @@ apps:
       - ReadMe_Polish.rtf
       - ReadMe_Russian.rtf
       - ReadMe_Spanish.rtf
-      - XComGame\Movies\Logo_2KFiraxis.bik
-      - XComGame\Movies\1080_Logo_2KFiraxis.bik
-      - XComGame\Movies\LogoLegal_PCConsole_DEU.bik
-      - XComGame\Movies\LogoLegal_PCConsole_ESN.bik
-      - XComGame\Movies\LogoLegal_PCConsole_FRA.bik
-      - XComGame\Movies\LogoLegal_PCConsole_INT.bik
-      - XComGame\Movies\LogoLegal_PCConsole_ITA.bik
-      - XComGame\Movies\LogoLegal_PCConsole_JPN.bik
-      - XComGame\Movies\LogoLegal_PCConsole_KOR.bik
-      - XComGame\Movies\LogoLegal_PCConsole_POL.bik
-      - XComGame\Movies\LogoLegal_PCConsole_RUS.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_DEU.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_ESN.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_FRA.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_INT.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_ITA.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_JPN.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_KOR.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_POL.bik
-      - XComGame\Movies\1080_LogoLegal_PCConsole_RUS.bik
-      - XComGame\Movies\LogoLegal_PS3_DEU.bik
-      - XComGame\Movies\LogoLegal_PS3_ESN.bik
-      - XComGame\Movies\LogoLegal_PS3_FRA.bik
-      - XComGame\Movies\LogoLegal_PS3_INT.bik
-      - XComGame\Movies\LogoLegal_PS3_ITA.bik
-      - XComGame\Movies\LogoLegal_PS3_JPN.bik
-      - XComGame\Movies\LogoLegal_PS3_KOR.bik
-      - XComGame\Movies\LogoLegal_PS3_POL.bik
-      - XComGame\Movies\LogoLegal_PS3_RUS.bik
-      - XComGame\Movies\LogoLegal_Xbox360_DEU.bik
-      - XComGame\Movies\LogoLegal_Xbox360_ESN.bik
-      - XComGame\Movies\LogoLegal_Xbox360_FRA.bik
-      - XComGame\Movies\LogoLegal_Xbox360_INT.bik
-      - XComGame\Movies\LogoLegal_Xbox360_ITA.bik
-      - XComGame\Movies\LogoLegal_Xbox360_JPN.bik
-      - XComGame\Movies\LogoLegal_Xbox360_KOR.bik
-      - XComGame\Movies\LogoLegal_Xbox360_POL.bik
-      - XComGame\Movies\LogoLegal_Xbox360_RUS.bik
-      - XComGame\Movies\1080_UE3TechLogo.bik
-      - XComGame\Movies\UE3TechLogo.bik
+      - - Logo_2KFiraxis.bik
+        - contains
+      - - LogoLegal_
+        - contains
+      - - UE3TechLogo.bik
+        - contains
     nonenglish:
       - Engine\Localization\DEU\
       - Engine\Localization\ESN\
