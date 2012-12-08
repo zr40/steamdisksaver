@@ -291,13 +291,14 @@ apps:
       - EULA\
       - ReadMe\
       - Support\
-      - - _filelist.txt
+      - - filelist.txt
         - contains
       - eauninstall.exe
       - eauninstall.ico
       - SC4.ico
       - SC4_ConnectToWebIcon.ico
       - SC4_uninst.exe
+      - readme.txt
   107200: {} # Space Pirates and Zombies
   221640: # Super Hexagon
     other:
