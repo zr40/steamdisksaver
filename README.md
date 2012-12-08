@@ -2,14 +2,14 @@ apps.json categorizes the deletable files for each supported game.
 
 Here's a fictious example for Spacewar, app id 480:
 
-		{
-			"480": { /* Spacewar */
-				"redist": [
-					"directxsetup.exe",
-				],
-			},
-			/* more games */
-		}
+	{
+		"480": { /* Spacewar */
+			"redist": [
+				"directxsetup.exe",
+			],
+		},
+		/* more games */
+	}
 
 Categories
 ==========
@@ -46,13 +46,13 @@ For a file, options are declared by wrapping the file name in an array, and appe
 
 Example:
 
-		{
-			"480": { /* Spacewar */
-				"intro": [
-					["startupmovie.dat", "empty"],
-				],
-			}
+	{
+		"480": { /* Spacewar */
+			"intro": [
+				["startupmovie.dat", "empty"],
+			],
 		}
+	}
 
 empty
 -----
