@@ -274,6 +274,13 @@ apps:
       - installer\
     other:
       - data\ui\video\Robot.usm
+  9200: # RAGE
+    redist:
+      - directx\
+      - msvc2010\
+    other:
+      - video\loadvideo.bik
+      - video\loadvideo_french.bik
   6120: # Shank
     redist:
       - bin\DirectX\
@@ -285,6 +292,30 @@ apps:
       - licence.txt
       - readme.txt
       - data\license.txt
+  204060: # Superbrothers Sword & Sworcery EP
+    redist:
+      - Drivers\
+    other:
+      - eula.txt
+      - lgpl-3.0.txt
+      - README.html
+      - soundtrack\
+  67370: # The Darkness II
+    other:
+      - eula.rtf
+      - eula_french.rtf
+      - eula_german.rtf
+      - eula_italian.rtf
+      - eula_japanese.rtf
+      - eula_russian.rtf
+      - eula_spanish.rtf
+      - readme.txt
+      - readme_french.txt
+      - readme_german.txt
+      - readme_italian.txt
+      - readme_japanese.txt
+      - readme_russian.txt
+      - readme_spanish.txt
   72850: # The Elder Scrolls V: Skyrim
     redist:
       - DirectX10\
@@ -293,6 +324,84 @@ apps:
     other:
       - readme.txt
       - Data\Video\BGS_Logo.bik
+  20920: # The Witcher 2
+    redist:
+      - redist\
+    other:
+      - ReadMe.txt
+      - readme_CZ.rtf
+      - readme_DE.rtf
+      - readme_EN.rtf
+      - readme_ES.rtf
+      - readme_FR.rtf
+      - readme_HU.rtf
+      - readme_IT.rtf
+      - readme_JP.rtf
+      - readme_PL.rtf
+      - readme_RU.rtf
+      - readme_TR.rtf
+      - readme_ZH.rtf
+    nonenglish:
+      - CookedPC\movies\outro_cz.usm
+      - CookedPC\movies\outro_de.usm
+      - CookedPC\movies\outro_es.usm
+      - CookedPC\movies\outro_fr.usm
+      - CookedPC\movies\outro_hu.usm
+      - CookedPC\movies\outro_jp.usm
+      - CookedPC\movies\outro_pl.usm
+      - CookedPC\movies\outro_ru.usm
+      - CookedPC\movies\outro_tr.usm
+      - CookedPC\movies\outro_zh.usm
+      - CookedPC\movies\intro01_cz.usm
+      - CookedPC\movies\intro01_de.usm
+      - CookedPC\movies\intro01_es.usm
+      - CookedPC\movies\intro01_fr.usm
+      - CookedPC\movies\intro01_hu.usm
+      - CookedPC\movies\intro01_jp.usm
+      - CookedPC\movies\intro01_pl.usm
+      - CookedPC\movies\intro01_ru.usm
+      - CookedPC\movies\intro01_tr.usm
+      - CookedPC\movies\intro01_zh.usm
+      - CookedPC\movies\intro02_cz.usm
+      - CookedPC\movies\intro02_de.usm
+      - CookedPC\movies\intro02_es.usm
+      - CookedPC\movies\intro02_fr.usm
+      - CookedPC\movies\intro02_hu.usm
+      - CookedPC\movies\intro02_jp.usm
+      - CookedPC\movies\intro02_pl.usm
+      - CookedPC\movies\intro02_ru.usm
+      - CookedPC\movies\intro02_tr.usm
+      - CookedPC\movies\intro02_zh.usm
+      - config\Lang\CZ
+      - config\Lang\DE
+      - config\Lang\ES
+      - config\Lang\FR
+      - config\Lang\HU
+      - config\Lang\IT
+      - config\Lang\JP
+      - config\Lang\PL
+      - config\Lang\RU
+      - config\Lang\TR
+      - config\Lang\ZH
+      - Launcher\CZ
+      - Launcher\DE
+      - Launcher\ES
+      - Launcher\FR
+      - Launcher\HU
+      - Launcher\IT
+      - Launcher\JP
+      - Launcher\PL
+      - Launcher\RU
+      - Launcher\TR
+      - Launcher\ZH
+  214360: # Tower Wars
+    redist:
+      - redist\
+  35700: # Trine
+    redist:
+      - directx\
+      - PhysX_9.09.0408_SystemSoftware.exe
+      - WMFDist11-WindowsXP-X86-ENU.exe
   18120: # Unstoppable Gorg
     redist:
       - DirectX\
