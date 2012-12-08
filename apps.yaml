@@ -286,6 +286,18 @@ apps:
       - bin\DirectX\
     other:
       - bin\GDF\
+  24780: # SimCity 4 Deluxe
+    other:
+      - EULA\
+      - ReadMe\
+      - Support\
+      - - _filelist.txt
+        - contains
+      - eauninstall.exe
+      - eauninstall.ico
+      - SC4.ico
+      - SC4_ConnectToWebIcon.ico
+      - SC4_uninst.exe
   107200: {} # Space Pirates and Zombies
   221640: # Super Hexagon
     other:
