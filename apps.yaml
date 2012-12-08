@@ -405,6 +405,11 @@ apps:
   18120: # Unstoppable Gorg
     redist:
       - DirectX\
+  207420: # Wizorb
+    redist:
+      - Dependencies\
+    other:
+      - README.txt
   200510: # XCOM: Enemy Unknown
     redist:
       - AMD Dual Core Optimizer\
@@ -449,3 +454,57 @@ apps:
       - XComGame\CookedPCConsole\XComGame_LOC_ITA.upk
       - XComGame\CookedPCConsole\XComGame_LOC_POL.upk
       - XComGame\CookedPCConsole\XComGame_LOC_RUS.upk
+  207350: # Ys Origin
+    redist:
+      - dxredist\
+      - vsredist\
+    intro:
+      - yso_logo.avi
+    other:
+      - release\programs\copyrights.txt
+  31410: # Zombie Driver
+    redist:
+      - DirectX\
+      - OpenAl\
+      - PhysX\
+      - VcRedist\
+    other:
+      - Documentation\
+      - Release\ZD_icon.ico
+      - RelWithDebInfo\
+    nonenglish:
+      - Packs\French0.zip
+      - Packs\French1.zip
+      - Packs\French2.zip
+      - Packs\German0.zip
+      - Packs\German1.zip
+      - Packs\German2.zip
+      - Packs\Italian0.zip
+      - Packs\Italian1.zip
+      - Packs\Italian2.zip
+      - Packs\Polish0.zip
+      - Packs\Polish1.zip
+      - Packs\Polish2.zip
+      - Packs\Russian0.zip
+      - Packs\Russian1.zip
+      - Packs\Russian2.zip
+      - Packs\Spanish0.zip
+      - Packs\Spanish1.zip
+      - Packs\Spanish2.zip
+  220820: # Zombie Driver HD
+    redist:
+      - DirectX\
+      - VcRedist\
+    other:
+      - Documentation\
+    nonenglish:
+      - - Packs\Win32_Fr_Res
+        - contains
+      - - Packs\Win32_Ge_Res
+        - contains
+      - - Packs\Win32_It_Res
+        - contains
+      - - Packs\Win32_Pl_Res
+        - contains
+      - - Packs\Win32_Sp_Res
+        - contains
