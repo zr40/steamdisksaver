@@ -149,6 +149,7 @@ apps:
       - Install.iss
       - Eufloria.ico
       - readmes\
+  38600: {} # Faerie Solitaire
   44200: # Galcon Fusion
     other:
       - data\Thumbs.db
