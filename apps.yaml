@@ -149,6 +149,9 @@ apps:
       - Install.iss
       - Eufloria.ico
       - readmes\
+  44200: # Galcon Fusion
+    other:
+      - data\Thumbs.db
   8400: # Geometry Wars: Retro Evolved
     other:
       - testapp.exe
