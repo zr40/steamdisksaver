@@ -300,6 +300,24 @@ apps:
       - SC4_uninst.exe
       - readme.txt
   107200: {} # Space Pirates and Zombies
+  92800: # SpaceChem
+    redist:
+      - dotNetFx35setup.exe
+    other:
+      - LICENSE.txt
+      - PRIVACY.txt
+      - rgb2theora.exe
+      - SOUND-CREDITS.txt
+      - spacechem.ico
+    nonenglish:
+      - lang\
+      - text\de.text
+      - text\es.text
+      - text\fr.text
+      - text\it.text
+      - text\jp.text
+      - text\pt.text
+      - text\ru.text
   221640: # Super Hexagon
     other:
       - licence.txt
