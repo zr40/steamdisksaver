@@ -285,6 +285,43 @@ apps:
     other:
       - video\loadvideo.bik
       - video\loadvideo_french.bik
+  91600: # Sanctum
+    redist:
+      - Install\
+    other:
+      - Engine\EditorResources\
+      - Soundtrack\
+      - UE3_THIRD_PARTY_SOFTWARE.pdf
+    nonenglish:
+      - Engine\Localization\DEU\
+      - Engine\Localization\ESN\
+      - Engine\Localization\FRA\
+      - Engine\Localization\ITA\
+      - Engine\Localization\JPN\
+      - Engine\Localization\POL\
+      - Engine\Localization\RUS\
+      - SanctumGame\PCTOC_DAN.txt
+      - SanctumGame\PCTOC_DEU.txt
+      - SanctumGame\PCTOC_DUT.txt
+      - SanctumGame\PCTOC_ESN.txt
+      - SanctumGame\PCTOC_FRA.txt
+      - SanctumGame\PCTOC_ITA.txt
+      - SanctumGame\PCTOC_JPN.txt
+      - SanctumGame\PCTOC_POL.txt
+      - SanctumGame\PCTOC_RUS.txt
+      - SanctumGame\PCTOC_SWE.txt
+      - SanctumGame\PCTOC_TUR.txt
+      - SanctumGame\Localization\DAN\
+      - SanctumGame\Localization\DEU\
+      - SanctumGame\Localization\DUT\
+      - SanctumGame\Localization\ESN\
+      - SanctumGame\Localization\FRA\
+      - SanctumGame\Localization\ITA\
+      - SanctumGame\Localization\JPN\
+      - SanctumGame\Localization\POL\
+      - SanctumGame\Localization\RUS\
+      - SanctumGame\Localization\SWE\
+      - SanctumGame\Localization\TUR\
   6120: # Shank
     redist:
       - bin\DirectX\
