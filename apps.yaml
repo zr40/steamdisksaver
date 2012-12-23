@@ -104,6 +104,11 @@ apps:
       - manual-french.pdf
       - manual-german.pdf
       - manual-spanish.pdf
+  208710: # Color Bind
+    redist:
+      - redist\
+    other:
+      - Credits\
   211900: # Conquest of Elysium 3
     other:
       - manual_mapeditor.pdf
