@@ -431,6 +431,11 @@ apps:
       - SC4_ConnectToWebIcon.ico
       - SC4_uninst.exe
       - readme.txt
+  204220: # Snapshot
+    redist:
+      - redist\
+    other:
+      - soundcredits.txt
   107200: {} # Space Pirates and Zombies
   92800: # SpaceChem
     redist:
