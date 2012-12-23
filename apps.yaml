@@ -119,6 +119,20 @@ apps:
   115100: # Costume Quest
     redist:
       - Redist\
+  18500: # Defense Grid: The Awakening
+    redist:
+      - DirectX\
+    nonenglish:
+      - - dede
+        - contains
+      - - eses
+        - contains
+      - - frfr
+        - contains
+      - - itit
+        - contains
+    other:
+      - manual.pdf
   28050: # Deus Ex: Human Revolution
     redist:
       - redist\
