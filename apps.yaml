@@ -394,6 +394,26 @@ apps:
     other:
       - video\loadvideo.bik
       - video\loadvideo_french.bik
+  22230: # Rock of Ages
+    redist:
+      - Prerequisites\
+    other:
+      - Original Soundtrack\
+    nonenglish:
+      - BoulderGame\Localization\DEU\
+      - BoulderGame\Localization\ESM\
+      - BoulderGame\Localization\ESN\
+      - BoulderGame\Localization\FRA\
+      - BoulderGame\Localization\ITA\
+      - BoulderGame\Localization\JPN\
+      - BoulderGame\Localization\RUS\
+      - Engine\Localization\DEU\
+      - Engine\Localization\ESM\
+      - Engine\Localization\ESN\
+      - Engine\Localization\FRA\
+      - Engine\Localization\ITA\
+      - Engine\Localization\JPN\
+      - Engine\Localization\RUS\
   91600: # Sanctum
     redist:
       - Install\
