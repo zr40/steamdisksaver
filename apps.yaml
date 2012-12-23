@@ -324,8 +324,8 @@ apps:
       - patches\
     other:
       - installscript_osx.vdf
-      - nd.osx
-      - nd.osx.sh
+      - nd_osx
+      - nd_osx.sh
       - ndsrv_osx
       - srcds_linux
       - srcds_run
