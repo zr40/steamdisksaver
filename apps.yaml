@@ -208,6 +208,13 @@ apps:
         - contains
     other:
       - manual.pdf
+  214340: # Deponia
+    redist:
+      - resources\dotNetFx40_Full_x86_x64.exe
+    other:
+      - documents\
+      - videos\video.vv001
+      - videos\video.vv002
   28050: # Deus Ex: Human Revolution
     redist:
       - redist\
