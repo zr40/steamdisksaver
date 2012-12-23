@@ -244,6 +244,11 @@ apps:
       - sounds.it.vfs0
       - sounds.jp.vfs0
       - sounds.ru.vfs0
+  4920: # Natural Selection 2
+    redist:
+      - redist\
+    other:
+      - DeluxeEdition\
   200390: # Oil Rush
     other:
       - bin\launcher_x86.exe
