@@ -131,6 +131,9 @@ apps:
       - msvc2010\
     other:
       - base\video\loadvideo.bik
+  570: # Dota 2
+    redist:
+      - directx\
   98800: # Dungeons of Dredmor
     other:
       - amd64\
