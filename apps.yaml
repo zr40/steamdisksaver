@@ -318,6 +318,18 @@ apps:
       - redist\
     other:
       - DeluxeEdition\
+  17710: # Nuclear Dawn
+    redist:
+      - redist\
+      - patches\
+    other:
+      - installscript_osx.vdf
+      - nd.osx
+      - nd.osx.sh
+      - ndsrv_osx
+      - srcds_linux
+      - srcds_run
+      - nucleardawn\media\iw.bik
   200390: # Oil Rush
     other:
       - bin\launcher_x86.exe
