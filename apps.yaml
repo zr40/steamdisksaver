@@ -514,6 +514,8 @@ apps:
       - README.html
       - soundtrack\
   67370: # The Darkness II
+    redist:
+      - Drivers\
     other:
       - eula.rtf
       - eula_french.rtf
