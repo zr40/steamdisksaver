@@ -24,7 +24,15 @@ namespace SteamDiskSaver
 		{
 			Manifest = manifest;
 
-			var baseDir = Manifest["UserConfig"].Items.ContainsKey("appinstalldir") ? Manifest["UserConfig"]["appinstalldir"] : Path.Combine(steamDir, "common", Manifest["installdir"]);
+			string baseDir;
+			try
+			{
+				baseDir = Manifest["UserConfig"].Items.ContainsKey("appinstalldir") ? Manifest["UserConfig"]["appinstalldir"] : Path.Combine(steamDir, "common", Manifest["installdir"]);
+			}
+			catch (KeyNotFoundException)
+			{
+				throw new IgnoreAppException("No installdir present in manifest");
+			}
 
 			var walker = DirectoryWalker.Walk(baseDir, Id);
 			Known = AppMetadata.Known.Contains(Id);

@@ -59,6 +59,7 @@
     <Compile Include="AppManifestItem.cs" />
     <Compile Include="AppManifestParser.cs" />
     <Compile Include="AppMetadata.cs" />
+    <Compile Include="IgnoreAppException.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
