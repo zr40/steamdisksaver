@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace SteamDiskSaver
 {
@@ -47,7 +48,10 @@ namespace SteamDiskSaver
 		{
 			get
 			{
-				return Manifest["UserConfig"]["name"];
+				if (Manifest["UserConfig"].Items.ContainsKey("name"))
+					return Manifest["UserConfig"]["name"];
+				else
+					return Manifest["installdir"].Value.Split('\\').Last();
 			}
 		}
 
@@ -55,7 +59,9 @@ namespace SteamDiskSaver
 		{
 			get
 			{
-				return int.Parse(Manifest["UserConfig"]["GameID"]);
+				if (Manifest["UserConfig"].Items.ContainsKey("GameID"))
+					return int.Parse(Manifest["UserConfig"]["GameID"]);
+				return int.Parse(Manifest["appID"]);
 			}
 		}
 	}

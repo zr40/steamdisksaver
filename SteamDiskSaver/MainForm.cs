@@ -89,7 +89,10 @@ namespace SteamDiskSaver
 							                    appManifestItem = AppManifestParser.Parse(s)["AppState"];
 
 						                    loading.ProgressBar.Value++;
-						                    loading.CurrentGame.Text = appManifestItem["UserConfig"]["name"];
+											if (appManifestItem["UserConfig"].Items.ContainsKey("name"))
+												loading.CurrentGame.Text = appManifestItem["UserConfig"]["name"];
+											else
+												loading.CurrentGame.Text = appManifestItem["installdir"].Value.Split('\\').Last();
 						                    Application.DoEvents();
 
 						                    var app = new App(appManifestItem, path);
