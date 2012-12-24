@@ -327,8 +327,6 @@ apps:
       - Movies\INTRO_KO.wmv
       - Movies\INTRO_RU.wmv
       - Movies\INTRO_SP.wmv
-      - Movies\INTRO_.wmv
-      - Movies\INTRO_.wmv
     other:
       - Movies\Stainless_Movie.wmv
       - Movies\WotC_Movie.wmv
