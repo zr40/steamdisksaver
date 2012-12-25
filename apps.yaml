@@ -384,6 +384,13 @@ apps:
   105800: # PixelJunk Eden
     other:
       - doc\
+  3830: # Psychonauts
+    redist:
+      - redist\
+    other:
+      - Documents\
+      - Psychonauts Manual Win.pdf
+      - WorkResource\Cutscenes\Prerendered\DFLogo.bik
   102600: # Orcs Must Die!
     redist:
       - installer\
