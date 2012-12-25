@@ -391,6 +391,12 @@ apps:
       - Documents\
       - Psychonauts Manual Win.pdf
       - WorkResource\Cutscenes\Prerendered\DFLogo.bik
+    nonenglish:
+      - WorkResource\Localization\French\
+      - WorkResource\Localization\German\
+      - WorkResource\Localization\Italian\
+      - WorkResource\Localization\Nonsense\
+      - WorkResource\Localization\Spanish\
   102600: # Orcs Must Die!
     redist:
       - installer\
