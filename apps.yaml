@@ -412,6 +412,9 @@ apps:
     other:
       - video\loadvideo.bik
       - video\loadvideo_french.bik
+  204630: # Retro City Rampage
+    redist:
+      - Redist\
   22230: # Rock of Ages
     redist:
       - Prerequisites\
