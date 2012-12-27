@@ -397,6 +397,8 @@ apps:
       - WorkResource\Localization\Italian\
       - WorkResource\Localization\Nonsense\
       - WorkResource\Localization\Spanish\
+      - WorkResource\Sounds\French\
+      - WorkResource\Sounds\German\
   102600: # Orcs Must Die!
     redist:
       - installer\
