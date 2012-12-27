@@ -248,6 +248,12 @@ apps:
       - Install.iss
       - Eufloria.ico
       - readmes\
+  32150: # Everyday Genius: SquareLogic
+    other:
+      - Data\Images\Achievements\jpg\
+      - Data\Images\SplashScreens\
+      - SquareLogic.MCE.png
+      - SquareLogic.MCE.mcl
   38600: {} # Faerie Solitaire
   44200: # Galcon Fusion
     other:
