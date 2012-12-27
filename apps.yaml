@@ -514,6 +514,9 @@ apps:
       - text\jp.text
       - text\pt.text
       - text\ru.text
+  9900: # Star Trek Online
+    redist:
+      - directx_aug2009_redist\
   221640: # Super Hexagon
     other:
       - licence.txt
