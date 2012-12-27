@@ -646,7 +646,7 @@ apps:
     redist:
       - AMD Dual Core Optimizer\
       - DirectX\
-      - VCRedist
+      - VCRedist\
     other:
       - ReadMe_English.rtf
       - ReadMe_French.rtf
