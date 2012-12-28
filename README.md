@@ -10,14 +10,14 @@ apps.json structure
 
 Here's a fictious apps.yaml containing only Spacewar, app id 480:
 
-	version: 1
-	apps:
-		480: # Spacewar
-			redist:
-				- DirectX\
-			nonenglish:
-				- language\french.txt
-				- language\spanish.txt
+    version: 1
+    apps:
+      480: # Spacewar
+        redist:
+          - DirectX\
+        nonenglish:
+          - language\french.txt
+          - language\spanish.txt
 
 If a file name ends with a backslash (like the DirectX entry in the example), it will match that directory and everything in it.
 
@@ -58,11 +58,11 @@ For a file, options are declared by wrapping the file name in an array, and appe
 
 Example:
 
-	480: # Spacewar
-		intro:
-		  - regularfile.dat
-			- - startupmovie.dat
-			  - empty
+    480: # Spacewar
+      intro:
+        - regularfile.dat
+        - - startupmovie.dat
+          - empty
 
 contains
 --------
