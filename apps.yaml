@@ -718,6 +718,14 @@ apps:
       - yso_logo.avi
     other:
       - release\programs\copyrights.txt
+  61600: # Zen Bound 2
+    nonenglish:
+      - data_common\lang\dict_de.txt
+      - data_common\lang\dict_es.txt
+      - data_common\lang\dict_fi.txt
+      - data_common\lang\dict_fr.txt
+      - data_common\lang\dict_it.txt
+      - data_common\lang\dict_nl.txt
   31410: # Zombie Driver
     redist:
       - DirectX\
