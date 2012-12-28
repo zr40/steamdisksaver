@@ -347,6 +347,13 @@ apps:
       - sounds.it.vfs0
       - sounds.jp.vfs0
       - sounds.ru.vfs0
+  223430: # Miner Wars 2081
+    redist:
+      - redist\
+    other:
+      - Soundtrack\
+      - MinerWars.ico
+      - MinerWarsUserFolderOpener.ico
   4920: # Natural Selection 2
     redist:
       - redist\
