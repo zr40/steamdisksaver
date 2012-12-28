@@ -337,6 +337,11 @@ apps:
       - Movies\Stainless_Movie.wmv
       - Movies\WotC_Movie.wmv
       - Movies\WotC_Movie_R.wmv
+  214560: # Mark of the Ninja
+    redist:
+      - data-pc\DirectX\
+    other:
+      - data\bootstrap\movies\
   43110: # Metro 2033
     redist:
       - install\
