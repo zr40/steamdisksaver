@@ -657,6 +657,10 @@ apps:
   18120: # Unstoppable Gorg
     redist:
       - DirectX\
+  102400: # Vertex Dispenser
+    other:
+      - manual.pdf
+      - README.txt
   207420: # Wizorb
     redist:
       - Dependencies\
