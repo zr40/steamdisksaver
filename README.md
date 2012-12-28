@@ -5,10 +5,10 @@ This is where Steam Disk Saver looks to determine which files are deletable. `ap
 
 Feel free to submit a pull request or issue if you want to contribute!
 
-apps.json structure
+apps.yaml structure
 ===================
 
-Here's a fictious apps.yaml containing only Spacewar, app id 480:
+Here's a fictious `apps.yaml` containing only Spacewar, app id 480:
 
     version: 1
     apps:
