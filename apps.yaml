@@ -402,6 +402,11 @@ apps:
   105800: # PixelJunk Eden
     other:
       - doc\
+  80300: # Puzzle Bots
+    other:
+      - EULA.txt
+      - preload.pcx
+      - winsetup.exe
   3830: # Psychonauts
     redist:
       - redist\
