@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Json;
 using System.Net;
 using System.Windows.Forms;
-
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace SteamDiskSaver
 {
@@ -15,20 +13,20 @@ namespace SteamDiskSaver
 		internal readonly bool EmptyFile;
 		private readonly bool matchContains;
 
-		internal PathMatch(JToken rule)
+		internal PathMatch(JsonValue rule)
 		{
-			if (rule.Type == JTokenType.String)
+			if (rule.JsonType == JsonType.String)
 			{
-				pathMatch = rule.Value<string>();
+				pathMatch = (string) rule;
 			}
 			else
 			{
-				pathMatch = rule[0].Value<string>();
+				pathMatch = (string) rule[0];
 
-				var item = rule[0];
-				while ((item = item.Next) != null)
+				for (int i = 1; i < rule.Count; i++)
 				{
-					var flag = item.Value<string>();
+					var item = rule[i];
+					var flag = (string) item;
 					switch (flag)
 					{
 						case "contains":
@@ -86,33 +84,34 @@ namespace SteamDiskSaver
 				Environment.Exit(1);
 				return;
 			}
-
 			ParseJson(json);
 		}
 
 		private static void ParseJson(string json)
 		{
-			JObject data;
+			JsonValue data;
 			try
 			{
-				data = JObject.Parse(json);
+				data = JsonValue.Parse(json);
 			}
-			catch (JsonReaderException e)
+			catch (FormatException e)
 			{
 				MessageBox.Show(e.Message, "Error in apps.json", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Environment.Exit(1);
 				return;
 			}
 
-			if (data["version"].Value<int>() != 1)
+			if ((int)data["version"] != 1)
 			{
 				MessageBox.Show("This version of Steam Disk Saver is too old. The definition requires format " + data["version"] + ", but this version only supports format 1.", "Outdated version", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				Environment.Exit(0);
 			}
 
-			foreach (JProperty app in data["apps"])
+			foreach (var item in data["apps"])
 			{
-				var id = int.Parse((app).Name);
+				var id = int.Parse(item.Key);
+				var app = item.Value;
+
 				Known.Add(id);
 
 				Redist[id] = new List<PathMatch>();
@@ -120,28 +119,28 @@ namespace SteamDiskSaver
 				NonEnglish[id] = new List<PathMatch>();
 				Intro[id] = new List<PathMatch>();
 
-				if (app.Value["redist"] != null)
-					foreach (var redist in app.Value["redist"])
+				if (app.ContainsKey("redist"))
+					foreach (var redist in app["redist"])
 					{
-						Redist[id].Add(new PathMatch(redist));
+						Redist[id].Add(new PathMatch(redist.Value));
 					}
 
-				if (app.Value["other"] != null)
-					foreach (var other in app.Value["other"])
+				if (app.ContainsKey("other"))
+					foreach (var other in app["other"])
 					{
-						Other[id].Add(new PathMatch(other));
+						Other[id].Add(new PathMatch(other.Value));
 					}
 
-				if (app.Value["intro"] != null)
-					foreach (var intro in app.Value["intro"])
+				if (app.ContainsKey("intro"))
+					foreach (var intro in app["intro"])
 					{
-						Intro[id].Add(new PathMatch(intro));
+						Intro[id].Add(new PathMatch(intro.Value));
 					}
 
-				if (app.Value["nonenglish"] != null)
-					foreach (var nonEnglish in app.Value["nonenglish"])
+				if (app.ContainsKey("nonenglish"))
+					foreach (var nonEnglish in app["nonenglish"])
 					{
-						NonEnglish[id].Add(new PathMatch(nonEnglish));
+						NonEnglish[id].Add(new PathMatch(nonEnglish.Value));
 					}
 			}
 		}
