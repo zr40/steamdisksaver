@@ -3,15 +3,17 @@ categories:
   redist:
     name: redistributables
     description: Installers which are only run when the game is first launched.
+    benefit: prevent Steam from running the installers.
     default: true
   nonenglish:
     name: language files
-    description: Non-English language files.
+    description: Files for languages other than English.
+    keep_if: you use another language than English.
     default: true
   intros:
     name: intro movies
     description: These intro movies are always played when launching the game.
-    keep_if: you want to see these intro movies.
+    keep_if: you want to see the intro movies.
     benefit: improve the game launch time.
     default: false
   logos:
