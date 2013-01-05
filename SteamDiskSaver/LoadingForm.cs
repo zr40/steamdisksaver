@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.ComponentModel;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace SteamDiskSaver
 {
@@ -6,10 +9,24 @@ namespace SteamDiskSaver
 	{
 		internal ProgressBar ProgressBar;
 		internal Label CurrentGame;
+		private IContainer components;
+		private Loader loader;
 
 		internal LoadingForm()
 		{
 			InitializeComponent();
+			loader = new Loader();
+			loader.Done = apps => BeginInvoke(new Action(() =>
+			                                             {
+				                                             var f = new MainForm();
+				                                             f.Apps = apps;
+				                                             f.Show();
+				                                             Close();
+			                                             }));
+			loader.Maximum = max => BeginInvoke(new Action(() => { ProgressBar.Maximum = max; }));
+			loader.Progress = val => BeginInvoke(new Action(() => { ProgressBar.Value = val; }));
+			loader.Status = text => BeginInvoke(new Action(() => { CurrentGame.Text = text; }));
+			new Thread(loader.Load).Start();
 		}
 
 		#region Windows Form Designer generated code
@@ -50,10 +67,22 @@ namespace SteamDiskSaver
 			this.Name = "LoadingForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Loading games...";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoadingForm_FormClosed);
+			this.Load += new System.EventHandler(this.LoadingForm_Load);
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
+
+		private void LoadingForm_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Program.Context.FormClosed();
+		}
+
+		private void LoadingForm_Load(object sender, EventArgs e)
+		{
+			Program.Context.FormOpened();
+		}
 	}
 }

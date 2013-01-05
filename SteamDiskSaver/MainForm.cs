@@ -2,11 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-
-using Microsoft.Win32;
 
 namespace SteamDiskSaver
 {
@@ -40,81 +37,15 @@ namespace SteamDiskSaver
 		public MainForm()
 		{
 			InitializeComponent();
-			ReadSteamApps();
-
-			listView1.ListViewItemSorter = itemSorter;
-
-			comparisons[0] = (l, r) => l.Name.CompareTo(r.Name);
-			comparisons[1] = (l, r) => l.Id.CompareTo(r.Id);
-			comparisons[2] = (l, r) => r.TotalSize.CompareTo(l.TotalSize);
-			comparisons[3] = (l, r) => r.RedistSize.CompareTo(l.RedistSize);
-			comparisons[4] = (l, r) => r.IntroSize.CompareTo(l.IntroSize);
-			comparisons[5] = (l, r) => r.NonEnglishSize.CompareTo(l.NonEnglishSize);
-			comparisons[6] = (l, r) => r.OtherSize.CompareTo(l.OtherSize);
-
-			itemSorter.Comparison = comparisons[0];
 		}
+
+		internal List<App> Apps;
 
 		private ListViewItem totalsItem;
 
 		private void ReadSteamApps()
 		{
-			var steamPath = (string) Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam", "SteamPath", null);
-			if (steamPath == null)
-			{
-				MessageBox.Show("Could not find Steam installation path in the Registry.", "Steam not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				Environment.Exit(1);
-			}
-			var path = Path.Combine(steamPath, "steamapps");
-
-			List<App> apps;
-
-			using (var loading = new LoadingForm())
-			{
-				try
-				{
-					// this needs to be refactored into a worker thread
-					var files = Directory.GetFiles(path, "*.acf");
-					loading.ProgressBar.Maximum = files.Length + 1;
-					loading.CurrentGame.Text = "Downloading definition...";
-					loading.Show();
-
-					Application.DoEvents();
-					var metadata = AppMetadata.GetMetadata();
-					
-					apps = files.Select(f =>
-					                    {
-						                    AppManifestItem appManifestItem;
-						                    using (var s = File.OpenRead(f))
-							                    appManifestItem = AppManifestParser.Parse(s)["AppState"];
-
-						                    loading.ProgressBar.Value++;
-						                    if (appManifestItem["UserConfig"].Items.ContainsKey("name"))
-							                    loading.CurrentGame.Text = appManifestItem["UserConfig"]["name"];
-						                    else
-							                    loading.CurrentGame.Text = appManifestItem["installdir"].Value.Split('\\').Last();
-						                    Application.DoEvents();
-
-						                    try
-						                    {
-							                    return new App(metadata, appManifestItem, path);
-						                    }
-						                    catch (IgnoreAppException)
-						                    {
-							                    return (App) null;
-						                    }
-					                    }).Where(n => n != null).ToList();
-				}
-				catch (DirectoryNotFoundException)
-				{
-					MessageBox.Show(string.Format("'steamapps' directory wasn't found in '{0}'. Please reinstall Steam", steamPath), "steamapps directory not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					Environment.Exit(1);
-
-					return;
-				}
-			}
-
-			foreach (var item in apps)
+			foreach (var item in Apps)
 			{
 				var i = new ListViewItem();
 				i.Tag = item;
@@ -319,6 +250,32 @@ namespace SteamDiskSaver
 		{
 			itemSorter.Comparison = comparisons[e.Column];
 			listView1.Sort();
+		}
+
+		private void MainForm_Shown(object sender, EventArgs e)
+		{
+			ReadSteamApps();
+
+			comparisons[0] = (l, r) => l.Name.CompareTo(r.Name);
+			comparisons[1] = (l, r) => l.Id.CompareTo(r.Id);
+			comparisons[2] = (l, r) => r.TotalSize.CompareTo(l.TotalSize);
+			comparisons[3] = (l, r) => r.RedistSize.CompareTo(l.RedistSize);
+			comparisons[4] = (l, r) => r.IntroSize.CompareTo(l.IntroSize);
+			comparisons[5] = (l, r) => r.NonEnglishSize.CompareTo(l.NonEnglishSize);
+			comparisons[6] = (l, r) => r.OtherSize.CompareTo(l.OtherSize);
+
+			itemSorter.Comparison = comparisons[0];
+			listView1.ListViewItemSorter = itemSorter;
+		}
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+			Program.Context.FormOpened();
+		}
+
+		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Program.Context.FormClosed();
 		}
 	}
 }
