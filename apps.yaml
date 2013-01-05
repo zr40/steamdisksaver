@@ -52,9 +52,13 @@ engines:
       - - :gamedir:\PCTOC
         - contains
       - :gamedir:\Localization\DEU\
+      - :gamedir:\Localization\ESM\
       - :gamedir:\Localization\ESN\
       - :gamedir:\Localization\FRA\
       - :gamedir:\Localization\ITA\
+      - :gamedir:\Localization\POL\
+      - :gamedir:\Localization\POR\
+      - :gamedir:\Localization\RUS\
       - Engine\Localization\DEU\
       - Engine\Localization\ESN\
       - Engine\Localization\FRA\
@@ -92,8 +96,6 @@ apps:
   209370: # Analogue: A Hate Story
     redist:
       - lib\dxwebsetup.exe
-    other:
-      - traceback.txt
   91200: # Anomaly Warzone Earth
     redist:
       - DirectX\
@@ -126,6 +128,9 @@ apps:
       - Content\Subtitles\fr\
       - Content\Subtitles\it\
   57400: # Batman: Arkham City
+    engine:
+      name: unreal3
+      gamedir: BmGame
     redist:
       - Setup\
     other:
@@ -134,7 +139,13 @@ apps:
       - BmGame\Movies\Startup.swf
       - BmGame\Movies\StartupNV.swf
       - BmGame\MoviesStereo\NVIDIA_TWIMTBP_Bats.usm
+    manual:
       - readme.rtf
+    nonenglish:
+      - BmGame\CookedPCConsole\French(France)\
+      - BmGame\CookedPCConsole\German\
+      - BmGame\CookedPCConsole\Italian\
+      - BmGame\CookedPCConsole\Spanish(Spain)\
       - readme_DEU.rtf
       - readme_ESN.rtf
       - readme_FRA.rtf
@@ -143,19 +154,6 @@ apps:
       - readme_POL.rtf
       - readme_POR.rtf
       - readme_RUS.rtf
-    nonenglish:
-      - BmGame\CookedPCConsole\French(France)\
-      - BmGame\CookedPCConsole\German\
-      - BmGame\CookedPCConsole\Italian\
-      - BmGame\CookedPCConsole\Spanish(Spain)\
-      - BmGame\Localization\DEU\
-      - BmGame\Localization\ESM\
-      - BmGame\Localization\ESN\
-      - BmGame\Localization\FRA\
-      - BmGame\Localization\ITA\
-      - BmGame\Localization\POL\
-      - BmGame\Localization\POR\
-      - BmGame\Localization\RUS\
   63710: # BIT.TRIP RUNNER
     redist:
       - Dependencies\
