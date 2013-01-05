@@ -47,6 +47,10 @@ categories:
     description: All other files which aren't used by the game at all.
     default: true
 engines:
+  unity:
+    other:
+      - :gamedir:\Mono\etc\
+      - :gamedir:\Managed\UnityEngine.dll.mdb
   unreal3:
     nonenglish:
       - - ':gamedir:\PCTOC'
@@ -65,10 +69,13 @@ engines:
       - Engine\Localization\ITA\
     editor:
       - Binaries\Win32\Editor\
+      - Binaries\wxRC\
+      - Binaries\wxRes\
       - Engine\EditorResources\
       - Engine\Localization\INT\EditorTips.int
       - Engine\Localization\INT\GFxUIEditor.int
       - Engine\Localization\INT\UnrealEd.int
+      - Engine\Localization\INT\UnrealScriptTest.int
 apps:
   207650: # A Virus Named TOM
     redist:
@@ -157,25 +164,36 @@ apps:
   63710: # BIT.TRIP RUNNER
     redist:
       - Dependencies\
-    other:
+    manual:
       - README.html
+    license:
       - ThirdPartyLicenses.txt
   80330: {} # The Blackwell Legacy
   80340: {} # Blackwell Unbound
   80350: {} # Blackwell Convergence
   15390: # Brothers in Arms: Hell's Highway
+    engine:
+      name: unreal3
+      gamedir: SumacGame
     redist:
       - Redist\
+    editor:
+      - SumacGame\CookedPC\Editor.u
+      - SumacGame\CookedPC\EditorMaterials.upk
+      - SumacGame\CookedPC\EditorMeshes.upk
+      - SumacGame\CookedPC\EditorResources.upk
+      - SumacGame\CookedPC\UnrealEd.u
     other:
-      - SumacGame\Movies\
-      - Support\
       - Binaries\uninst.exe
+      - SumacGame\Movies\
+    manual:
+      - Support\
   204360: # Castle Crashers
     redist:
       - directx\
   200900: {} # Cave Story+
   73010: # Cities in Motion
-    other:
+    manual:
       - manual-english.pdf
       - manual-french.pdf
       - manual-german.pdf
@@ -186,8 +204,10 @@ apps:
     other:
       - Credits\
   211900: # Conquest of Elysium 3
-    other:
+    manual:
+      - manual_coe3.pdf
       - manual_mapeditor.pdf
+    other:
       - installscript_linux.vdf
       - installscript_osx.vdf
       - coe3.sh
@@ -195,8 +215,13 @@ apps:
       - coe3_x86
       - coe3.app\
   203560: # Containment: The Zombie Puzzler
+    engine:
+      name: unity
+      gamedir: Containment_Data\
     redist:
       - VCRedist\
+    other:
+      - Containment_Data\Thumbs.db
   115100: # Costume Quest
     redist:
       - Redist\
