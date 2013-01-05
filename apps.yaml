@@ -26,12 +26,21 @@ categories:
     description: Stand-alone soundtrack.
     keep_if: you want to listen to the game's soundtrack outside of the game.
     default: true
+  manuals:
+    name: manuals
+    description: The game manual.
+    keep_if: you want to read the game's manual.
+    default: false
+  editor:
+    name: editors
+    description: Game editor.
+    keep_if: you want to create content for the game.
+    default: false
   license:
     name: license files
     description: License files describe what you are allowed to do with the software.
 
-      If you choose to delete these files, you understand that this does not remove or invalidate any license granted to you. It only removes the files.
-    keep_if: you need to read license files.
+      If you choose to delete these files, you understand that this action only removes these files and is not intended to change or remove the terms of any license.
     default: false
   other:
     name: remaining unused files
@@ -40,12 +49,17 @@ categories:
 apps:
   207650: # A Virus Named TOM
     redist:
+      - ChainingdotNet4.exe
       - dotNetFx40_Client_x86_x64.exe
       - xnafx40_redist.msi
   40400: # AI War: Fleet Command
-    other:
+    license:
       - AIWarLicense.txt
-      - AIWarAutoUpdater-windows.exe
+    manual:
+      - AIWarManual.pdf
+      - RuntimeData\sysrequirements.txt
+    other:
+      - RuntimeData\AIWarCredits.doc
   206500: {} # AirMech
   204140: # All Zombies Must Die!
     redist:
