@@ -7,5 +7,5 @@ data = YAML.load_file 'apps.yaml'
 data['release'] = Time.now.to_i
 
 File.open 'apps.json', 'w' do |file|
- file.write data.to_json
+ file.write data.to_json :array_nl => "\n", :object_nl => "\n", :indent => "\t"
 end
