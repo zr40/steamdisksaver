@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 
 namespace SteamDiskSaver
@@ -40,19 +41,12 @@ namespace SteamDiskSaver
 			{
 				string directory = directoriesToWalk.Dequeue();
 
-				try
+				foreach (NativeMethods.FindData findData in new FindFilesEnumerator(directory + Path.DirectorySeparatorChar + "*"))
 				{
-					foreach (NativeMethods.FindData findData in new FindFilesEnumerator(directory + Path.DirectorySeparatorChar + "*"))
-					{
-						InspectFile(findData, directory);
-					}
+					InspectFile(findData, directory);
+				}
 
-					InspectDirectory(directory + Path.DirectorySeparatorChar);
-				}
-				catch (Win32Exception)
-				{
-					// ignore :(
-				}
+				InspectDirectory(directory + Path.DirectorySeparatorChar);
 			}
 		}
 
@@ -76,9 +70,17 @@ namespace SteamDiskSaver
 				{
 					size = (long) NativeMethods.CompressedFileSize(fullPath);
 				}
-				catch (Win32Exception)
+				catch (Win32Exception e)
 				{
-					// ignore :(
+					if (e.NativeErrorCode == 2)
+					{
+						// File not found. Perhaps it was just now deleted.
+						Debug.WriteLine("File not found: " + fullPath);
+					}
+					else
+					{
+						throw;
+					}
 				}
 
 				TotalSize += size;

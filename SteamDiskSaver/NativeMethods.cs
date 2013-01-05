@@ -13,7 +13,7 @@ namespace SteamDiskSaver
 		[DllImport("kernel32", SetLastError = true, CharSet = CharSet.Unicode)]
 		internal static extern FindFilesHandle FindFirstFile(string fileName, out FindData findFileData);
 
-		[DllImport("kernel32", SetLastError = true)]
+		[DllImport("kernel32", SetLastError = true, CharSet = CharSet.Unicode)]
 		[return: MarshalAs(UnmanagedType.Bool)]
 		internal static extern bool FindNextFile(FindFilesHandle findFileHandle, out FindData findFileData);
 
@@ -41,7 +41,7 @@ namespace SteamDiskSaver
 			private readonly uint highDateTime;
 		}
 
-		[StructLayout(LayoutKind.Sequential)]
+		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
 		internal struct FindData
 		{
 			internal readonly FileAttributes fileAttributes;
