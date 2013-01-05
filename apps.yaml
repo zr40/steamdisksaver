@@ -276,6 +276,8 @@ apps:
     other:
       - - LOTDGame\Movies\splash_screen_0
         - contains
+      - - LOTDGame\Movies\cassette
+        - contains
   18500: # Defense Grid: The Awakening
     redist:
       - DirectX\
@@ -288,13 +290,17 @@ apps:
         - contains
       - - itit
         - contains
-    other:
+    manual:
       - manual.pdf
   214340: # Deponia
     redist:
       - resources\dotNetFx40_Full_x86_x64.exe
-    other:
-      - documents\
+    license:
+      - documents\licenses\
+    manual:
+      - documents\Deponia_Manual_en.pdf
+      - documents\Deponia_Readme_en.txt
+    intro:
       - videos\video.vv001
       - videos\video.vv002
   28050: # Deus Ex: Human Revolution
