@@ -26,7 +26,9 @@ categories:
     default: true
   license:
     name: license files
-    description: License files describe what you are allowed to do with the software. If you choose to delete these files, you understand that this does not remove or invalidate any license granted to you. It only removes the files.
+    description: |
+      License files describe what you are allowed to do with the software.
+      If you choose to delete these files, you understand that this does not remove or invalidate any license granted to you. It only removes the files.
     keep_if: you need to read license files.
     default: false
   other:
