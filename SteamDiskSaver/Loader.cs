@@ -22,7 +22,7 @@ namespace SteamDiskSaver
 			var steamPath = (string) Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam", "SteamPath", null);
 			if (steamPath == null)
 			{
-				MessageBox.Show("Could not find Steam installation path in the Registry.", "Steam not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Could not find Steam installation path in the Registry. Is Steam installed?", "Steam not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Environment.Exit(1);
 			}
 			var path = Path.Combine(steamPath, "steamapps");
@@ -60,7 +60,7 @@ namespace SteamDiskSaver
 			}
 			catch (DirectoryNotFoundException)
 			{
-				MessageBox.Show(string.Format("'steamapps' directory wasn't found in '{0}'. Please reinstall Steam", steamPath), "steamapps directory not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(string.Format("'steamapps' directory wasn't found in '{0}'. This probably means that the Steam installation path in the Registry is not correct. You could try reinstalling Steam to fix that.", steamPath), "steamapps directory not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Environment.Exit(1);
 
 				return;

@@ -80,7 +80,24 @@ namespace SteamDiskSaver
 			}
 			catch (WebException e)
 			{
-				MessageBox.Show(e.Message + "\n\nSteam Disk Saver downloads the current version of the metadata directly from GitHub. Please check your internet connectivity.", "Couldn't download metadata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				// github down? Let's find out if the internet connection is working
+				try
+				{
+					var request = WebRequest.Create("https://www.google.com/");
+					using (var response = request.GetResponse())
+					{
+					}
+				}
+				catch (WebException)
+				{
+					// google also failed. Assume not connected
+					MessageBox.Show("Metadata download failed with the error '" + e.Message + "'. It appears that you aren't connected to the internet.", "Couldn't download metadata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					Environment.Exit(1);
+					return null;
+				}
+
+				// github down, but google isn't. Assume github maintenance
+				MessageBox.Show("Metadata download failed with the error '" + e.Message + "'. It appears that GitHub is currently unavailable. Please try again later.", "Couldn't download metadata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Environment.Exit(1);
 				return null;
 			}
@@ -96,14 +113,14 @@ namespace SteamDiskSaver
 			}
 			catch (FormatException e)
 			{
-				MessageBox.Show(e.Message, "Error in apps.json", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Apparently the metadata contains an error. Sorry about that! Please try again in a minute.\n\nThe error is: " + e.Message, "Error in apps.json", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Environment.Exit(1);
 				return;
 			}
 
 			if ((int) data["version"] != 1)
 			{
-				MessageBox.Show("This version of Steam Disk Saver is too old. The definition requires format " + data["version"] + ", but this version only supports format 1.", "Outdated version", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show("This version of Steam Disk Saver is too old. The metadata uses format " + data["version"] + ", but this version only supports format 1. Please download the latest version.", "Outdated version", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				Environment.Exit(0);
 			}
 
