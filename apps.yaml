@@ -60,22 +60,55 @@ engines:
       - ':gamedir:\Localization\ESN\'
       - ':gamedir:\Localization\FRA\'
       - ':gamedir:\Localization\ITA\'
+      - ':gamedir:\Localization\JPN\'
       - ':gamedir:\Localization\POL\'
       - ':gamedir:\Localization\POR\'
       - ':gamedir:\Localization\RUS\'
+      - Engine\Localization\CHN\
+      - Engine\Localization\CZE\
       - Engine\Localization\DEU\
+      - Engine\Localization\ESM\
       - Engine\Localization\ESN\
       - Engine\Localization\FRA\
+      - Engine\Localization\HUN\
       - Engine\Localization\ITA\
+      - Engine\Localization\JPN\
+      - Engine\Localization\KOR\
+      - Engine\Localization\POL\
+      - Engine\Localization\RUS\
+      - Engine\Localization\SLO\
     editor:
       - Binaries\Win32\Editor\
       - Binaries\wxRC\
       - Binaries\wxRes\
       - Engine\EditorResources\
+      - Engine\Extras\3dsMaxScripts\
       - Engine\Localization\INT\EditorTips.int
       - Engine\Localization\INT\GFxUIEditor.int
       - Engine\Localization\INT\UnrealEd.int
       - Engine\Localization\INT\UnrealScriptTest.int
+    other:
+      - - Engine\Localization\Readme.UDK.
+        - contains
+      - ':gamedir:\Config\Mac\'
+      - ':gamedir:\Config\Mobile\'
+      - ':gamedir:\Config\NGP\'
+      - ':gamedir:\Config\PS3\'
+      - ':gamedir:\Config\Xbox360\'
+      - Engine\Config\Mac\
+      - Engine\Config\Mobile\
+      - Engine\Config\NGP\
+      - Engine\Config\PS3\
+      - Engine\Config\Xbox360\
+      - Engine\Shaders\Mobile\
+      - Engine\Shaders\WorkingDirectory\
+      - Engine\Shaders\Xbox360\
+      - Engine\Splash\PS3\
+      - Engine\Splash\Xbox360\
+      - Engine\Stats\
+    license:
+      - - Engine\Localization\EULA.UDK.
+        - contains
 apps:
   207650: # A Virus Named TOM
     redist:
@@ -225,57 +258,23 @@ apps:
   115100: # Costume Quest
     redist:
       - Redist\
+    nonenglish:
+      - Win\Packs\Loc_deDE.~h
+      - Win\Packs\Loc_deDE.~p
+      - Win\Packs\Loc_esES.~h
+      - Win\Packs\Loc_esES.~p
+      - Win\Packs\Loc_frFR.~h
+      - Win\Packs\Loc_frFR.~p
+      - Win\Packs\Loc_itIT.~h
+      - Win\Packs\Loc_itIT.~p
   211400: # Deadlight
+    engine:
+      name: unreal3
+      gamedir: LOTDGame
     redist:
       - redist\
     other:
-      - Engine\Config\Mac\
-      - Engine\Config\Mobile\
-      - Engine\Config\NGP\
-      - Engine\Config\PS3\
-      - Engine\Config\Xbox360\
-      - Engine\EditorResources\
-      - - Engine\Localization\EULA.UDK.
-        - contains
-      - - Engine\Localization\Readme.UDK.
-        - contains
-      - Engine\Splash\PS3\
-      - Engine\Splash\Xbox360\
-      - LOTDGame\Config\Mac\
-      - LOTDGame\Config\Mobile\
-      - LOTDGame\Config\NGP\
-      - LOTDGame\Config\PS3\
-      - LOTDGame\Config\Xbox360\
       - - LOTDGame\Movies\splash_screen_0
-        - contains
-    nonenglish:
-      - - CHN
-        - contains
-      - - CZE
-        - contains
-      - - DEU
-        - contains
-      - - ESM
-        - contains
-      - - ESN
-        - contains
-      - - FRA
-        - contains
-      - - HUN
-        - contains
-      - - ITA
-        - contains
-      - - JPN
-        - contains
-      - - KOR
-        - contains
-      - - POL
-        - contains
-      - - PTB
-        - contains
-      - - RUS
-        - contains
-      - - SLO
         - contains
   18500: # Defense Grid: The Awakening
     redist:
