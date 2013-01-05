@@ -80,8 +80,8 @@ namespace SteamDiskSaver
 					loading.Show();
 
 					Application.DoEvents();
-					AppMetadata.GetDefinition();
-
+					var metadata = AppMetadata.GetMetadata();
+					
 					apps = files.Select(f =>
 					                    {
 						                    AppManifestItem appManifestItem;
@@ -97,7 +97,7 @@ namespace SteamDiskSaver
 
 						                    try
 						                    {
-							                    return new App(appManifestItem, path);
+							                    return new App(metadata, appManifestItem, path);
 						                    }
 						                    catch (IgnoreAppException)
 						                    {

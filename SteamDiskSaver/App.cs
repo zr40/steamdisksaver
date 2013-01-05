@@ -20,7 +20,7 @@ namespace SteamDiskSaver
 
 		internal readonly bool Known;
 
-		internal App(AppManifestItem manifest, string steamDir)
+		internal App(AppMetadata metadata, AppManifestItem manifest, string steamDir)
 		{
 			Manifest = manifest;
 
@@ -34,8 +34,8 @@ namespace SteamDiskSaver
 				throw new IgnoreAppException("No installdir present in manifest");
 			}
 
-			var walker = DirectoryWalker.Walk(baseDir, Id);
-			Known = AppMetadata.Known.Contains(Id);
+			var walker = DirectoryWalker.Walk(metadata, baseDir, Id);
+			Known = metadata.Known.Contains(Id);
 
 			TotalSize = walker.TotalSize;
 			if (!Known)

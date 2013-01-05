@@ -55,16 +55,16 @@ namespace SteamDiskSaver
 		}
 	}
 
-	internal static class AppMetadata
+	internal sealed class AppMetadata
 	{
-		internal static readonly HashSet<int> Known = new HashSet<int>();
+		internal readonly HashSet<int> Known = new HashSet<int>();
 
-		internal static readonly Dictionary<int, List<PathMatch>> Redist = new Dictionary<int, List<PathMatch>>();
-		internal static readonly Dictionary<int, List<PathMatch>> Other = new Dictionary<int, List<PathMatch>>();
-		internal static readonly Dictionary<int, List<PathMatch>> Intro = new Dictionary<int, List<PathMatch>>();
-		internal static readonly Dictionary<int, List<PathMatch>> NonEnglish = new Dictionary<int, List<PathMatch>>();
+		internal readonly Dictionary<int, List<PathMatch>> Redist = new Dictionary<int, List<PathMatch>>();
+		internal readonly Dictionary<int, List<PathMatch>> Other = new Dictionary<int, List<PathMatch>>();
+		internal readonly Dictionary<int, List<PathMatch>> Intro = new Dictionary<int, List<PathMatch>>();
+		internal readonly Dictionary<int, List<PathMatch>> NonEnglish = new Dictionary<int, List<PathMatch>>();
 
-		internal static void GetDefinition()
+		internal static AppMetadata GetMetadata()
 		{
 			string json;
 
@@ -82,12 +82,12 @@ namespace SteamDiskSaver
 			{
 				MessageBox.Show(e.Message + "\n\nSteam Disk Saver downloads the current version of the metadata directly from GitHub. Please check your internet connectivity.", "Couldn't download metadata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Environment.Exit(1);
-				return;
+				return null;
 			}
-			ParseJson(json);
+			return new AppMetadata(json);
 		}
 
-		private static void ParseJson(string json)
+		private AppMetadata(string json)
 		{
 			JsonValue data;
 			try
@@ -101,7 +101,7 @@ namespace SteamDiskSaver
 				return;
 			}
 
-			if ((int)data["version"] != 1)
+			if ((int) data["version"] != 1)
 			{
 				MessageBox.Show("This version of Steam Disk Saver is too old. The definition requires format " + data["version"] + ", but this version only supports format 1.", "Outdated version", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				Environment.Exit(0);

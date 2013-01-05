@@ -7,6 +7,7 @@ namespace SteamDiskSaver
 {
 	internal sealed class DirectoryWalker
 	{
+		private readonly AppMetadata metadata;
 		private readonly int appId;
 		private readonly Queue<string> directoriesToWalk = new Queue<string>();
 		private readonly string rootDir;
@@ -21,8 +22,9 @@ namespace SteamDiskSaver
 		internal readonly List<DeletableFile> IntroFiles = new List<DeletableFile>();
 		internal readonly List<DeletableFile> NonEnglishFiles = new List<DeletableFile>();
 
-		private DirectoryWalker(string path, int appId)
+		private DirectoryWalker(AppMetadata metadata, string path, int appId)
 		{
+			this.metadata = metadata;
 			this.appId = appId;
 			rootDir = path;
 			directoriesToWalk.Enqueue(path);
@@ -30,9 +32,9 @@ namespace SteamDiskSaver
 			Walk();
 		}
 
-		internal static DirectoryWalker Walk(string path, int appId)
+		internal static DirectoryWalker Walk(AppMetadata metadata, string path, int appId)
 		{
-			return new DirectoryWalker(path, appId);
+			return new DirectoryWalker(metadata, path, appId);
 		}
 
 		private void Walk()
@@ -85,13 +87,13 @@ namespace SteamDiskSaver
 
 				TotalSize += size;
 
-				if (AppMetadata.Known.Contains(appId))
+				if (metadata.Known.Contains(appId))
 				{
 					var path = fullPath.Substring(rootDir.Length + 1);
-					CheckFile(AppMetadata.Redist, path, size, fullPath, ref RedistSize, RedistFiles);
-					CheckFile(AppMetadata.Other, path, size, fullPath, ref OtherSize, OtherFiles);
-					CheckFile(AppMetadata.Intro, path, size, fullPath, ref IntroSize, IntroFiles);
-					CheckFile(AppMetadata.NonEnglish, path, size, fullPath, ref NonEnglishSize, NonEnglishFiles);
+					CheckFile(metadata.Redist, path, size, fullPath, ref RedistSize, RedistFiles);
+					CheckFile(metadata.Other, path, size, fullPath, ref OtherSize, OtherFiles);
+					CheckFile(metadata.Intro, path, size, fullPath, ref IntroSize, IntroFiles);
+					CheckFile(metadata.NonEnglish, path, size, fullPath, ref NonEnglishSize, NonEnglishFiles);
 				}
 			}
 		}
@@ -108,13 +110,13 @@ namespace SteamDiskSaver
 
 		private void InspectDirectory(string fullPath)
 		{
-			if (AppMetadata.Known.Contains(appId))
+			if (metadata.Known.Contains(appId))
 			{
 				var path = fullPath.Substring(rootDir.Length + 1);
-				CheckFile(AppMetadata.Redist, path, 0, fullPath, ref RedistSize, RedistFiles);
-				CheckFile(AppMetadata.Other, path, 0, fullPath, ref OtherSize, OtherFiles);
-				CheckFile(AppMetadata.Intro, path, 0, fullPath, ref IntroSize, IntroFiles);
-				CheckFile(AppMetadata.NonEnglish, path, 0, fullPath, ref NonEnglishSize, NonEnglishFiles);
+				CheckFile(metadata.Redist, path, 0, fullPath, ref RedistSize, RedistFiles);
+				CheckFile(metadata.Other, path, 0, fullPath, ref OtherSize, OtherFiles);
+				CheckFile(metadata.Intro, path, 0, fullPath, ref IntroSize, IntroFiles);
+				CheckFile(metadata.NonEnglish, path, 0, fullPath, ref NonEnglishSize, NonEnglishFiles);
 			}
 		}
 	}
