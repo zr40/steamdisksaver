@@ -49,16 +49,16 @@ categories:
 engines:
   unreal3:
     nonenglish:
-      - - :gamedir:\PCTOC
+      - - ':gamedir:\PCTOC'
         - contains
-      - :gamedir:\Localization\DEU\
-      - :gamedir:\Localization\ESM\
-      - :gamedir:\Localization\ESN\
-      - :gamedir:\Localization\FRA\
-      - :gamedir:\Localization\ITA\
-      - :gamedir:\Localization\POL\
-      - :gamedir:\Localization\POR\
-      - :gamedir:\Localization\RUS\
+      - ':gamedir:\Localization\DEU\'
+      - ':gamedir:\Localization\ESM\'
+      - ':gamedir:\Localization\ESN\'
+      - ':gamedir:\Localization\FRA\'
+      - ':gamedir:\Localization\ITA\'
+      - ':gamedir:\Localization\POL\'
+      - ':gamedir:\Localization\POR\'
+      - ':gamedir:\Localization\RUS\'
       - Engine\Localization\DEU\
       - Engine\Localization\ESN\
       - Engine\Localization\FRA\
