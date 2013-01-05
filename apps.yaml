@@ -26,7 +26,7 @@ categories:
     description: Stand-alone soundtrack.
     keep_if: you want to listen to the game's soundtrack outside of the game.
     default: true
-  manuals:
+  manual:
     name: manuals
     description: The game manual.
     keep_if: you want to read the game's manual.
