@@ -46,6 +46,25 @@ categories:
     name: remaining unused files
     description: All other files which aren't used by the game at all.
     default: true
+engines:
+  unreal3:
+    nonenglish:
+      - - :gamedir:\PCTOC
+        - contains
+      - :gamedir:\Localization\DEU\
+      - :gamedir:\Localization\ESN\
+      - :gamedir:\Localization\FRA\
+      - :gamedir:\Localization\ITA\
+      - Engine\Localization\DEU\
+      - Engine\Localization\ESN\
+      - Engine\Localization\FRA\
+      - Engine\Localization\ITA\
+    editor:
+      - Binaries\Win32\Editor\
+      - Engine\EditorResources\
+      - Engine\Localization\INT\EditorTips.int
+      - Engine\Localization\INT\GFxUIEditor.int
+      - Engine\Localization\INT\UnrealEd.int
 apps:
   207650: # A Virus Named TOM
     redist:
@@ -62,25 +81,14 @@ apps:
       - RuntimeData\AIWarCredits.doc
   206500: {} # AirMech
   204140: # All Zombies Must Die!
+    engine:
+      name: unreal3
+      gamedir: Bzb2Game
     redist:
       - Prerequisites\
     other:
       - Binaries\Redist\
       - BuildLog.txt
-      - Engine\EditorResources\
-    nonenglish:
-      - Bzb2Game\PCTOC_DEU.txt
-      - Bzb2Game\PCTOC_ESN.txt
-      - Bzb2Game\PCTOC_FRA.txt
-      - Bzb2Game\PCTOC_ITA.txt
-      - Bzb2Game\Localization\DEU\
-      - Bzb2Game\Localization\ESN\
-      - Bzb2Game\Localization\FRA\
-      - Bzb2Game\Localization\ITA\
-      - Engine\Localization\DEU\
-      - Engine\Localization\ESN\
-      - Engine\Localization\FRA\
-      - Engine\Localization\ITA\
   209370: # Analogue: A Hate Story
     redist:
       - lib\dxwebsetup.exe
