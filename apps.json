@@ -711,6 +711,19 @@
 				]
 			]
 		},
+		"102600":{
+			"redist":[
+				"installer\\"
+			]
+		},
+		"201790":{
+			"redist":[
+				"installer\\"
+			],
+			"logos":[
+				"data\\ui\\video\\Robot.usm"
+			]
+		},
 		"105800":{
 			"license":[
 				"doc\\"
@@ -751,25 +764,12 @@
 				"winsetup.exe"
 			]
 		},
-		"102600":{
-			"redist":[
-				"installer\\"
-			]
-		},
-		"201790":{
-			"redist":[
-				"installer\\"
-			],
-			"other":[
-				"data\\ui\\video\\Robot.usm"
-			]
-		},
 		"9200":{
 			"redist":[
 				"directx\\",
 				"msvc2010\\"
 			],
-			"other":[
+			"logos":[
 				"video\\loadvideo.bik",
 				"video\\loadvideo_french.bik"
 			]
@@ -780,68 +780,30 @@
 			]
 		},
 		"22230":{
+			"engine":{
+				"name":"unreal3",
+				"gamedir":"BoulderGame"
+			},
 			"redist":[
 				"Prerequisites\\"
 			],
-			"other":[
+			"extras":[
 				"Original Soundtrack\\"
-			],
-			"nonenglish":[
-				"BoulderGame\\Localization\\DEU\\",
-				"BoulderGame\\Localization\\ESM\\",
-				"BoulderGame\\Localization\\ESN\\",
-				"BoulderGame\\Localization\\FRA\\",
-				"BoulderGame\\Localization\\ITA\\",
-				"BoulderGame\\Localization\\JPN\\",
-				"BoulderGame\\Localization\\RUS\\",
-				"Engine\\Localization\\DEU\\",
-				"Engine\\Localization\\ESM\\",
-				"Engine\\Localization\\ESN\\",
-				"Engine\\Localization\\FRA\\",
-				"Engine\\Localization\\ITA\\",
-				"Engine\\Localization\\JPN\\",
-				"Engine\\Localization\\RUS\\"
 			]
 		},
 		"91600":{
+			"engine":{
+				"name":"unreal3",
+				"gamedir":"SanctumGame"
+			},
 			"redist":[
 				"Install\\"
 			],
-			"other":[
-				"Engine\\EditorResources\\",
-				"Soundtrack\\",
-				"UE3_THIRD_PARTY_SOFTWARE.pdf"
+			"extra":[
+				"Soundtrack\\"
 			],
-			"nonenglish":[
-				"Engine\\Localization\\DEU\\",
-				"Engine\\Localization\\ESN\\",
-				"Engine\\Localization\\FRA\\",
-				"Engine\\Localization\\ITA\\",
-				"Engine\\Localization\\JPN\\",
-				"Engine\\Localization\\POL\\",
-				"Engine\\Localization\\RUS\\",
-				"SanctumGame\\PCTOC_DAN.txt",
-				"SanctumGame\\PCTOC_DEU.txt",
-				"SanctumGame\\PCTOC_DUT.txt",
-				"SanctumGame\\PCTOC_ESN.txt",
-				"SanctumGame\\PCTOC_FRA.txt",
-				"SanctumGame\\PCTOC_ITA.txt",
-				"SanctumGame\\PCTOC_JPN.txt",
-				"SanctumGame\\PCTOC_POL.txt",
-				"SanctumGame\\PCTOC_RUS.txt",
-				"SanctumGame\\PCTOC_SWE.txt",
-				"SanctumGame\\PCTOC_TUR.txt",
-				"SanctumGame\\Localization\\DAN\\",
-				"SanctumGame\\Localization\\DEU\\",
-				"SanctumGame\\Localization\\DUT\\",
-				"SanctumGame\\Localization\\ESN\\",
-				"SanctumGame\\Localization\\FRA\\",
-				"SanctumGame\\Localization\\ITA\\",
-				"SanctumGame\\Localization\\JPN\\",
-				"SanctumGame\\Localization\\POL\\",
-				"SanctumGame\\Localization\\RUS\\",
-				"SanctumGame\\Localization\\SWE\\",
-				"SanctumGame\\Localization\\TUR\\"
+			"license":[
+				"UE3_THIRD_PARTY_SOFTWARE.pdf"
 			]
 		},
 		"6120":{
@@ -1202,5 +1164,5 @@
 			]
 		}
 	},
-	"release":1357471379
+	"release":1357471611
 }
