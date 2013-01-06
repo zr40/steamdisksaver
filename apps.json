@@ -68,12 +68,22 @@
 					"<gamedir>\\PCTOC",
 					"startswith"
 				],
+				[
+					"<gamedir>\\PCConsoleTOC",
+					"startswith"
+				],
 				"<gamedir>\\CookedPC\\Startup_LOC_JPN.upk",
 				"<gamedir>\\CookedPC\\Startup_LOC_POL.upk",
 				"<gamedir>\\CookedPC\\Startup_LOC_RUS.upk",
 				"<gamedir>\\CookedPC\\UDKBase_LOC_JPN.upk",
 				"<gamedir>\\CookedPC\\UDKBase_LOC_POL.upk",
 				"<gamedir>\\CookedPC\\UDKBase_LOC_RUS.upk",
+				"<gamedir>\\CookedPC\\<gamedir>_LOC_DEU.upk",
+				"<gamedir>\\CookedPC\\<gamedir>_LOC_ESN.upk",
+				"<gamedir>\\CookedPC\\<gamedir>_LOC_FRA.upk",
+				"<gamedir>\\CookedPC\\<gamedir>_LOC_ITA.upk",
+				"<gamedir>\\CookedPC\\<gamedir>_LOC_POL.upk",
+				"<gamedir>\\CookedPC\\<gamedir>_LOC_RUS.upk",
 				"<gamedir>\\Localization\\DAN\\",
 				"<gamedir>\\Localization\\DEU\\",
 				"<gamedir>\\Localization\\DUT\\",
@@ -198,7 +208,7 @@
 				"Data\\DirectXRedist\\",
 				"Data\\VCRedist\\"
 			],
-			"intro":[
+			"intros":[
 				"Data\\Video\\intro.ogg",
 				"Data\\Video\\introLowQuality.ogg"
 			]
@@ -422,7 +432,7 @@
 				"documents\\Deponia_Manual_en.pdf",
 				"documents\\Deponia_Readme_en.txt"
 			],
-			"intro":[
+			"intros":[
 				"videos\\video.vv001",
 				"videos\\video.vv002"
 			]
@@ -538,7 +548,7 @@
 			"redist":[
 				"DirectX\\"
 			],
-			"intro":[
+			"intros":[
 				"res\\logomovie.wmv"
 			],
 			"other":[
@@ -594,7 +604,7 @@
 			"redist":[
 				"PreReqs\\"
 			],
-			"intro":[
+			"intros":[
 				"Movies\\INTRO_BR-PT.wmv",
 				"Movies\\INTRO_DE.wmv",
 				"Movies\\INTRO_EN.wmv",
@@ -824,12 +834,28 @@
 			],
 			"other":[
 				"bin\\GDF\\"
+			],
+			"intros":[
+				"data\\bootstrap\\movies\\introtomain.usm"
+			],
+			"logos":[
+				"data-pc\\bootstrap\\movies\\introscea.usm",
+				"data-pc\\bootstrap\\movies\\introscee.usm"
+			],
+			"nonenglish":[
+				"data\\bootstrap\\localization\\localization_ja.xml",
+				"data\\bootstrap\\localization\\localization_xu.xml"
 			]
 		},
 		"24780":{
-			"other":[
-				"EULA\\",
+			"license":[
+				"EULA\\"
+			],
+			"manual":[
 				"ReadMe\\",
+				"readme.txt"
+			],
+			"other":[
 				"Support\\",
 				[
 					"filelist.txt",
@@ -839,8 +865,7 @@
 				"eauninstall.ico",
 				"SC4.ico",
 				"SC4_ConnectToWebIcon.ico",
-				"SC4_uninst.exe",
-				"readme.txt"
+				"SC4_uninst.exe"
 			]
 		},
 		"204220":{
@@ -857,10 +882,11 @@
 			"redist":[
 				"dotNetFx35setup.exe"
 			],
-			"other":[
+			"license":[
 				"LICENSE.txt",
-				"PRIVACY.txt",
-				"rgb2theora.exe",
+				"PRIVACY.txt"
+			],
+			"other":[
 				"SOUND-CREDITS.txt",
 				"spacechem.ico"
 			],
@@ -881,20 +907,26 @@
 			]
 		},
 		"221640":{
-			"other":[
+			"license":[
 				"licence.txt",
-				"readme.txt",
 				"data\\license.txt"
+			],
+			"manual":[
+				"readme.txt"
 			]
 		},
 		"204060":{
 			"redist":[
 				"Drivers\\"
 			],
-			"other":[
+			"license":[
 				"eula.txt",
-				"lgpl-3.0.txt",
-				"README.html",
+				"lgpl-3.0.txt"
+			],
+			"manual":[
+				"README.html"
+			],
+			"extras":[
 				"soundtrack\\"
 			]
 		},
@@ -902,14 +934,16 @@
 			"redist":[
 				"Drivers\\"
 			],
-			"other":[
+			"license":[
 				"eula.rtf",
 				"eula_french.rtf",
 				"eula_german.rtf",
 				"eula_italian.rtf",
 				"eula_japanese.rtf",
 				"eula_russian.rtf",
-				"eula_spanish.rtf",
+				"eula_spanish.rtf"
+			],
+			"manual":[
 				"readme.txt",
 				"readme_french.txt",
 				"readme_german.txt",
@@ -925,8 +959,10 @@
 				"DotNetFX\\",
 				"VCRedist\\"
 			],
-			"other":[
-				"readme.txt",
+			"manual":[
+				"readme.txt"
+			],
+			"logos":[
 				"Data\\Video\\BGS_Logo.bik"
 			]
 		},
@@ -934,7 +970,7 @@
 			"redist":[
 				"redist\\"
 			],
-			"other":[
+			"manual":[
 				"ReadMe.txt",
 				"readme_CZ.rtf",
 				"readme_DE.rtf",
@@ -1014,15 +1050,22 @@
 				"directx\\",
 				"PhysX_9.09.0408_SystemSoftware.exe",
 				"WMFDist11-WindowsXP-X86-ENU.exe"
+			],
+			"other":[
+				"Trine_updates.txt"
 			]
 		},
 		"18120":{
+			"engine":{
+				"name":"unity",
+				"gamedir":"unstoppable_gorg_Data"
+			},
 			"redist":[
 				"DirectX\\"
 			]
 		},
 		"102400":{
-			"other":[
+			"manual":[
 				"manual.pdf",
 				"README.txt"
 			]
@@ -1031,17 +1074,21 @@
 			"redist":[
 				"Dependencies\\"
 			],
-			"other":[
+			"manual":[
 				"README.txt"
 			]
 		},
 		"200510":{
+			"engine":{
+				"name":"unreal3",
+				"gamedir":"XComGame"
+			},
 			"redist":[
 				"AMD Dual Core Optimizer\\",
 				"DirectX\\",
 				"VCRedist\\"
 			],
-			"other":[
+			"manual":[
 				"ReadMe_English.rtf",
 				"ReadMe_French.rtf",
 				"ReadMe_German.rtf",
@@ -1050,7 +1097,9 @@
 				"ReadMe_Korean.rtf",
 				"ReadMe_Polish.rtf",
 				"ReadMe_Russian.rtf",
-				"ReadMe_Spanish.rtf",
+				"ReadMe_Spanish.rtf"
+			],
+			"logos":[
 				[
 					"Logo_2KFiraxis.bik",
 					"contains"
@@ -1063,30 +1112,6 @@
 					"UE3TechLogo.bik",
 					"contains"
 				]
-			],
-			"nonenglish":[
-				"Engine\\Localization\\DEU\\",
-				"Engine\\Localization\\ESN\\",
-				"Engine\\Localization\\FRA\\",
-				"Engine\\Localization\\ITA\\",
-				"Engine\\Localization\\JPN\\",
-				"Engine\\Localization\\KOR\\",
-				"Engine\\Localization\\POL\\",
-				"Engine\\Localization\\RUS\\",
-				"XComGame\\PCConsoleTOC_DEU.txt",
-				"XComGame\\PCConsoleTOC_ESN.txt",
-				"XComGame\\PCConsoleTOC_FRA.txt",
-				"XComGame\\PCConsoleTOC_ITA.txt",
-				"XComGame\\PCConsoleTOC_JPN.txt",
-				"XComGame\\PCConsoleTOC_KOR.txt",
-				"XComGame\\PCConsoleTOC_POL.txt",
-				"XComGame\\PCConsoleTOC_RUS.txt",
-				"XComGame\\CookedPCConsole\\XComGame_LOC_DEU.upk",
-				"XComGame\\CookedPCConsole\\XComGame_LOC_ESN.upk",
-				"XComGame\\CookedPCConsole\\XComGame_LOC_FRA.upk",
-				"XComGame\\CookedPCConsole\\XComGame_LOC_ITA.upk",
-				"XComGame\\CookedPCConsole\\XComGame_LOC_POL.upk",
-				"XComGame\\CookedPCConsole\\XComGame_LOC_RUS.upk"
 			]
 		},
 		"207350":{
@@ -1094,7 +1119,7 @@
 				"dxredist\\",
 				"vsredist\\"
 			],
-			"intro":[
+			"intros":[
 				"yso_logo.avi"
 			],
 			"other":[
@@ -1176,5 +1201,5 @@
 			]
 		}
 	},
-	"release":1357473234
+	"release":1357474683
 }

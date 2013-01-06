@@ -54,12 +54,19 @@ engines:
   unreal3:
     nonenglish:
       - [<gamedir>\PCTOC, startswith]
+      - [<gamedir>\PCConsoleTOC, startswith]
       - <gamedir>\CookedPC\Startup_LOC_JPN.upk
       - <gamedir>\CookedPC\Startup_LOC_POL.upk
       - <gamedir>\CookedPC\Startup_LOC_RUS.upk
       - <gamedir>\CookedPC\UDKBase_LOC_JPN.upk
       - <gamedir>\CookedPC\UDKBase_LOC_POL.upk
       - <gamedir>\CookedPC\UDKBase_LOC_RUS.upk
+      - <gamedir>\CookedPC\<gamedir>_LOC_DEU.upk
+      - <gamedir>\CookedPC\<gamedir>_LOC_ESN.upk
+      - <gamedir>\CookedPC\<gamedir>_LOC_FRA.upk
+      - <gamedir>\CookedPC\<gamedir>_LOC_ITA.upk
+      - <gamedir>\CookedPC\<gamedir>_LOC_POL.upk
+      - <gamedir>\CookedPC\<gamedir>_LOC_RUS.upk
       - <gamedir>\Localization\DAN\
       - <gamedir>\Localization\DEU\
       - <gamedir>\Localization\DUT\
@@ -155,7 +162,7 @@ apps:
     redist:
       - Data\DirectXRedist\
       - Data\VCRedist\
-    intro:
+    intros:
       - Data\Video\intro.ogg
       - Data\Video\introLowQuality.ogg
   107100: # Bastion
@@ -306,7 +313,7 @@ apps:
     manual:
       - documents\Deponia_Manual_en.pdf
       - documents\Deponia_Readme_en.txt
-    intro:
+    intros:
       - videos\video.vv001
       - videos\video.vv002
   28050: # Deus Ex: Human Revolution
@@ -389,7 +396,7 @@ apps:
   214830: # Half Minute Hero
     redist:
       - DirectX\
-    intro:
+    intros:
       - res\logomovie.wmv
     other:
       - res\mapdata\yushaMap\mapconv\
@@ -424,7 +431,7 @@ apps:
   97330: # Magic 2013
     redist:
       - PreReqs\
-    intro:
+    intros:
       - Movies\INTRO_BR-PT.wmv
       - Movies\INTRO_DE.wmv
       - Movies\INTRO_EN.wmv
@@ -585,10 +592,21 @@ apps:
       - bin\DirectX\
     other:
       - bin\GDF\
+    intros:
+      - data\bootstrap\movies\introtomain.usm
+    logos:
+      - data-pc\bootstrap\movies\introscea.usm
+      - data-pc\bootstrap\movies\introscee.usm
+    nonenglish:
+      - data\bootstrap\localization\localization_ja.xml
+      - data\bootstrap\localization\localization_xu.xml
   24780: # SimCity 4 Deluxe
-    other:
+    license:
       - EULA\
+    manual:
       - ReadMe\
+      - readme.txt
+    other:
       - Support\
       - - filelist.txt
         - contains
@@ -597,7 +615,6 @@ apps:
       - SC4.ico
       - SC4_ConnectToWebIcon.ico
       - SC4_uninst.exe
-      - readme.txt
   204220: # Snapshot
     redist:
       - redist\
@@ -607,10 +624,10 @@ apps:
   92800: # SpaceChem
     redist:
       - dotNetFx35setup.exe
-    other:
+    license:
       - LICENSE.txt
       - PRIVACY.txt
-      - rgb2theora.exe
+    other:
       - SOUND-CREDITS.txt
       - spacechem.ico
     nonenglish:
@@ -626,22 +643,25 @@ apps:
     redist:
       - directx_aug2009_redist\
   221640: # Super Hexagon
-    other:
+    license:
       - licence.txt
-      - readme.txt
       - data\license.txt
+    manual:
+      - readme.txt
   204060: # Superbrothers Sword & Sworcery EP
     redist:
       - Drivers\
-    other:
+    license:
       - eula.txt
       - lgpl-3.0.txt
+    manual:
       - README.html
+    extras:
       - soundtrack\
   67370: # The Darkness II
     redist:
       - Drivers\
-    other:
+    license:
       - eula.rtf
       - eula_french.rtf
       - eula_german.rtf
@@ -649,6 +669,7 @@ apps:
       - eula_japanese.rtf
       - eula_russian.rtf
       - eula_spanish.rtf
+    manual:
       - readme.txt
       - readme_french.txt
       - readme_german.txt
@@ -661,13 +682,14 @@ apps:
       - DirectX10\
       - DotNetFX\
       - VCRedist\
-    other:
+    manual:
       - readme.txt
+    logos:
       - Data\Video\BGS_Logo.bik
   20920: # The Witcher 2
     redist:
       - redist\
-    other:
+    manual:
       - ReadMe.txt
       - readme_CZ.rtf
       - readme_DE.rtf
@@ -742,24 +764,32 @@ apps:
       - directx\
       - PhysX_9.09.0408_SystemSoftware.exe
       - WMFDist11-WindowsXP-X86-ENU.exe
+    other:
+      - Trine_updates.txt
   18120: # Unstoppable Gorg
+    engine:
+      name: unity
+      gamedir: unstoppable_gorg_Data
     redist:
       - DirectX\
   102400: # Vertex Dispenser
-    other:
+    manual:
       - manual.pdf
       - README.txt
   207420: # Wizorb
     redist:
       - Dependencies\
-    other:
+    manual:
       - README.txt
   200510: # XCOM: Enemy Unknown
+    engine:
+      name: unreal3
+      gamedir: XComGame
     redist:
       - AMD Dual Core Optimizer\
       - DirectX\
       - VCRedist\
-    other:
+    manual:
       - ReadMe_English.rtf
       - ReadMe_French.rtf
       - ReadMe_German.rtf
@@ -769,40 +799,18 @@ apps:
       - ReadMe_Polish.rtf
       - ReadMe_Russian.rtf
       - ReadMe_Spanish.rtf
+    logos:
       - - Logo_2KFiraxis.bik
         - contains
       - - LogoLegal_
         - contains
       - - UE3TechLogo.bik
         - contains
-    nonenglish:
-      - Engine\Localization\DEU\
-      - Engine\Localization\ESN\
-      - Engine\Localization\FRA\
-      - Engine\Localization\ITA\
-      - Engine\Localization\JPN\
-      - Engine\Localization\KOR\
-      - Engine\Localization\POL\
-      - Engine\Localization\RUS\
-      - XComGame\PCConsoleTOC_DEU.txt
-      - XComGame\PCConsoleTOC_ESN.txt
-      - XComGame\PCConsoleTOC_FRA.txt
-      - XComGame\PCConsoleTOC_ITA.txt
-      - XComGame\PCConsoleTOC_JPN.txt
-      - XComGame\PCConsoleTOC_KOR.txt
-      - XComGame\PCConsoleTOC_POL.txt
-      - XComGame\PCConsoleTOC_RUS.txt
-      - XComGame\CookedPCConsole\XComGame_LOC_DEU.upk
-      - XComGame\CookedPCConsole\XComGame_LOC_ESN.upk
-      - XComGame\CookedPCConsole\XComGame_LOC_FRA.upk
-      - XComGame\CookedPCConsole\XComGame_LOC_ITA.upk
-      - XComGame\CookedPCConsole\XComGame_LOC_POL.upk
-      - XComGame\CookedPCConsole\XComGame_LOC_RUS.upk
   207350: # Ys Origin
     redist:
       - dxredist\
       - vsredist\
-    intro:
+    intros:
       - yso_logo.avi
     other:
       - release\programs\copyrights.txt
