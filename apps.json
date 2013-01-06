@@ -1122,7 +1122,7 @@
 			"intros":[
 				"yso_logo.avi"
 			],
-			"other":[
+			"license":[
 				"release\\programs\\copyrights.txt"
 			]
 		},
@@ -1143,8 +1143,10 @@
 				"PhysX\\",
 				"VcRedist\\"
 			],
+			"license":[
+				"Documentation\\"
+			],
 			"other":[
-				"Documentation\\",
 				"Release\\ZD_icon.ico",
 				"RelWithDebInfo\\"
 			],
@@ -1174,7 +1176,7 @@
 				"DirectX\\",
 				"VcRedist\\"
 			],
-			"other":[
+			"license":[
 				"Documentation\\"
 			],
 			"nonenglish":[
@@ -1201,5 +1203,5 @@
 			]
 		}
 	},
-	"release":1357474683
+	"release":1357474877
 }

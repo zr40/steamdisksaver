@@ -812,7 +812,7 @@ apps:
       - vsredist\
     intros:
       - yso_logo.avi
-    other:
+    license:
       - release\programs\copyrights.txt
   61600: # Zen Bound 2
     nonenglish:
@@ -828,8 +828,9 @@ apps:
       - OpenAl\
       - PhysX\
       - VcRedist\
-    other:
+    license:
       - Documentation\
+    other:
       - Release\ZD_icon.ico
       - RelWithDebInfo\
     nonenglish:
@@ -855,7 +856,7 @@ apps:
     redist:
       - DirectX\
       - VcRedist\
-    other:
+    license:
       - Documentation\
     nonenglish:
       - - Packs\Win32_Fr_Res
