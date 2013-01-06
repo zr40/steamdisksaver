@@ -1,6 +1,5 @@
-using System;
+using System.Diagnostics;
 using System.Json;
-using System.Windows.Forms;
 
 namespace SteamDiskSaver.Metadata
 {
@@ -9,6 +8,7 @@ namespace SteamDiskSaver.Metadata
 		private readonly string pathMatch;
 		internal readonly bool EmptyFile;
 		private readonly bool matchContains;
+		private readonly bool matchStartsWith;
 		private readonly bool ignore;
 
 		internal PathMatch(JsonValue rule)
@@ -35,9 +35,13 @@ namespace SteamDiskSaver.Metadata
 							EmptyFile = true;
 							break;
 
+						case "startswith":
+							matchStartsWith = true;
+							break;
+
 						default:
-							MessageBox.Show(string.Format("Unknown flag '{0}' for match '{1}'", flag, pathMatch), "Metadata error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-							Environment.Exit(1);
+							ignore = true;
+							Debug.WriteLine("Unknown flag '{0}' for match '{1}'", flag, pathMatch);
 							return;
 					}
 				}
@@ -48,18 +52,21 @@ namespace SteamDiskSaver.Metadata
 		{
 			foreach (var replacement in replacements)
 			{
-				pathMatch = pathMatch.Replace(':' + replacement.Key + ':', (string)replacement.Value);
+				pathMatch = pathMatch.Replace('<' + replacement.Key + '>', (string) replacement.Value);
 			}
 
-			ignore = pathMatch.Contains(":"); // unreplaced argument. Ignore this match
+			ignore |= pathMatch.Contains("<") || pathMatch.Contains(">"); // unreplaced argument. Ignore this match
 		}
 
 		internal bool Match(string path)
 		{
+			if (matchStartsWith || pathMatch.EndsWith("\\"))
+				return path.StartsWith(pathMatch);
+
 			if (matchContains)
 				return path.Contains(pathMatch);
 
-			return (path == pathMatch || (pathMatch.EndsWith("\\") && path.StartsWith(pathMatch)));
+			return path == pathMatch;
 		}
 	}
 }

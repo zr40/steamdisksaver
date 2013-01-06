@@ -90,8 +90,6 @@ namespace SteamDiskSaver.Metadata
 					cat.AddApp(id, app, engines);
 				}
 			}
-
-
 		}
 	}
 }

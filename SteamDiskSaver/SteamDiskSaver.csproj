@@ -35,22 +35,25 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Json">
       <HintPath>..\packages\System.Json.4.0.20126.16343\lib\net40\System.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
     <Compile Include="Apps\App.cs" />
     <Compile Include="Apps\AppManifestItem.cs" />
     <Compile Include="Apps\AppManifestParser.cs" />
+    <Compile Include="Apps\DeletableFile.cs" />
+    <Compile Include="Apps\DirectoryWalker.cs" />
+    <Compile Include="Apps\IgnoreAppException.cs" />
     <Compile Include="CategoriesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,11 +66,6 @@
     <Compile Include="CategoryControl.Designer.cs">
       <DependentUpon>CategoryControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apps\DeletableFile.cs" />
-    <Compile Include="Apps\DirectoryWalker.cs" />
-    <Compile Include="Win32\FindFilesEnumerator.cs" />
-    <Compile Include="Win32\FindFilesHandle.cs" />
-    <Compile Include="Apps\IgnoreAppException.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
@@ -84,12 +82,17 @@
     <Compile Include="Metadata\AppMetadata.cs" />
     <Compile Include="Metadata\Category.cs" />
     <Compile Include="Metadata\PathMatch.cs" />
-    <Compile Include="Win32\NativeMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32\FindFilesEnumerator.cs" />
+    <Compile Include="Win32\FindFilesHandle.cs" />
+    <Compile Include="Win32\NativeMethods.cs" />
     <None Include="app.config" />
     <None Include="CategoriesForm.resx">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </None>
+    <None Include="CategoryControl.resx">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
     </None>
     <None Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
@@ -98,11 +101,6 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="CategoryControl.resx">
-      <DependentUpon>CategoryControl.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
