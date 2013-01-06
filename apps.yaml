@@ -54,7 +54,15 @@ engines:
   unreal3:
     nonenglish:
       - [<gamedir>\PCTOC, startswith]
+      - <gamedir>\CookedPC\Startup_LOC_JPN.upk
+      - <gamedir>\CookedPC\Startup_LOC_POL.upk
+      - <gamedir>\CookedPC\Startup_LOC_RUS.upk
+      - <gamedir>\CookedPC\UDKBase_LOC_JPN.upk
+      - <gamedir>\CookedPC\UDKBase_LOC_POL.upk
+      - <gamedir>\CookedPC\UDKBase_LOC_RUS.upk
+      - <gamedir>\Localization\DAN\
       - <gamedir>\Localization\DEU\
+      - <gamedir>\Localization\DUT\
       - <gamedir>\Localization\ESM\
       - <gamedir>\Localization\ESN\
       - <gamedir>\Localization\FRA\
@@ -63,6 +71,8 @@ engines:
       - <gamedir>\Localization\POL\
       - <gamedir>\Localization\POR\
       - <gamedir>\Localization\RUS\
+      - <gamedir>\Localization\SWE\
+      - <gamedir>\Localization\TUR\
       - Engine\Localization\CHN\
       - Engine\Localization\CZE\
       - Engine\Localization\DEU\
@@ -82,10 +92,12 @@ engines:
       - Binaries\wxRes\
       - Engine\EditorResources\
       - Engine\Extras\3dsMaxScripts\
+      - Engine\Localization\INT\EditorMapTemplates.int
       - Engine\Localization\INT\EditorTips.int
       - Engine\Localization\INT\GFxUIEditor.int
       - Engine\Localization\INT\UnrealEd.int
       - Engine\Localization\INT\UnrealScriptTest.int
+      - <gamedir>\CookedPC\UnrealEd.u
     other:
       - [Engine\Localization\Readme.UDK., startswith]
       - <gamedir>\Config\Mac\
