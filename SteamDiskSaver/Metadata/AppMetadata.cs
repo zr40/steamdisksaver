@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Json;
 using System.Net;
@@ -78,6 +79,7 @@ namespace SteamDiskSaver.Metadata
 
 			var engines = data["engines"];
 
+
 			foreach (var item in data["apps"])
 			{
 				var id = int.Parse(item.Key);
@@ -85,9 +87,23 @@ namespace SteamDiskSaver.Metadata
 
 				Known.Add(id);
 
+				var categoriesInApp = new HashSet<string>();
+				foreach (var cat in app)
+				{
+					categoriesInApp.Add(cat.Key);
+				}
+
+				categoriesInApp.Remove("engine");
+
 				foreach (var cat in Categories)
 				{
+					categoriesInApp.Remove(cat.Key);
 					cat.AddApp(id, app, engines);
+				}
+
+				foreach (var cat in categoriesInApp)
+				{
+					Debug.WriteLine("Unknown category {0} in {1}", cat, id);
 				}
 			}
 		}

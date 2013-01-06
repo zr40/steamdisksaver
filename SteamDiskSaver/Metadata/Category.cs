@@ -9,7 +9,7 @@ namespace SteamDiskSaver.Metadata
 {
 	internal sealed class Category
 	{
-		private readonly string key;
+		internal readonly string Key;
 		internal readonly string Name;
 		internal readonly string Description;
 		private readonly bool @default;
@@ -22,7 +22,7 @@ namespace SteamDiskSaver.Metadata
 
 		internal Category(string key, JsonValue data)
 		{
-			this.key = key;
+			this.Key = key;
 			Name = (string) data["name"];
 			Description = (string) data["description"];
 			@default = (bool) data["default"];
@@ -36,18 +36,18 @@ namespace SteamDiskSaver.Metadata
 		{
 			var matches = new List<PathMatch>();
 
-			if (app.ContainsKey(key))
+			if (app.ContainsKey(Key))
 			{
-				matches.AddRange(app[key].Select(match => new PathMatch(match.Value)));
+				matches.AddRange(app[Key].Select(match => new PathMatch(match.Value)));
 			}
 
 			if (app.ContainsKey("engine"))
 			{
 				var args = app["engine"];
 				var engine = engines[(string) args["name"]];
-				if (engine.ContainsKey(key))
+				if (engine.ContainsKey(Key))
 				{
-					matches.AddRange(engine[key].Select(match => new PathMatch(match.Value, args)));
+					matches.AddRange(engine[Key].Select(match => new PathMatch(match.Value, args)));
 				}
 			}
 
@@ -56,7 +56,7 @@ namespace SteamDiskSaver.Metadata
 
 		internal void SavePreference()
 		{
-			Registry.SetValue(@"HKEY_CURRENT_USER\Software\zr40.nl\Steam Disk Saver\Categories", key, Convert.ToInt32(Selected));
+			Registry.SetValue(@"HKEY_CURRENT_USER\Software\zr40.nl\Steam Disk Saver\Categories", Key, Convert.ToInt32(Selected));
 		}
 	}
 }
