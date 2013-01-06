@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -17,7 +18,7 @@ namespace SteamDiskSaver
 		internal AppMetadata Metadata;
 		private List<CategoryControl> CategoryControls = new List<CategoryControl>();
 
-		private void CategoriesForm_Load(object sender, System.EventArgs e)
+		private void CategoriesForm_Load(object sender, EventArgs e)
 		{
 			foreach (var category in Metadata.Categories)
 			{
@@ -35,13 +36,12 @@ namespace SteamDiskSaver
 			}
 
 			flowLayoutPanel1.PerformLayout();
-			
 
 			Left = Owner.Left + Owner.Width / 2 - Width / 2;
 			Top = Owner.Top + Owner.Height / 2 - Height / 2;
 		}
 
-		private void button1_Click(object sender, System.EventArgs e)
+		private void button1_Click(object sender, EventArgs e)
 		{
 			foreach (var control in CategoryControls)
 			{

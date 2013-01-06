@@ -44,7 +44,7 @@ namespace SteamDiskSaver.Metadata
 			if (app.ContainsKey("engine"))
 			{
 				var args = app["engine"];
-				var engine = engines[(string)args["name"]];
+				var engine = engines[(string) args["name"]];
 				if (engine.ContainsKey(key))
 				{
 					matches.AddRange(engine[key].Select(match => new PathMatch(match.Value, args)));

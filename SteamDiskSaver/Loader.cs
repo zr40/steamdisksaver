@@ -39,27 +39,27 @@ namespace SteamDiskSaver
 				var metadata = AppMetadata.GetMetadata();
 
 				Done(files.Select(f =>
-				                    {
-					                    AppManifestItem appManifestItem;
-					                    using (var s = File.OpenRead(f))
-						                    appManifestItem = AppManifestParser.Parse(s)["AppState"];
+				                  {
+					                  AppManifestItem appManifestItem;
+					                  using (var s = File.OpenRead(f))
+						                  appManifestItem = AppManifestParser.Parse(s)["AppState"];
 
-					                    Progress(++currentProgress);
-					                    if (appManifestItem["UserConfig"].Items.ContainsKey("name"))
-						                    Status(appManifestItem["UserConfig"]["name"]);
-					                    else
-						                    Status(appManifestItem["installdir"].Value.Split('\\').Last());
-					                    Application.DoEvents();
+					                  Progress(++currentProgress);
+					                  if (appManifestItem["UserConfig"].Items.ContainsKey("name"))
+						                  Status(appManifestItem["UserConfig"]["name"]);
+					                  else
+						                  Status(appManifestItem["installdir"].Value.Split('\\').Last());
+					                  Application.DoEvents();
 
-					                    try
-					                    {
-						                    return new App(metadata, appManifestItem, path);
-					                    }
-					                    catch (IgnoreAppException)
-					                    {
-						                    return (App) null;
-					                    }
-				                    }).Where(n => n != null).ToList(), metadata);
+					                  try
+					                  {
+						                  return new App(metadata, appManifestItem, path);
+					                  }
+					                  catch (IgnoreAppException)
+					                  {
+						                  return (App) null;
+					                  }
+				                  }).Where(n => n != null).ToList(), metadata);
 			}
 			catch (DirectoryNotFoundException)
 			{
