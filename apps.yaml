@@ -564,7 +564,7 @@ apps:
       gamedir: SanctumGame
     redist:
       - Install\
-    extra:
+    extras:
       - Soundtrack\
     license:
       - UE3_THIRD_PARTY_SOFTWARE.pdf

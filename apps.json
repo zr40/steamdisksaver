@@ -799,7 +799,7 @@
 			"redist":[
 				"Install\\"
 			],
-			"extra":[
+			"extras":[
 				"Soundtrack\\"
 			],
 			"license":[
@@ -1164,5 +1164,5 @@
 			]
 		}
 	},
-	"release":1357471611
+	"release":1357472979
 }
