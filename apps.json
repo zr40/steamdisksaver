@@ -26,10 +26,10 @@
 			"benefit":"improve the game launch time.",
 			"default":true
 		},
-		"soundtrack":{
-			"name":"soundtrack",
-			"description":"Stand-alone soundtrack.",
-			"keep_if":"you want to listen to the game's soundtrack outside of the game.",
+		"extras":{
+			"name":"extra content",
+			"description":"Stand-alone content, like soundtracks and wallpapers.",
+			"keep_if":"you want to use the extra content outside of the game.",
 			"default":true
 		},
 		"manual":{
@@ -58,25 +58,25 @@
 	"engines":{
 		"unity":{
 			"other":[
-				"gamedir:\\Mono\\etc\\",
-				"gamedir:\\Managed\\UnityEngine.dll.mdb"
+				"<gamedir>\\Mono\\etc\\",
+				"<gamedir>\\Managed\\UnityEngine.dll.mdb"
 			]
 		},
 		"unreal3":{
 			"nonenglish":[
 				[
-					":gamedir:\\PCTOC",
-					"contains"
+					"<gamedir>\\PCTOC",
+					"startswith"
 				],
-				":gamedir:\\Localization\\DEU\\",
-				":gamedir:\\Localization\\ESM\\",
-				":gamedir:\\Localization\\ESN\\",
-				":gamedir:\\Localization\\FRA\\",
-				":gamedir:\\Localization\\ITA\\",
-				":gamedir:\\Localization\\JPN\\",
-				":gamedir:\\Localization\\POL\\",
-				":gamedir:\\Localization\\POR\\",
-				":gamedir:\\Localization\\RUS\\",
+				"<gamedir>\\Localization\\DEU\\",
+				"<gamedir>\\Localization\\ESM\\",
+				"<gamedir>\\Localization\\ESN\\",
+				"<gamedir>\\Localization\\FRA\\",
+				"<gamedir>\\Localization\\ITA\\",
+				"<gamedir>\\Localization\\JPN\\",
+				"<gamedir>\\Localization\\POL\\",
+				"<gamedir>\\Localization\\POR\\",
+				"<gamedir>\\Localization\\RUS\\",
 				"Engine\\Localization\\CHN\\",
 				"Engine\\Localization\\CZE\\",
 				"Engine\\Localization\\DEU\\",
@@ -105,13 +105,13 @@
 			"other":[
 				[
 					"Engine\\Localization\\Readme.UDK.",
-					"contains"
+					"startswith"
 				],
-				":gamedir:\\Config\\Mac\\",
-				":gamedir:\\Config\\Mobile\\",
-				":gamedir:\\Config\\NGP\\",
-				":gamedir:\\Config\\PS3\\",
-				":gamedir:\\Config\\Xbox360\\",
+				"<gamedir>\\Config\\Mac\\",
+				"<gamedir>\\Config\\Mobile\\",
+				"<gamedir>\\Config\\NGP\\",
+				"<gamedir>\\Config\\PS3\\",
+				"<gamedir>\\Config\\Xbox360\\",
 				"Engine\\Config\\Mac\\",
 				"Engine\\Config\\Mobile\\",
 				"Engine\\Config\\NGP\\",
@@ -127,7 +127,7 @@
 			"license":[
 				[
 					"Engine\\Localization\\EULA.UDK.",
-					"contains"
+					"startswith"
 				]
 			]
 		}
@@ -259,6 +259,9 @@
 		"80330":{
 		},
 		"80340":{
+			"other":[
+				"New folder\\"
+			]
 		},
 		"80350":{
 		},
@@ -357,14 +360,16 @@
 			"redist":[
 				"redist\\"
 			],
-			"other":[
+			"logos":[
 				[
 					"LOTDGame\\Movies\\splash_screen_0",
-					"contains"
-				],
+					"startswith"
+				]
+			],
+			"other":[
 				[
 					"LOTDGame\\Movies\\cassette",
-					"contains"
+					"startswith"
 				]
 			]
 		},
@@ -425,7 +430,7 @@
 				"directx\\",
 				"msvc2010\\"
 			],
-			"other":[
+			"logos":[
 				"base\\video\\loadvideo.bik"
 			]
 		},
@@ -449,11 +454,15 @@
 				"vcredist_x64.exe",
 				"vcredist_x86.exe"
 			],
-			"other":[
+			"manual":[
 				"Readme.txt",
-				"Manual.pdf",
+				"Manual.pdf"
+			],
+			"other":[
 				"Install.iss",
-				"Eufloria.ico",
+				"Eufloria.ico"
+			],
+			"license":[
 				"readmes\\"
 			]
 		},
@@ -481,26 +490,36 @@
 			"redist":[
 				"Extras\\"
 			],
+			"logos":[
+				"data_common\\BFG Logo 1080p.wmv"
+			],
 			"other":[
-				"data_common\\BFG Logo 1080p.wmv",
-				"7z_copying.txt",
-				"7z_license.txt",
 				"7z_readme.txt",
-				"EULA_DE.docx",
-				"EULA_DE.pdf",
-				"EULA_EN.docx",
-				"EULA_EN.pdf",
-				"launcher\\NVIDIA_Texture_Tools_LICENSE.txt",
 				"launcher\\de",
 				"launcher\\en",
 				"launcher\\es",
 				"launcher\\fr",
 				"launcher\\it"
+			],
+			"license":[
+				"7z_copying.txt",
+				"7z_license.txt",
+				"EULA_DE.docx",
+				"EULA_DE.pdf",
+				"EULA_EN.docx",
+				"EULA_EN.pdf",
+				"launcher\\NVIDIA_Texture_Tools_LICENSE.txt"
 			]
 		},
 		"48950":{
 			"redist":[
 				"DirectX\\"
+			],
+			"nonenglish":[
+				"Scaleform\\tbs_intro_movie_subtitles_FR\\",
+				"Scaleform\\tbs_intro_movie_subtitles_GE\\",
+				"Scaleform\\tbs_intro_movie_subtitles_NL\\",
+				"Scaleform\\tbs_intro_movie_subtitles_SP\\"
 			]
 		},
 		"214830":{
@@ -550,7 +569,7 @@
 			"redist":[
 				"3rd\\"
 			],
-			"other":[
+			"manual":[
 				"readmeDEU.txt",
 				"readmeENG.txt",
 				"readmeESP.txt",
@@ -574,7 +593,7 @@
 				"Movies\\INTRO_RU.wmv",
 				"Movies\\INTRO_SP.wmv"
 			],
-			"other":[
+			"logos":[
 				"Movies\\Stainless_Movie.wmv",
 				"Movies\\WotC_Movie.wmv",
 				"Movies\\WotC_Movie_R.wmv"
@@ -584,7 +603,7 @@
 			"redist":[
 				"data-pc\\DirectX\\"
 			],
-			"other":[
+			"logos":[
 				"data\\bootstrap\\movies\\"
 			]
 		},
@@ -605,8 +624,10 @@
 			"redist":[
 				"redist\\"
 			],
+			"extras":[
+				"Soundtrack\\"
+			],
 			"other":[
-				"Soundtrack\\",
 				"MinerWars.ico",
 				"MinerWarsUserFolderOpener.ico"
 			]
@@ -615,7 +636,23 @@
 			"redist":[
 				"redist\\"
 			],
-			"other":[
+			"editor":[
+				"Builder.com",
+				"Builder.exe",
+				"builder_setup.xml",
+				"builder_setup_development.xml",
+				"CinematicEditor.exe",
+				"Decoda.chm",
+				"Decoda.exe",
+				"Editor Manual.pdf",
+				"Editor.exe",
+				"Mapping Guidelines.pdf",
+				"Viewer.exe"
+			],
+			"manual":[
+				"Dedicated_Server_Usage.txt"
+			],
+			"extras":[
 				"DeluxeEdition\\"
 			]
 		},
@@ -630,7 +667,9 @@
 				"nd_osx.sh",
 				"ndsrv_osx",
 				"srcds_linux",
-				"srcds_run",
+				"srcds_run"
+			],
+			"logos":[
 				"nucleardawn\\media\\iw.bik"
 			]
 		},
@@ -643,12 +682,18 @@
 				"bin\\QtWebKitUnigine_x864.dll",
 				"bin\\QtXmlUnigine_x864.dll",
 				"data\\launcher\\",
+				"launcher_x86.bat"
+			],
+			"logos":[
 				"data\\oilrush\\video\\nvidia_twimtbp.ogv",
 				"data\\oilrush\\video\\oil_rush_logo.ogv",
 				"data\\oilrush\\video\\raknet_logo.ogv",
-				"data\\oilrush\\video\\unigine_logo.ogv",
-				"documentation\\",
-				"launcher_x86.bat",
+				"data\\oilrush\\video\\unigine_logo.ogv"
+			],
+			"manual":[
+				"documentation\\"
+			],
+			"extras":[
 				"ost\\"
 			],
 			"nonenglish":[
@@ -657,34 +702,32 @@
 					"contains"
 				],
 				[
-					".fr.",
+					".ru.",
 					"contains"
 				],
 				[
-					".ru.",
+					".fr.",
 					"contains"
 				]
 			]
 		},
 		"105800":{
-			"other":[
+			"license":[
 				"doc\\"
-			]
-		},
-		"80300":{
-			"other":[
-				"EULA.txt",
-				"preload.pcx",
-				"winsetup.exe"
 			]
 		},
 		"3830":{
 			"redist":[
 				"redist\\"
 			],
-			"other":[
-				"Documents\\",
-				"Psychonauts Manual Win.pdf",
+			"license":[
+				"Documents\\EULAs\\"
+			],
+			"manual":[
+				"Documents\\Readmes\\",
+				"Psychonauts Manual Win.pdf"
+			],
+			"logos":[
 				"WorkResource\\Cutscenes\\Prerendered\\DFLogo.bik"
 			],
 			"nonenglish":[
@@ -695,6 +738,17 @@
 				"WorkResource\\Localization\\Spanish\\",
 				"WorkResource\\Sounds\\French\\",
 				"WorkResource\\Sounds\\German\\"
+			]
+		},
+		"80300":{
+			"license":[
+				"EULA.txt"
+			],
+			"logos":[
+				"preload.pcx"
+			],
+			"other":[
+				"winsetup.exe"
 			]
 		},
 		"102600":{
@@ -1148,5 +1202,5 @@
 			]
 		}
 	},
-	"release":1357429885
+	"release":1357471379
 }

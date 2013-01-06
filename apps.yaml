@@ -21,10 +21,10 @@ categories:
     description: These publisher, developer and software logos are always shown when launching the game.
     benefit: improve the game launch time.
     default: true
-  soundtrack:
-    name: soundtrack
-    description: Stand-alone soundtrack.
-    keep_if: you want to listen to the game's soundtrack outside of the game.
+  extras:
+    name: extra content
+    description: Stand-alone content, like soundtracks and wallpapers.
+    keep_if: you want to use the extra content outside of the game.
     default: true
   manual:
     name: manuals
@@ -49,21 +49,20 @@ categories:
 engines:
   unity:
     other:
-      - :gamedir:\Mono\etc\
-      - :gamedir:\Managed\UnityEngine.dll.mdb
+      - <gamedir>\Mono\etc\
+      - <gamedir>\Managed\UnityEngine.dll.mdb
   unreal3:
     nonenglish:
-      - - ':gamedir:\PCTOC'
-        - contains
-      - ':gamedir:\Localization\DEU\'
-      - ':gamedir:\Localization\ESM\'
-      - ':gamedir:\Localization\ESN\'
-      - ':gamedir:\Localization\FRA\'
-      - ':gamedir:\Localization\ITA\'
-      - ':gamedir:\Localization\JPN\'
-      - ':gamedir:\Localization\POL\'
-      - ':gamedir:\Localization\POR\'
-      - ':gamedir:\Localization\RUS\'
+      - [<gamedir>\PCTOC, startswith]
+      - <gamedir>\Localization\DEU\
+      - <gamedir>\Localization\ESM\
+      - <gamedir>\Localization\ESN\
+      - <gamedir>\Localization\FRA\
+      - <gamedir>\Localization\ITA\
+      - <gamedir>\Localization\JPN\
+      - <gamedir>\Localization\POL\
+      - <gamedir>\Localization\POR\
+      - <gamedir>\Localization\RUS\
       - Engine\Localization\CHN\
       - Engine\Localization\CZE\
       - Engine\Localization\DEU\
@@ -88,13 +87,12 @@ engines:
       - Engine\Localization\INT\UnrealEd.int
       - Engine\Localization\INT\UnrealScriptTest.int
     other:
-      - - Engine\Localization\Readme.UDK.
-        - contains
-      - ':gamedir:\Config\Mac\'
-      - ':gamedir:\Config\Mobile\'
-      - ':gamedir:\Config\NGP\'
-      - ':gamedir:\Config\PS3\'
-      - ':gamedir:\Config\Xbox360\'
+      - [Engine\Localization\Readme.UDK., startswith]
+      - <gamedir>\Config\Mac\
+      - <gamedir>\Config\Mobile\
+      - <gamedir>\Config\NGP\
+      - <gamedir>\Config\PS3\
+      - <gamedir>\Config\Xbox360\
       - Engine\Config\Mac\
       - Engine\Config\Mobile\
       - Engine\Config\NGP\
@@ -107,8 +105,7 @@ engines:
       - Engine\Splash\Xbox360\
       - Engine\Stats\
     license:
-      - - Engine\Localization\EULA.UDK.
-        - contains
+      - [Engine\Localization\EULA.UDK., startswith]
 apps:
   207650: # A Virus Named TOM
     redist:
@@ -202,7 +199,9 @@ apps:
     license:
       - ThirdPartyLicenses.txt
   80330: {} # The Blackwell Legacy
-  80340: {} # Blackwell Unbound
+  80340: # Blackwell Unbound
+    other:
+      - New folder\
   80350: {} # Blackwell Convergence
   15390: # Brothers in Arms: Hell's Highway
     engine:
@@ -273,23 +272,18 @@ apps:
       gamedir: LOTDGame
     redist:
       - redist\
+    logos:
+      - [LOTDGame\Movies\splash_screen_0, startswith]
     other:
-      - - LOTDGame\Movies\splash_screen_0
-        - contains
-      - - LOTDGame\Movies\cassette
-        - contains
+      - [LOTDGame\Movies\cassette, startswith]
   18500: # Defense Grid: The Awakening
     redist:
       - DirectX\
     nonenglish:
-      - - dede
-        - contains
-      - - eses
-        - contains
-      - - frfr
-        - contains
-      - - itit
-        - contains
+      - [dede, contains]
+      - [eses, contains]
+      - [frfr, contains]
+      - [itit, contains]
     manual:
       - manual.pdf
   214340: # Deponia
@@ -313,7 +307,7 @@ apps:
     redist:
       - directx\
       - msvc2010\
-    other:
+    logos:
       - base\video\loadvideo.bik
   570: # Dota 2
     redist:
@@ -330,11 +324,13 @@ apps:
     redist:
       - vcredist_x64.exe
       - vcredist_x86.exe
-    other:
+    manual:
       - Readme.txt
       - Manual.pdf
+    other:
       - Install.iss
       - Eufloria.ico
+    license:
       - readmes\
   32150: # Everyday Genius: SquareLogic
     other:
@@ -352,25 +348,32 @@ apps:
   223220: # Giana Sisters: Twisted Dreams
     redist:
       - Extras\
-    other:
+    logos:
       - data_common\BFG Logo 1080p.wmv
-      - 7z_copying.txt
-      - 7z_license.txt
+    other:
       - 7z_readme.txt
-      - EULA_DE.docx
-      - EULA_DE.pdf
-      - EULA_EN.docx
-      - EULA_EN.pdf
-      - launcher\NVIDIA_Texture_Tools_LICENSE.txt
       - launcher\de
       - launcher\en
       - launcher\es
       - launcher\fr
       - launcher\it
+    license:
+      - 7z_copying.txt
+      - 7z_license.txt
+      - EULA_DE.docx
+      - EULA_DE.pdf
+      - EULA_EN.docx
+      - EULA_EN.pdf
+      - launcher\NVIDIA_Texture_Tools_LICENSE.txt
   48950: # Greed Corp
     redist:
       - DirectX\
     # intro isn't deletable :(
+    nonenglish:
+      - Scaleform\tbs_intro_movie_subtitles_FR\
+      - Scaleform\tbs_intro_movie_subtitles_GE\
+      - Scaleform\tbs_intro_movie_subtitles_NL\
+      - Scaleform\tbs_intro_movie_subtitles_SP\
   214830: # Half Minute Hero
     redist:
       - DirectX\
@@ -382,10 +385,8 @@ apps:
     redist:
       - Redist\
     other:
-      - - Content\LOGO\LOGO_Arkedo.wmv
-        - empty
-      - - Content\LOGO\LOGO_Sega.wmv
-        - empty
+      - [Content\LOGO\LOGO_Arkedo.wmv, empty]
+      - [Content\LOGO\LOGO_Sega.wmv, empty]
     nonenglish:
       - de\
       - es\
@@ -401,7 +402,7 @@ apps:
   110800: # L.A. Noire
     redist:
       - 3rd\
-    other:
+    manual:
       - readmeDEU.txt
       - readmeENG.txt
       - readmeESP.txt
@@ -421,14 +422,14 @@ apps:
       - Movies\INTRO_KO.wmv
       - Movies\INTRO_RU.wmv
       - Movies\INTRO_SP.wmv
-    other:
+    logos:
       - Movies\Stainless_Movie.wmv
       - Movies\WotC_Movie.wmv
       - Movies\WotC_Movie_R.wmv
   214560: # Mark of the Ninja
     redist:
       - data-pc\DirectX\
-    other:
+    logos:
       - data\bootstrap\movies\
   43110: # Metro 2033
     redist:
@@ -443,14 +444,29 @@ apps:
   223430: # Miner Wars 2081
     redist:
       - redist\
-    other:
+    extras:
       - Soundtrack\
+    other:
       - MinerWars.ico
       - MinerWarsUserFolderOpener.ico
   4920: # Natural Selection 2
     redist:
       - redist\
-    other:
+    editor:
+      - Builder.com
+      - Builder.exe
+      - builder_setup.xml
+      - builder_setup_development.xml
+      - CinematicEditor.exe
+      - Decoda.chm
+      - Decoda.exe
+      - Editor Manual.pdf
+      - Editor.exe
+      - Mapping Guidelines.pdf
+      - Viewer.exe
+    manual:
+      - Dedicated_Server_Usage.txt
+    extras:
       - DeluxeEdition\
   17710: # Nuclear Dawn
     redist:
@@ -463,6 +479,7 @@ apps:
       - ndsrv_osx
       - srcds_linux
       - srcds_run
+    logos:
       - nucleardawn\media\iw.bik
   200390: # Oil Rush
     other:
@@ -473,34 +490,32 @@ apps:
       - bin\QtWebKitUnigine_x864.dll
       - bin\QtXmlUnigine_x864.dll
       - data\launcher\
+      - launcher_x86.bat
+    logos:
       - data\oilrush\video\nvidia_twimtbp.ogv
       - data\oilrush\video\oil_rush_logo.ogv
       - data\oilrush\video\raknet_logo.ogv
       - data\oilrush\video\unigine_logo.ogv
+    manual:
       - documentation\
-      - launcher_x86.bat
+    extras:
       - ost\
     nonenglish:
-      - - .de.
-        - contains
-      - - .fr.
-        - contains
-      - - .ru.
-        - contains
+      - [.de., contains]
+      - [.ru., contains]
+      - [.fr., contains]
   105800: # PixelJunk Eden
-    other:
+    license:
       - doc\
-  80300: # Puzzle Bots
-    other:
-      - EULA.txt
-      - preload.pcx
-      - winsetup.exe
   3830: # Psychonauts
     redist:
       - redist\
-    other:
-      - Documents\
+    license:
+      - Documents\EULAs\
+    manual:
+      - Documents\Readmes\
       - Psychonauts Manual Win.pdf
+    logos:
       - WorkResource\Cutscenes\Prerendered\DFLogo.bik
     nonenglish:
       - WorkResource\Localization\French\
@@ -510,6 +525,13 @@ apps:
       - WorkResource\Localization\Spanish\
       - WorkResource\Sounds\French\
       - WorkResource\Sounds\German\
+  80300: # Puzzle Bots
+    license:
+      - EULA.txt
+    logos:
+      - preload.pcx
+    other:
+      - winsetup.exe
   102600: # Orcs Must Die!
     redist:
       - installer\
