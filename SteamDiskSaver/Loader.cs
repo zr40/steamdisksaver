@@ -6,16 +6,19 @@ using System.Windows.Forms;
 
 using Microsoft.Win32;
 
+using SteamDiskSaver.Apps;
+using SteamDiskSaver.Metadata;
+
 namespace SteamDiskSaver
 {
 	internal sealed class Loader
 	{
-		internal Action<List<App>> Done;
+		internal Action<List<App>, AppMetadata> Done;
 		internal Action<int> Maximum;
 		internal Action<int> Progress;
 		internal Action<string> Status;
 
-		private int progress;
+		private int currentProgress;
 
 		internal void Load()
 		{
@@ -41,7 +44,7 @@ namespace SteamDiskSaver
 					                    using (var s = File.OpenRead(f))
 						                    appManifestItem = AppManifestParser.Parse(s)["AppState"];
 
-					                    Progress(++progress);
+					                    Progress(++currentProgress);
 					                    if (appManifestItem["UserConfig"].Items.ContainsKey("name"))
 						                    Status(appManifestItem["UserConfig"]["name"]);
 					                    else
@@ -56,7 +59,7 @@ namespace SteamDiskSaver
 					                    {
 						                    return (App) null;
 					                    }
-				                    }).Where(n => n != null).ToList());
+				                    }).Where(n => n != null).ToList(), metadata);
 			}
 			catch (DirectoryNotFoundException)
 			{

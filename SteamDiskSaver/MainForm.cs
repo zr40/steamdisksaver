@@ -5,6 +5,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
+using SteamDiskSaver.Apps;
+using SteamDiskSaver.Metadata;
+
 namespace SteamDiskSaver
 {
 	internal sealed partial class MainForm : Form
@@ -42,6 +45,7 @@ namespace SteamDiskSaver
 		internal List<App> Apps;
 
 		private ListViewItem totalsItem;
+		internal AppMetadata Metadata;
 
 		private void ReadSteamApps()
 		{
@@ -77,87 +81,33 @@ namespace SteamDiskSaver
 
 		private void ItemSelected(object sender, EventArgs e)
 		{
-			flowLayoutPanel2.Enabled = listView1.SelectedItems.Count == 1;
+			button1.Enabled = listView1.SelectedItems.Count == 1;
 			button6.Enabled = listView1.SelectedItems.Count == 1 && listView1.SelectedItems[0].Tag != null;
 		}
 
-		private void DeleteRedistsClicked(object sender, EventArgs e)
+		private void DeleteFilesClicked(object sender, EventArgs e)
 		{
 			var selected = listView1.SelectedItems[0];
 			IEnumerable<ListViewItem> items = selected.Tag == null ? listView1.Items.Cast<ListViewItem>().Where(i => i.Tag != null) : new[] {selected};
 			foreach (var item in items)
-				DeleteRedists(item);
+				DeleteFiles(item);
 		}
 
-		private void DeleteRedists(ListViewItem listItem)
+		private void DeleteFiles(ListViewItem listItem)
 		{
 			var item = (App) listItem.Tag;
 
 			if (!item.Known)
 				return;
 
-			foreach (var file in item.Redists)
+			foreach (var file in item.DeletableFiles)
 			{
 				file.Delete();
 			}
 
-			item.TotalSize -= item.RedistSize;
-			item.RedistSize = 0;
-			item.Redists.Clear();
-			UpdateItem(listItem);
-		}
-
-		private void DeleteOthers(ListViewItem listItem)
-		{
-			var item = (App) listItem.Tag;
-
-			if (!item.Known)
-				return;
-
-			foreach (var file in item.Others)
-			{
-				file.Delete();
-			}
-
-			item.TotalSize -= item.OtherSize;
-			item.OtherSize = 0;
-			item.Others.Clear();
-			UpdateItem(listItem);
-		}
-
-		private void DeleteNonEnglish(ListViewItem listItem)
-		{
-			var item = (App) listItem.Tag;
-
-			if (!item.Known)
-				return;
-
-			foreach (var file in item.NonEnglish)
-			{
-				file.Delete();
-			}
-
-			item.TotalSize -= item.NonEnglishSize;
-			item.NonEnglishSize = 0;
-			item.NonEnglish.Clear();
-			UpdateItem(listItem);
-		}
-
-		private void DeleteIntros(ListViewItem listItem)
-		{
-			var item = (App) listItem.Tag;
-
-			if (!item.Known)
-				return;
-
-			foreach (var file in item.Intros)
-			{
-				file.Delete();
-			}
-
-			item.TotalSize -= item.IntroSize;
-			item.IntroSize = 0;
-			item.Intros.Clear();
+			item.TotalSize -= item.DeletableSize;
+			item.DeletableSize = 0;
+			item.DeletableFiles.Clear();
 			UpdateItem(listItem);
 		}
 
@@ -191,51 +141,12 @@ namespace SteamDiskSaver
 			i.SubItems.Add(SizeFormat(apps.Sum(a => a.TotalSize)));
 			if (first.Known || i.Tag == null)
 			{
-				i.SubItems.Add(SizeFormat(apps.Sum(a => a.RedistSize)));
-				i.SubItems.Add(SizeFormat(apps.Sum(a => a.IntroSize)));
-				i.SubItems.Add(SizeFormat(apps.Sum(a => a.NonEnglishSize)));
-				i.SubItems.Add(SizeFormat(apps.Sum(a => a.OtherSize)));
+				i.SubItems.Add(SizeFormat(apps.Sum(a => a.DeletableSize)));
+				i.SubItems.Add(SizeFormat(apps.Sum(a => a.NotSelectedSize)));
 			}
 			else
 			{
 				i.SubItems.Add("Unknown game");
-			}
-		}
-
-		private void DeleteIntrosClicked(object sender, EventArgs e)
-		{
-			var selected = listView1.SelectedItems[0];
-			IEnumerable<ListViewItem> items = selected.Tag == null ? listView1.Items.Cast<ListViewItem>().Where(i => i.Tag != null) : new[] {selected};
-			foreach (var item in items)
-				DeleteIntros(item);
-		}
-
-		private void DeleteOthersClicked(object sender, EventArgs e)
-		{
-			var selected = listView1.SelectedItems[0];
-			IEnumerable<ListViewItem> items = selected.Tag == null ? listView1.Items.Cast<ListViewItem>().Where(i => i.Tag != null) : new[] {selected};
-			foreach (var item in items)
-				DeleteOthers(item);
-		}
-
-		private void DeleteNonEnglishClicked(object sender, EventArgs e)
-		{
-			var selected = listView1.SelectedItems[0];
-			IEnumerable<ListViewItem> items = selected.Tag == null ? listView1.Items.Cast<ListViewItem>().Where(i => i.Tag != null) : new[] {selected};
-			foreach (var item in items)
-				DeleteNonEnglish(item);
-		}
-
-		private void DeleteAllClicked(object sender, EventArgs e)
-		{
-			var selected = listView1.SelectedItems[0];
-			IEnumerable<ListViewItem> items = selected.Tag == null ? listView1.Items.Cast<ListViewItem>().Where(i => i.Tag != null) : new[] {selected};
-			foreach (var item in items)
-			{
-				DeleteRedists(item);
-				DeleteOthers(item);
-				DeleteIntros(item);
-				DeleteNonEnglish(item);
 			}
 		}
 
@@ -252,30 +163,33 @@ namespace SteamDiskSaver
 			listView1.Sort();
 		}
 
-		private void MainForm_Shown(object sender, EventArgs e)
+		private void MainForm_Load(object sender, EventArgs e)
 		{
+			Program.Context.FormOpened();
+
 			ReadSteamApps();
 
 			comparisons[0] = (l, r) => l.Name.CompareTo(r.Name);
 			comparisons[1] = (l, r) => l.Id.CompareTo(r.Id);
 			comparisons[2] = (l, r) => r.TotalSize.CompareTo(l.TotalSize);
-			comparisons[3] = (l, r) => r.RedistSize.CompareTo(l.RedistSize);
-			comparisons[4] = (l, r) => r.IntroSize.CompareTo(l.IntroSize);
-			comparisons[5] = (l, r) => r.NonEnglishSize.CompareTo(l.NonEnglishSize);
-			comparisons[6] = (l, r) => r.OtherSize.CompareTo(l.OtherSize);
+			comparisons[3] = (l, r) => r.DeletableSize.CompareTo(l.DeletableSize);
+			comparisons[4] = (l, r) => r.NotSelectedSize.CompareTo(l.NotSelectedSize);
 
 			itemSorter.Comparison = comparisons[0];
 			listView1.ListViewItemSorter = itemSorter;
 		}
 
-		private void MainForm_Load(object sender, EventArgs e)
-		{
-			Program.Context.FormOpened();
-		}
-
 		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			Program.Context.FormClosed();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			var form = new CategoriesForm();
+			form.Metadata = Metadata;
+			if (form.ShowDialog(this) == DialogResult.OK)
+				Close();
 		}
 	}
 }

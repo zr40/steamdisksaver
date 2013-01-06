@@ -1,6 +1,8 @@
 ﻿using System.IO;
 
-namespace SteamDiskSaver
+using SteamDiskSaver.Metadata;
+
+namespace SteamDiskSaver.Apps
 {
 	internal sealed class DeletableFile
 	{

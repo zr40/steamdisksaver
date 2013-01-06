@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SteamDiskSaver
+namespace SteamDiskSaver.Apps
 {
 	internal sealed class IgnoreAppException : Exception
 	{

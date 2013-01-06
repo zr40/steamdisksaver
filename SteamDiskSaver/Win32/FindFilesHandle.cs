@@ -1,6 +1,6 @@
 using Microsoft.Win32.SafeHandles;
 
-namespace SteamDiskSaver
+namespace SteamDiskSaver.Win32
 {
 	internal sealed class FindFilesHandle : SafeHandleZeroOrMinusOneIsInvalid
 	{

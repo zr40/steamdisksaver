@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
-namespace SteamDiskSaver
+namespace SteamDiskSaver.Win32
 {
 	internal sealed class FindFilesEnumerator : IEnumerator<NativeMethods.FindData>, IEnumerable<NativeMethods.FindData>
 	{

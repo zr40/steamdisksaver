@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace SteamDiskSaver
+namespace SteamDiskSaver.Apps
 {
 	internal static class AppManifestParser
 	{
@@ -60,7 +60,7 @@ namespace SteamDiskSaver
 			}
 			var str = new List<byte>();
 			byte b;
-			while ((b = (byte)stream.ReadByte()) != (byte) '"')
+			while ((b = (byte) stream.ReadByte()) != (byte) '"')
 			{
 				str.Add(b);
 			}

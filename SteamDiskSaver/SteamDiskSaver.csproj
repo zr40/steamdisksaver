@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7F1B0874-FE56-4129-B672-458A821D6CFC}</ProjectGuid>
@@ -11,11 +11,7 @@
     <RootNamespace>SteamDiskSaver</RootNamespace>
     <AssemblyName>SteamDiskSaver</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
@@ -52,54 +48,61 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="App.cs" />
-    <Compile Include="AppManifestItem.cs" />
-    <Compile Include="AppManifestParser.cs" />
-    <Compile Include="AppMetadata.cs" />
-    <Compile Include="IgnoreAppException.cs" />
+    <Compile Include="Apps\App.cs" />
+    <Compile Include="Apps\AppManifestItem.cs" />
+    <Compile Include="Apps\AppManifestParser.cs" />
+    <Compile Include="CategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriesForm.Designer.cs">
+      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CategoryControl.Designer.cs">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\DeletableFile.cs" />
+    <Compile Include="Apps\DirectoryWalker.cs" />
+    <Compile Include="Win32\FindFilesEnumerator.cs" />
+    <Compile Include="Win32\FindFilesHandle.cs" />
+    <Compile Include="Apps\IgnoreAppException.cs" />
     <Compile Include="Loader.cs" />
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeletableFile.cs" />
-    <Compile Include="FindFilesEnumerator.cs" />
-    <Compile Include="DirectoryWalker.cs" />
-    <Compile Include="FindFilesHandle.cs" />
-    <Compile Include="NativeMethods.cs" />
-    <Compile Include="LoadingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Metadata\AppMetadata.cs" />
+    <Compile Include="Metadata\Category.cs" />
+    <Compile Include="Metadata\PathMatch.cs" />
+    <Compile Include="Win32\NativeMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="CategoriesForm.resx">
+      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </None>
+    <None Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </None>
     <None Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <EmbeddedResource Include="CategoryControl.resx">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="LoadingForm.resx">
-      <DependentUpon>LoadingForm.cs</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SteamDiskSaver
+namespace SteamDiskSaver.Apps
 {
 	internal sealed class AppManifestItem
 	{
