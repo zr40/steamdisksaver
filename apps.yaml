@@ -711,6 +711,20 @@ apps:
       - Soundtrack\
     license:
       - UE3_THIRD_PARTY_SOFTWARE.pdf
+  111600: # Serious Sam Double D
+    redist:
+      - dotNetFx40_Full_setup.exe
+      - xnafx40_redist.msi
+    other:
+      - [.pdb, contains]
+      - SteamLink.exp
+      - SteamLink.lib
+      - SSGame.application
+    nonenglish:
+      - de\
+      - es\
+      - fr\
+      - it\
   6120: # Shank
     redist:
       - bin\DirectX\

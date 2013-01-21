@@ -1025,6 +1025,27 @@
 				"UE3_THIRD_PARTY_SOFTWARE.pdf"
 			]
 		},
+		"111600":{
+			"redist":[
+				"dotNetFx40_Full_setup.exe",
+				"xnafx40_redist.msi"
+			],
+			"other":[
+				[
+					".pdb",
+					"contains"
+				],
+				"SteamLink.exp",
+				"SteamLink.lib",
+				"SSGame.application"
+			],
+			"nonenglish":[
+				"de\\",
+				"es\\",
+				"fr\\",
+				"it\\"
+			]
+		},
 		"6120":{
 			"redist":[
 				"bin\\DirectX\\"
@@ -1406,5 +1427,5 @@
 			]
 		}
 	},
-	"release":1358767780
+	"release":1358768032
 }
