@@ -763,6 +763,10 @@ apps:
       - text\jp.text
       - text\pt.text
       - text\ru.text
+  18300: # Spectraball
+    engine:
+      name: unity
+      gamedir: Spectraball_Data
   9900: # Star Trek Online
     redist:
       - directx_aug2009_redist\

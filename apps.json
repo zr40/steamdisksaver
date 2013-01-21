@@ -1098,6 +1098,12 @@
 				"text\\ru.text"
 			]
 		},
+		"18300":{
+			"engine":{
+				"name":"unity",
+				"gamedir":"Spectraball_Data"
+			}
+		},
 		"9900":{
 			"redist":[
 				"directx_aug2009_redist\\"
@@ -1400,5 +1406,5 @@
 			]
 		}
 	},
-	"release":1358767662
+	"release":1358767780
 }
