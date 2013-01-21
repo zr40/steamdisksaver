@@ -155,6 +155,12 @@
 		}
 	},
 	"apps":{
+		"227580":{
+			"engine":{
+				"name":"unity",
+				"gamedir":"10000000_Data"
+			}
+		},
 		"207650":{
 			"redist":[
 				"ChainingdotNet4.exe",
@@ -751,6 +757,117 @@
 				"doc\\"
 			]
 		},
+		"620":{
+			"license":[
+				"thirdpartylegalnotices.doc"
+			],
+			"nonenglish":[
+				"portal2_czech\\",
+				"portal2_danish\\",
+				"portal2_dutch\\",
+				"portal2_finnish\\",
+				"portal2_french\\",
+				"portal2_german\\",
+				"portal2_hungarian\\",
+				"portal2_italian\\",
+				"portal2_korean\\",
+				"portal2_koreana\\",
+				"portal2_norwegian\\",
+				"portal2_polish\\",
+				"portal2_portugese\\",
+				"portal2_romanian\\",
+				"portal2_russian\\",
+				"portal2_schinese\\",
+				"portal2_spanish\\",
+				"portal2_swedish\\",
+				"portal2_tchinese\\",
+				"portal2_thai\\",
+				"portal2_turkish\\",
+				"portal2_dlc1_french\\",
+				"portal2_dlc1_german\\",
+				"portal2_dlc1_russian\\",
+				"portal2_dlc1_spanish\\",
+				[
+					"_danish.txt",
+					"contains"
+				],
+				[
+					"_dutch.txt",
+					"contains"
+				],
+				[
+					"_finnish.txt",
+					"contains"
+				],
+				[
+					"_french.txt",
+					"contains"
+				],
+				[
+					"_german.txt",
+					"contains"
+				],
+				[
+					"_italian.txt",
+					"contains"
+				],
+				[
+					"_japanese.txt",
+					"contains"
+				],
+				[
+					"_korean.txt",
+					"contains"
+				],
+				[
+					"_koreana.txt",
+					"contains"
+				],
+				[
+					"_norwegian.txt",
+					"contains"
+				],
+				[
+					"_polish.txt",
+					"contains"
+				],
+				[
+					"_portugese.txt",
+					"contains"
+				],
+				[
+					"_russian.txt",
+					"contains"
+				],
+				[
+					"_schinese.txt",
+					"contains"
+				],
+				[
+					"_tchinese.txt",
+					"contains"
+				],
+				[
+					"_thai.txt",
+					"contains"
+				]
+			],
+			"other":[
+				"bin\\osx32\\",
+				"bin\\vrad_osx.dsym\\",
+				"bin\\vvis_osx.dsym\\",
+				"installscript_osx.vdf",
+				"portal2.ico",
+				"portal2.sh",
+				"portal2_osx",
+				"portal2\\media\\valve.bik",
+				"portal2\\media\\valve_ps3_legals.bik",
+				"portal2\\media\\valve_xbox_legals.bik"
+			],
+			"intro":[
+				"portal2_dlc2\\media\\valve.bik"
+			]
+		},
 		"3830":{
 			"redist":[
 				"redist\\"
@@ -1203,5 +1320,5 @@
 			]
 		}
 	},
-	"release":1357474877
+	"release":1358766314
 }
