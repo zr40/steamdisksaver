@@ -578,9 +578,11 @@ apps:
       - [_koreana.txt, contains]
       - [_norwegian.txt, contains]
       - [_polish.txt, contains]
-      - [_portugese.txt, contains]
+      - [_portuguese.txt, contains]
       - [_russian.txt, contains]
       - [_schinese.txt, contains]
+      - [_spanish.txt, contains]
+      - [_swedish.txt, contains]
       - [_tchinese.txt, contains]
       - [_thai.txt, contains]
     other:

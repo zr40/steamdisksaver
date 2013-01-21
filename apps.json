@@ -832,7 +832,7 @@
 					"contains"
 				],
 				[
-					"_portugese.txt",
+					"_portuguese.txt",
 					"contains"
 				],
 				[
@@ -841,6 +841,14 @@
 				],
 				[
 					"_schinese.txt",
+					"contains"
+				],
+				[
+					"_spanish.txt",
+					"contains"
+				],
+				[
+					"_swedish.txt",
 					"contains"
 				],
 				[
@@ -1320,5 +1328,5 @@
 			]
 		}
 	},
-	"release":1358766403
+	"release":1358766461
 }
