@@ -597,7 +597,7 @@ apps:
       - portal2\media\valve_ps3_legals.bik
       - portal2\media\valve_xbox_legals.bik
       - [.dylib, contains]
-    intro:
+    intros:
       - portal2_dlc2\media\valve.bik
   3830: # Psychonauts
     redist:

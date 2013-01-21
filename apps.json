@@ -876,7 +876,7 @@
 					"contains"
 				]
 			],
-			"intro":[
+			"intros":[
 				"portal2_dlc2\\media\\valve.bik"
 			]
 		},
@@ -1332,5 +1332,5 @@
 			]
 		}
 	},
-	"release":1358766575
+	"release":1358766646
 }
