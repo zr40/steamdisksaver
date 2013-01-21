@@ -624,6 +624,14 @@ apps:
       - preload.pcx
     other:
       - winsetup.exe
+  200010: # Quantum Conundrum
+    engine:
+      name: unreal3
+      gamedir: TryGame
+    redist:
+      - Binaries\Redist\
+    extras:
+      - QC_soundtrack\
   9200: # RAGE
     redist:
       - directx\

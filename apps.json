@@ -915,6 +915,18 @@
 				"winsetup.exe"
 			]
 		},
+		"200010":{
+			"engine":{
+				"name":"unreal3",
+				"gamedir":"TryGame"
+			},
+			"redist":[
+				"Binaries\\Redist\\"
+			],
+			"extras":[
+				"QC_soundtrack\\"
+			]
+		},
 		"9200":{
 			"redist":[
 				"directx\\",
@@ -1332,5 +1344,5 @@
 			]
 		}
 	},
-	"release":1358766646
+	"release":1358767027
 }
