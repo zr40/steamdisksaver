@@ -362,6 +362,11 @@ apps:
       - SquareLogic.MCE.png
       - SquareLogic.MCE.mcl
   38600: {} # Faerie Solitaire
+  212680: # FTL: Faster Than Light
+    manual:
+      - FTL_README.html
+    license:
+      - licenses\
   44200: # Galcon Fusion
     other:
       - data\Thumbs.db

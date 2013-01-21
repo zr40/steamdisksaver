@@ -504,6 +504,14 @@
 		},
 		"38600":{
 		},
+		"212680":{
+			"manual":[
+				"FTL_README.html"
+			],
+			"license":[
+				"licenses\\"
+			]
+		},
 		"44200":{
 			"other":[
 				"data\\Thumbs.db"
@@ -1392,5 +1400,5 @@
 			]
 		}
 	},
-	"release":1358767523
+	"release":1358767662
 }
