@@ -725,6 +725,7 @@ apps:
       - es\
       - fr\
       - it\
+  201480: {} # Serious Sam: The Random Encounter
   6120: # Shank
     redist:
       - bin\DirectX\
