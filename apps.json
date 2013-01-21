@@ -774,7 +774,7 @@
 				"portal2_koreana\\",
 				"portal2_norwegian\\",
 				"portal2_polish\\",
-				"portal2_portugese\\",
+				"portal2_portuguese\\",
 				"portal2_romanian\\",
 				"portal2_russian\\",
 				"portal2_schinese\\",
@@ -1320,5 +1320,5 @@
 			]
 		}
 	},
-	"release":1358766314
+	"release":1358766403
 }
