@@ -925,6 +925,54 @@
 			],
 			"extras":[
 				"QC_soundtrack\\"
+			],
+			"nonenglish":[
+				"TryGame\\DLC\\PC\\PuzzlePack1\\Localization\\TryGame.deu",
+				"TryGame\\DLC\\PC\\PuzzlePack1\\Localization\\TryGame.esn",
+				"TryGame\\DLC\\PC\\PuzzlePack1\\Localization\\TryGame.fra",
+				"TryGame\\DLC\\PC\\PuzzlePack1\\Localization\\TryGame.ita",
+				"TryGame\\DLC\\PC\\PuzzlePack1\\Localization\\TryGame.jpn",
+				"TryGame\\DLC\\PC\\PuzzlePack2\\Localization\\TryGame.deu",
+				"TryGame\\DLC\\PC\\PuzzlePack2\\Localization\\TryGame.esn",
+				"TryGame\\DLC\\PC\\PuzzlePack2\\Localization\\TryGame.fra",
+				"TryGame\\DLC\\PC\\PuzzlePack2\\Localization\\TryGame.ita",
+				"TryGame\\DLC\\PC\\PuzzlePack2\\Localization\\TryGame.jpn"
+			],
+			"other":[
+				"Binaries\\build.properties",
+				"Binaries\\ConsoleInterface.dll",
+				"Binaries\\CookerSync.exe",
+				"Binaries\\CookerSync.exe.config",
+				"Binaries\\CookerSync.xml",
+				"Binaries\\GameplayProfiler.exe",
+				"Binaries\\GameplayProfiler.exe.config",
+				"Binaries\\Ionic.Zip.Reduced.dll",
+				"Binaries\\MemLeakCheckDiffer.exe",
+				"Binaries\\MemLeakCheckDiffer.exe.config",
+				"Binaries\\NetworkProfiler.exe",
+				"Binaries\\NetworkProfiler.exe.config",
+				"Binaries\\PackageDiffFrontEnd.exe",
+				"Binaries\\PackageDiffFrontEnd.exe.config",
+				"Binaries\\Stats.dll",
+				"Binaries\\StatsComparison.exe",
+				"Binaries\\StatsComparison.exe.config",
+				"Binaries\\StatsThreshold.exe",
+				"Binaries\\StatsThreshold.exe.config",
+				"Binaries\\StatsViewer.exe",
+				"Binaries\\StatsViewer.exe.config",
+				"Binaries\\UnrealCommand.exe",
+				"Binaries\\UnrealCommand.exe.config",
+				"Binaries\\UnrealConsole.exe",
+				"Binaries\\UnrealConsole.exe.config",
+				"Binaries\\UnrealConsoleRemoting.dll",
+				"Binaries\\UnrealControls.dll",
+				"Binaries\\UnrealFrontend.exe",
+				"Binaries\\UnrealFrontend.exe.config",
+				"Binaries\\UnrealLoc.exe",
+				"Binaries\\UnrealLoc.exe.config",
+				"Binaries\\UnSetup.exe",
+				"Binaries\\UnSetup.exe.config",
+				"Binaries\\UnSetup.Manifests.UDK.xml"
 			]
 		},
 		"9200":{
@@ -1344,5 +1392,5 @@
 			]
 		}
 	},
-	"release":1358767027
+	"release":1358767523
 }
