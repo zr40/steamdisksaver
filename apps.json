@@ -870,7 +870,11 @@
 				"portal2_osx",
 				"portal2\\media\\valve.bik",
 				"portal2\\media\\valve_ps3_legals.bik",
-				"portal2\\media\\valve_xbox_legals.bik"
+				"portal2\\media\\valve_xbox_legals.bik",
+				[
+					".dylib",
+					"contains"
+				]
 			],
 			"intro":[
 				"portal2_dlc2\\media\\valve.bik"
@@ -1328,5 +1332,5 @@
 			]
 		}
 	},
-	"release":1358766461
+	"release":1358766575
 }
