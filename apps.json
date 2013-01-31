@@ -209,6 +209,22 @@
 				"AnomalyWarzoneEarth.ico"
 			]
 		},
+		"219890":{
+			"engine":{
+				"name":"unreal3",
+				"gamedir":"UDKGame"
+			},
+			"redist":[
+				"Binaries\\Redist\\"
+			],
+			"logos":[
+				"UDKGame\\Movies\\UE3_logo.bik"
+			],
+			"other":[
+				"UDKGame\\Movies\\MultichannelTest_LOC.bik",
+				"UDKGame\\Movies\\UDKFrontEnd.udk_loading.bik"
+			]
+		},
 		"204300":{
 			"redist":[
 				"Data\\DirectXRedist\\",
@@ -1046,6 +1062,8 @@
 				"it\\"
 			]
 		},
+		"201480":{
+		},
 		"6120":{
 			"redist":[
 				"bin\\DirectX\\"
@@ -1427,5 +1445,5 @@
 			]
 		}
 	},
-	"release":1358768032
+	"release":1359656281
 }

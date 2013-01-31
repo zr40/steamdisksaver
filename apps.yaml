@@ -162,6 +162,17 @@ apps:
       - Redist\
     other:
       - AnomalyWarzoneEarth.ico
+  219890: # Antichamber
+    engine:
+      name: unreal3
+      gamedir: UDKGame
+    redist:
+      - Binaries\Redist\
+    logos:
+      - UDKGame\Movies\UE3_logo.bik
+    other:
+      - UDKGame\Movies\MultichannelTest_LOC.bik
+      - UDKGame\Movies\UDKFrontEnd.udk_loading.bik
   204300: # Awesomenauts
     redist:
       - Data\DirectXRedist\
