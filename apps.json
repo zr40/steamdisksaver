@@ -309,6 +309,35 @@
 		},
 		"80350":{
 		},
+		"8980":{
+			"engine":{
+				"name":"unreal3",
+				"gamedir":"WillowGame"
+			},
+			"license":[
+				"EULA\\"
+			],
+			"extras":[
+				"PandoraMap\\"
+			],
+			"redist":[
+				"Prerequisites\\"
+			],
+			"readme":[
+				"Readme\\"
+			],
+			"logos":[
+				"WillowGame\\Movies\\2K_logo.bik",
+				"WillowGame\\Movies\\Gearbox_logo.bik",
+				"WillowGame\\Movies\\NVidia.bik"
+			],
+			"intros":[
+				"WillowGame\\Movies\\Attract.bik",
+				"WillowGame\\Movies\\Attract.txt",
+				"WillowGame\\Movies\\Prelude.bik",
+				"WillowGame\\Movies\\Prelude.txt"
+			]
+		},
 		"15390":{
 			"engine":{
 				"name":"unreal3",
@@ -1445,5 +1474,5 @@
 			]
 		}
 	},
-	"release":1359656281
+	"release":1368952597
 }

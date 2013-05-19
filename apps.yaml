@@ -237,6 +237,27 @@ apps:
     other:
       - New folder\
   80350: {} # Blackwell Convergence
+  8980: # Borderlands
+    engine:
+      name: unreal3
+      gamedir: WillowGame
+    license:
+      - EULA\
+    extras:
+      - PandoraMap\
+    redist:
+      - Prerequisites\
+    readme:
+      - Readme\
+    logos:
+      - WillowGame\Movies\2K_logo.bik
+      - WillowGame\Movies\Gearbox_logo.bik
+      - WillowGame\Movies\NVidia.bik
+    intros:
+      - WillowGame\Movies\Attract.bik
+      - WillowGame\Movies\Attract.txt
+      - WillowGame\Movies\Prelude.bik
+      - WillowGame\Movies\Prelude.txt
   15390: # Brothers in Arms: Hell's Highway
     engine:
       name: unreal3
