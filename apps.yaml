@@ -732,6 +732,18 @@ apps:
     logos:
       - video\loadvideo.bik
       - video\loadvideo_french.bik
+  20500: # Red Faction: Guerrilla
+    redist:
+      - DirectX\
+      - GFWLive\
+      - VCRedist\
+    manual:
+      - readme_EN.txt
+      - readme_FR.txt
+    logos:
+      - build\pc\cache\logo_thq_hd.bik
+      - build\pc\cache\logo_volition_hd.bik
+      - build\pc\cache\legal_hd.bik
   204630: # Retro City Rampage
     redist:
       - Redist\
