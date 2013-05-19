@@ -182,6 +182,19 @@
 		},
 		"206500":{
 		},
+		"108710":{
+			"extras":[
+				"alan_wake_files\\",
+				"bonus\\",
+				"soundtrack\\"
+			],
+			"logos":[
+				"data\\videos\\startup_remedy.bik"
+			],
+			"redist":[
+				"thirdparty\\"
+			]
+		},
 		"204140":{
 			"engine":{
 				"name":"unreal3",
@@ -538,6 +551,8 @@
 			"license":[
 				"readmes\\"
 			]
+		},
+		"8500":{
 		},
 		"32150":{
 			"other":[
@@ -1474,5 +1489,5 @@
 			]
 		}
 	},
-	"release":1368952597
+	"release":1368965657
 }

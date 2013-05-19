@@ -144,6 +144,15 @@ apps:
     other:
       - RuntimeData\AIWarCredits.doc
   206500: {} # AirMech
+  108710: # Alan Wake
+    extras:
+      - alan_wake_files\
+      - bonus\
+      - soundtrack\
+    logos:
+      - data\videos\startup_remedy.bik
+    redist:
+      - thirdparty\
   204140: # All Zombies Must Die!
     engine:
       name: unreal3
@@ -387,6 +396,7 @@ apps:
       - Eufloria.ico
     license:
       - readmes\
+  8500: {} # Eve Online
   32150: # Everyday Genius: SquareLogic
     other:
       - Data\Images\Achievements\jpg\
