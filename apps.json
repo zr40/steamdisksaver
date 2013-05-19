@@ -1268,6 +1268,18 @@
 				"Data\\Video\\BGS_Logo.bik"
 			]
 		},
+		"26000":{
+			"redist":[
+				"directx_9c_redist.exe",
+				"vcredist_x86.exe"
+			],
+			"manual":[
+				"TheMaw-Manual.pdf"
+			],
+			"logos":[
+				"content\\video\\intro1.ogg"
+			]
+		},
 		"20920":{
 			"redist":[
 				"redist\\"
@@ -1505,5 +1517,5 @@
 			]
 		}
 	},
-	"release":1368966059
+	"release":1368994482
 }

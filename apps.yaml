@@ -883,6 +883,14 @@ apps:
       - readme.txt
     logos:
       - Data\Video\BGS_Logo.bik
+  26000: # The Maw
+    redist:
+      - directx_9c_redist.exe
+      - vcredist_x86.exe
+    manual:
+      - TheMaw-Manual.pdf
+    logos:
+      - content\video\intro1.ogg
   20920: # The Witcher 2
     redist:
       - redist\
