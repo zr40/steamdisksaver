@@ -18,6 +18,8 @@ namespace SteamDiskSaver
 		internal Action<int> Progress;
 		internal Action<string> Status;
 
+		internal readonly List<string> Errors = new List<string>();
+
 		private int currentProgress;
 
 		internal void Load()
@@ -55,8 +57,9 @@ namespace SteamDiskSaver
 					                  {
 						                  return new App(metadata, appManifestItem, path);
 					                  }
-					                  catch (IgnoreAppException)
+					                  catch (IgnoreAppException e)
 					                  {
+										  Errors.Add(e.Message);
 						                  return (App) null;
 					                  }
 				                  }).Where(n => n != null).ToList(), metadata);

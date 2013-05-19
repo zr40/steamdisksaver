@@ -20,6 +20,8 @@
 			System.Windows.Forms.ColumnHeader columnHeader6;
 			this.button1 = new System.Windows.Forms.Button();
 			this.button6 = new System.Windows.Forms.Button();
+			this.ErrorsLabel = new System.Windows.Forms.Label();
+			this.ErrorsButton = new System.Windows.Forms.Button();
 			this.listView1 = new System.Windows.Forms.ListView();
 			flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			label5 = new System.Windows.Forms.Label();
@@ -116,6 +118,8 @@
 			flowLayoutPanel2.Controls.Add(this.button1);
 			flowLayoutPanel2.Controls.Add(label1);
 			flowLayoutPanel2.Controls.Add(this.button6);
+			flowLayoutPanel2.Controls.Add(this.ErrorsLabel);
+			flowLayoutPanel2.Controls.Add(this.ErrorsButton);
 			flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
 			flowLayoutPanel2.Location = new System.Drawing.Point(636, 0);
 			flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -145,6 +149,28 @@
 			this.button6.Text = "Restore deleted files";
 			this.button6.UseVisualStyleBackColor = true;
 			this.button6.Click += new System.EventHandler(this.ValidateClicked);
+			// 
+			// ErrorsLabel
+			// 
+			this.ErrorsLabel.AutoSize = true;
+			this.ErrorsLabel.Location = new System.Drawing.Point(3, 202);
+			this.ErrorsLabel.Name = "ErrorsLabel";
+			this.ErrorsLabel.Size = new System.Drawing.Size(143, 39);
+			this.ErrorsLabel.TabIndex = 14;
+			this.ErrorsLabel.Text = "Errors were encountered when loading information for some games.";
+			this.ErrorsLabel.Visible = false;
+			// 
+			// ErrorsButton
+			// 
+			flowLayoutPanel2.SetFlowBreak(this.ErrorsButton, true);
+			this.ErrorsButton.Location = new System.Drawing.Point(3, 244);
+			this.ErrorsButton.Name = "ErrorsButton";
+			this.ErrorsButton.Size = new System.Drawing.Size(142, 23);
+			this.ErrorsButton.TabIndex = 16;
+			this.ErrorsButton.Text = "Show errors";
+			this.ErrorsButton.UseVisualStyleBackColor = true;
+			this.ErrorsButton.Visible = false;
+			this.ErrorsButton.Click += new System.EventHandler(this.ErrorsButton_Click);
 			// 
 			// columnHeader6
 			// 
@@ -202,6 +228,8 @@
 		private System.Windows.Forms.ListView listView1;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label ErrorsLabel;
+		private System.Windows.Forms.Button ErrorsButton;
 	}
 }
 

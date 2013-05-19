@@ -15,7 +15,8 @@ namespace SteamDiskSaver
 				                                                         var f = new MainForm();
 				                                                         f.Apps = apps;
 				                                                         f.Metadata = metadata;
-				                                                         f.Show();
+				                                                         f.Errors = loader.Errors;
+																		 f.Show();
 				                                                         Close();
 			                                                         }));
 			loader.Maximum = max => BeginInvoke(new Action(() => { ProgressBar.Maximum = max; }));

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
+using SteamDiskSaver.Apps;
+
 namespace SteamDiskSaver.Win32
 {
 	internal sealed class FindFilesEnumerator : IEnumerator<NativeMethods.FindData>, IEnumerable<NativeMethods.FindData>
@@ -17,7 +19,8 @@ namespace SteamDiskSaver.Win32
 			handle = NativeMethods.FindFirstFile(directory, out findData);
 			if (handle.IsInvalid)
 			{
-				throw new Win32Exception();
+				var e = new Win32Exception();
+				throw new IgnoreAppException("Reading directory " + directory.Substring(0, directory.Length - 2) + ": " + e.Message);
 			}
 		}
 

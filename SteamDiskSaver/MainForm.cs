@@ -37,6 +37,20 @@ namespace SteamDiskSaver
 		private readonly ListViewSorter itemSorter = new ListViewSorter();
 		private readonly Comparison<App>[] comparisons = new Comparison<App>[7];
 
+		private string errors;
+		internal List<string> Errors
+		{
+			set
+			{
+				if (value.Count != 0)
+				{
+					errors = string.Join("\n\n", value);
+					ErrorsLabel.Visible = true;
+					ErrorsButton.Visible = true;
+				}
+			}
+		}
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -199,6 +213,11 @@ namespace SteamDiskSaver
 			form.Metadata = Metadata;
 			if (form.ShowDialog(this) == DialogResult.OK)
 				Close();
+		}
+
+		private void ErrorsButton_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show(errors, "Errors", MessageBoxButtons.OK);
 		}
 	}
 }
