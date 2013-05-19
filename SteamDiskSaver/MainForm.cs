@@ -66,6 +66,11 @@ namespace SteamDiskSaver
 		{
 			// Windows uses binary prefixes, so we do that as well
 
+			if (size < 0)
+			{
+				return "-" + SizeFormat(-size);
+			}
+
 			if (size == 0)
 				return "";
 			if (size < 10000)
@@ -76,7 +81,7 @@ namespace SteamDiskSaver
 				return ((size - 1) / 1024 / 1024 + 1) + " MiB";
 			if (size < 10000000000000)
 				return ((size - 1) / 1024 / 1024 / 1024 + 1) + " GiB";
-			return ((size - 1) / 1024 / 1024 / 1024 / 1024 / +1) + " TiB";
+			return ((size - 1) / 1024 / 1024 / 1024 / 1024 / + 1) + " TiB";
 		}
 
 		private void ItemSelected(object sender, EventArgs e)
@@ -147,7 +152,10 @@ namespace SteamDiskSaver
 			else
 			{
 				i.SubItems.Add("Unknown game");
+				i.SubItems.Add("");
 			}
+
+			i.SubItems.Add(SizeFormat(apps.Sum((a => a.SavedSize))));
 		}
 
 		private void ValidateClicked(object sender, EventArgs e)
@@ -174,6 +182,7 @@ namespace SteamDiskSaver
 			comparisons[2] = (l, r) => r.TotalSize.CompareTo(l.TotalSize);
 			comparisons[3] = (l, r) => r.DeletableSize.CompareTo(l.DeletableSize);
 			comparisons[4] = (l, r) => r.NotSelectedSize.CompareTo(l.NotSelectedSize);
+			comparisons[5] = (l, r) => r.SavedSize.CompareTo(l.SavedSize);
 
 			itemSorter.Comparison = comparisons[0];
 			listView1.ListViewItemSorter = itemSorter;

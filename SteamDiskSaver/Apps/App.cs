@@ -14,6 +14,7 @@ namespace SteamDiskSaver.Apps
 		internal long DeletableSize;
 		internal readonly long NotSelectedSize;
 		internal readonly List<DeletableFile> DeletableFiles;
+		internal readonly long SteamSize;
 
 		internal readonly bool Known;
 
@@ -24,12 +25,14 @@ namespace SteamDiskSaver.Apps
 			string baseDir;
 			try
 			{
-				baseDir = this.manifest["UserConfig"].Items.ContainsKey("appinstalldir") ? this.manifest["UserConfig"]["appinstalldir"] : Path.Combine(steamDir, "common", this.manifest["installdir"]);
+				baseDir = manifest["UserConfig"].Items.ContainsKey("appinstalldir") ? this.manifest["UserConfig"]["appinstalldir"] : Path.Combine(steamDir, "common", this.manifest["installdir"]);
 			}
 			catch (KeyNotFoundException)
 			{
 				throw new IgnoreAppException("No installdir present in manifest");
 			}
+
+			SteamSize = long.Parse(manifest["SizeOnDisk"]);
 
 			var walker = DirectoryWalker.Walk(metadata, baseDir, Id);
 			Known = metadata.Known.Contains(Id);
@@ -62,6 +65,17 @@ namespace SteamDiskSaver.Apps
 				if (manifest["UserConfig"].Items.ContainsKey("GameID"))
 					return int.Parse(manifest["UserConfig"]["GameID"]);
 				return int.Parse(manifest["appID"]);
+			}
+		}
+
+		public long SavedSize
+		{
+			get
+			{
+				if (TotalSize > SteamSize)
+					return 0;
+
+				return SteamSize - TotalSize;
 			}
 		}
 	}

@@ -25,6 +25,10 @@ namespace SteamDiskSaver.Apps
 			this.metadata = metadata;
 			this.appId = appId;
 			rootDir = path;
+
+			if (!Directory.Exists(path))
+				return;
+
 			directoriesToWalk.Enqueue(path);
 
 			Walk();

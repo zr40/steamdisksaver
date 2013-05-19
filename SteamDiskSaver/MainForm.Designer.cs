@@ -17,6 +17,7 @@
 			System.Windows.Forms.Label label2;
 			System.Windows.Forms.Button button2;
 			System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+			System.Windows.Forms.ColumnHeader columnHeader6;
 			this.button1 = new System.Windows.Forms.Button();
 			this.button6 = new System.Windows.Forms.Button();
 			this.listView1 = new System.Windows.Forms.ListView();
@@ -31,6 +32,7 @@
 			label2 = new System.Windows.Forms.Label();
 			button2 = new System.Windows.Forms.Button();
 			flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+			columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			flowLayoutPanel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -79,12 +81,12 @@
 			// columnHeader4
 			// 
 			columnHeader4.Text = "Deletable";
-			columnHeader4.Width = 100;
+			columnHeader4.Width = 95;
 			// 
 			// columnHeader5
 			// 
 			columnHeader5.Text = "Not selected";
-			columnHeader5.Width = 100;
+			columnHeader5.Width = 85;
 			// 
 			// label2
 			// 
@@ -144,6 +146,11 @@
 			this.button6.UseVisualStyleBackColor = true;
 			this.button6.Click += new System.EventHandler(this.ValidateClicked);
 			// 
+			// columnHeader6
+			// 
+			columnHeader6.Text = "Saved";
+			columnHeader6.Width = 85;
+			// 
 			// listView1
 			// 
 			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -151,7 +158,8 @@
             columnHeader2,
             columnHeader3,
             columnHeader4,
-            columnHeader5});
+            columnHeader5,
+            columnHeader6});
 			this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.listView1.FullRowSelect = true;
 			this.listView1.HideSelection = false;
