@@ -161,6 +161,21 @@
 				"gamedir":"10000000_Data"
 			}
 		},
+		"209330":{
+			"license":[
+				"AVWWLicense.txt"
+			],
+			"manual":[
+				"AVWWManualpdf"
+			],
+			"editor":[
+				"MapEditor.exe"
+			],
+			"other":[
+				"RuntimeData\\sysrequirements.txt",
+				"RuntimeData\\SoundCredits.doc"
+			]
+		},
 		"207650":{
 			"redist":[
 				"ChainingdotNet4.exe",
@@ -1517,5 +1532,5 @@
 			]
 		}
 	},
-	"release":1368994482
+	"release":1369587845
 }

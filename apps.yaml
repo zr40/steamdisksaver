@@ -130,6 +130,16 @@ apps:
     engine:
       name: unity
       gamedir: 10000000_Data
+  209330: # A Valley Without Wind
+    license:
+      - AVWWLicense.txt
+    manual:
+      - AVWWManualpdf
+    editor:
+      - MapEditor.exe
+    other:
+      - RuntimeData\sysrequirements.txt
+      - RuntimeData\SoundCredits.doc
   207650: # A Virus Named TOM
     redist:
       - ChainingdotNet4.exe
