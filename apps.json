@@ -162,6 +162,10 @@
 			}
 		},
 		"209330":{
+			"engine":{
+				"name":"unity",
+				"gamedir":"AVWW_Data"
+			},
 			"license":[
 				"AVWWLicense.txt"
 			],
@@ -1532,5 +1536,5 @@
 			]
 		}
 	},
-	"release":1369587845
+	"release":1369587966
 }

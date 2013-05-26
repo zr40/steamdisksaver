@@ -131,6 +131,9 @@ apps:
       name: unity
       gamedir: 10000000_Data
   209330: # A Valley Without Wind
+    engine:
+      name: unity
+      gamedir: AVWW_Data
     license:
       - AVWWLicense.txt
     manual:
