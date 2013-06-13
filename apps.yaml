@@ -137,12 +137,23 @@ apps:
     license:
       - AVWWLicense.txt
     manual:
-      - AVWWManualpdf
+      - AVWWManual.pdf
     editor:
       - MapEditor.exe
     other:
       - RuntimeData\sysrequirements.txt
       - RuntimeData\SoundCredits.doc
+      - avww.app\
+  228320: # A Valley Without Wind 2
+    engine:
+      name: unity
+      gamedir: Valley2_Data
+    license:
+      - AVWWLicense.txt
+    editor:
+      - Valley2MapEditor.exe
+    other:
+      - RuntimeData\sysrequirements.txt
   207650: # A Virus Named TOM
     redist:
       - ChainingdotNet4.exe

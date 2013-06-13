@@ -170,14 +170,30 @@
 				"AVWWLicense.txt"
 			],
 			"manual":[
-				"AVWWManualpdf"
+				"AVWWManual.pdf"
 			],
 			"editor":[
 				"MapEditor.exe"
 			],
 			"other":[
 				"RuntimeData\\sysrequirements.txt",
-				"RuntimeData\\SoundCredits.doc"
+				"RuntimeData\\SoundCredits.doc",
+				"avww.app\\"
+			]
+		},
+		"228320":{
+			"engine":{
+				"name":"unity",
+				"gamedir":"Valley2_Data"
+			},
+			"license":[
+				"AVWWLicense.txt"
+			],
+			"editor":[
+				"Valley2MapEditor.exe"
+			],
+			"other":[
+				"RuntimeData\\sysrequirements.txt"
 			]
 		},
 		"207650":{
@@ -1536,5 +1552,5 @@
 			]
 		}
 	},
-	"release":1369587966
+	"release":1371144764
 }
