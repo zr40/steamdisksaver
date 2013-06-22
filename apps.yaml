@@ -1032,6 +1032,26 @@ apps:
       - WMFDist11-WindowsXP-X86-ENU.exe
     other:
       - Trine_updates.txt
+  35720: # Trine 2
+    redist:
+      - _DirectX_Trine2\
+    nonenglish:
+      - launcher\locale\cs\
+      - launcher\locale\de\
+      - launcher\locale\es\
+      - launcher\locale\fi\
+      - launcher\locale\fr\
+      - launcher\locale\hu\
+      - launcher\locale\it\
+      - launcher\locale\ko_KR\
+      - launcher\locale\pl\
+      - launcher\locale\pt_br\
+      - launcher\locale\ro\
+      - launcher\locale\ru\
+      - launcher\locale\tr\
+      - launcher\locale\zh_TW\
+    manual:
+      - manuals\
   18120: # Unstoppable Gorg
     engine:
       name: unity
