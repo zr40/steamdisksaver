@@ -1175,6 +1175,14 @@
 				"UE3_THIRD_PARTY_SOFTWARE.pdf"
 			]
 		},
+		"218680":{
+			"intros":[
+				"vof.bik"
+			],
+			"redist":[
+				"DirectXRedist\\"
+			]
+		},
 		"111600":{
 			"redist":[
 				"dotNetFx40_Full_setup.exe",
@@ -1591,5 +1599,5 @@
 			]
 		}
 	},
-	"release":1371931707
+	"release":1371932620
 }

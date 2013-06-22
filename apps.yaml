@@ -821,6 +821,11 @@ apps:
       - Soundtrack\
     license:
       - UE3_THIRD_PARTY_SOFTWARE.pdf
+  218680: # Scribblenauts Unlimited
+    intros:
+      - vof.bik
+    redist:
+      - DirectXRedist\
   111600: # Serious Sam Double D
     redist:
       - dotNetFx40_Full_setup.exe
