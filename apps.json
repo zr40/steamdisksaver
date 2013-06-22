@@ -230,6 +230,16 @@
 				"thirdparty\\"
 			]
 		},
+		"630":{
+			"logos":[
+				"swarm\\media\\startup.bik",
+				"swarm\\media\\startupvids.txt"
+			],
+			"other":[
+				"srcds_run",
+				"swarm.ico"
+			]
+		},
 		"204140":{
 			"engine":{
 				"name":"unreal3",
@@ -1581,5 +1591,5 @@
 			]
 		}
 	},
-	"release":1371927161
+	"release":1371931707
 }

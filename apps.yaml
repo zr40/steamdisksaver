@@ -177,6 +177,13 @@ apps:
       - data\videos\startup_remedy.bik
     redist:
       - thirdparty\
+  630: # Alien Swarm
+    logos:
+      - swarm\media\startup.bik
+      - swarm\media\startupvids.txt
+    other:
+      - srcds_run
+      - swarm.ico
   204140: # All Zombies Must Die!
     engine:
       name: unreal3
