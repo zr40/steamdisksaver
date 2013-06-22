@@ -273,6 +273,35 @@
 				"UDKGame\\Movies\\UDKFrontEnd.udk_loading.bik"
 			]
 		},
+		"92300":{
+			"redist":[
+				"xnafx31_redist.msi"
+			],
+			"nonenglish":[
+				"Content\\GUI\\FNT\\JP\\",
+				"Content\\GUI\\FNT\\JPN\\",
+				"Content\\GUI\\CTL\\DE\\",
+				"Content\\GUI\\CTL\\ES\\",
+				"Content\\GUI\\CTL\\FR\\",
+				"Content\\GUI\\CTL\\IT\\",
+				"Content\\GUI\\CTL\\JP\\",
+				"Content\\GUI\\CTL\\PO\\",
+				"Content\\GUI\\HUD\\DE\\",
+				"Content\\GUI\\HUD\\ES\\",
+				"Content\\GUI\\HUD\\FR\\",
+				"Content\\GUI\\HUD\\IT\\",
+				"Content\\GUI\\HUD\\JP\\",
+				"Content\\GUI\\HUD\\PO\\",
+				"Content\\SCN\\SCR\\DE\\",
+				"Content\\SCN\\SCR\\FR\\",
+				"Content\\SCN\\SCR\\IT\\",
+				"Content\\SCN\\SCR\\JP\\",
+				"Content\\SCN\\SCR\\PO\\"
+			],
+			"extras":[
+				"OST Pack\\"
+			]
+		},
 		"204300":{
 			"redist":[
 				"Data\\DirectXRedist\\",
@@ -1552,5 +1581,5 @@
 			]
 		}
 	},
-	"release":1371144764
+	"release":1371927161
 }
