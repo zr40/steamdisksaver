@@ -1056,6 +1056,12 @@ apps:
       - Launcher\RU
       - Launcher\TR
       - Launcher\ZH
+  15500: # The Wonderful End of the World
+    other:
+      - icon.ico
+      - manual_image.png
+      - steam_appid.txt
+      - uninstall.ico
   214360: # Tower Wars
     redist:
       - redist\

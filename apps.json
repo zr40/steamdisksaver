@@ -1497,6 +1497,14 @@
 				"Launcher\\ZH"
 			]
 		},
+		"15500":{
+			"other":[
+				"icon.ico",
+				"manual_image.png",
+				"steam_appid.txt",
+				"uninstall.ico"
+			]
+		},
 		"214360":{
 			"redist":[
 				"redist\\"
@@ -1684,5 +1692,5 @@
 			]
 		}
 	},
-	"release":1373308786
+	"release":1373313621
 }
