@@ -323,6 +323,40 @@ apps:
       - WillowGame\Movies\Attract.txt
       - WillowGame\Movies\Prelude.bik
       - WillowGame\Movies\Prelude.txt
+  49520: # Borderlands 2
+    engine:
+      name: unreal3
+      gamedir: WillowGame
+    redist:
+      - Binaries\Redist\
+    nonenglish:
+      - Binaries\Win32\de-DE\
+      - Binaries\Win32\es-ES\
+      - Binaries\Win32\fr-FR\
+      - Binaries\Win32\it-IT\
+      - Binaries\Win32\ja-JP\
+      - Binaries\Win32\ko-KR\
+      - [DEU, contains]
+      - [ESN, contains]
+      - [FRA, contains]
+      - [ITA, contains]
+      - [JPN, contains]
+      - [KOR, contains]
+    logos:
+      - WillowGame\Movies\2K_logo.bik
+      - WillowGame\Movies\Gearbox_logo.bik
+      - WillowGame\Movies\NVidia.bik
+    intros:
+      - WillowGame\Movies\Attract.bik
+      - WillowGame\Movies\Attract.txt
+    manual:
+      - Documents\B2_Readme_EN.txt
+    license:
+      - Documents\COPYING.txt
+      - Documents\Revised eula 3-31-10 - ENGLISH.rtf
+    other:
+      - Binaries\Win32\protobuf-net.xml
+      - Binaries\Win32\steam_appid.txt
   15390: # Brothers in Arms: Hell's Highway
     engine:
       name: unreal3
