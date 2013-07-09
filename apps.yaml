@@ -466,6 +466,11 @@ apps:
   570: # Dota 2
     redist:
       - directx\
+  215790: # Dream Pinball 3D
+    redist:
+      - install\
+    manual:
+      - Manual.pdf
   98800: # Dungeons of Dredmor
     other:
       - amd64\
