@@ -913,6 +913,21 @@ apps:
       - redist\
     other:
       - soundcredits.txt
+  71250: # Sonic Adventure DX
+    redist:
+      - DirectX\
+    manual:
+      - manual.pdf
+    other:
+      - uninst.exe
+  200940: # Sonic CD
+    redist:
+      - directx\
+    nonenglish:
+      - help\DE.txt
+      - help\ES.txt
+      - help\FR.txt
+      - help\IT.txt
   107200: {} # Space Pirates and Zombies
   92800: # SpaceChem
     redist:

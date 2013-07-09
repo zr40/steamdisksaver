@@ -1323,6 +1323,28 @@
 				"soundcredits.txt"
 			]
 		},
+		"71250":{
+			"redist":[
+				"DirectX\\"
+			],
+			"manual":[
+				"manual.pdf"
+			],
+			"other":[
+				"uninst.exe"
+			]
+		},
+		"200940":{
+			"redist":[
+				"directx\\"
+			],
+			"nonenglish":[
+				"help\\DE.txt",
+				"help\\ES.txt",
+				"help\\FR.txt",
+				"help\\IT.txt"
+			]
+		},
 		"107200":{
 		},
 		"92800":{
@@ -1700,5 +1722,5 @@
 			]
 		}
 	},
-	"release":1373374391
+	"release":1373377206
 }
