@@ -707,6 +707,23 @@
 		},
 		"38600":{
 		},
+		"220260":{
+			"redist":[
+				"dxsetup\\"
+			],
+			"editor":[
+				"sdk\\"
+			],
+			"manual":[
+				"FarmingSimulator2013_DE.pdf",
+				"FarmingSimulator2013_EN.pdf",
+				"FarmingSimulator2013_ES.pdf",
+				"FarmingSimulator2013_FR.pdf",
+				"FarmingSimulator2013_IT.pdf",
+				"FarmingSimulator2013_JP.pdf",
+				"FarmingSimulator2013_RU.pdf"
+			]
+		},
 		"212680":{
 			"manual":[
 				"FTL_README.html"
@@ -1722,5 +1739,5 @@
 			]
 		}
 	},
-	"release":1373377206
+	"release":1373741570
 }

@@ -499,6 +499,19 @@ apps:
       - SquareLogic.MCE.png
       - SquareLogic.MCE.mcl
   38600: {} # Faerie Solitaire
+  220260: # Farming Simulator 2013
+    redist:
+      - dxsetup\
+    editor:
+      - sdk\
+    manual:
+      - FarmingSimulator2013_DE.pdf
+      - FarmingSimulator2013_EN.pdf
+      - FarmingSimulator2013_ES.pdf
+      - FarmingSimulator2013_FR.pdf
+      - FarmingSimulator2013_IT.pdf
+      - FarmingSimulator2013_JP.pdf
+      - FarmingSimulator2013_RU.pdf
   212680: # FTL: Faster Than Light
     manual:
       - FTL_README.html
