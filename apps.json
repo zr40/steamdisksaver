@@ -203,6 +203,46 @@
 				"xnafx40_redist.msi"
 			]
 		},
+		"221380":{
+			"redist":[
+				"_CommonRedist\\"
+			],
+			"intros":[
+				"Avi\\AOEIIHD.wmv"
+			],
+			"manual":[
+				"Docs\\en\\AoK Manual.pdf",
+				"Docs\\en\\Readme.rtf",
+				"Docs\\en\\Readme_a.rtf",
+				"Docs\\en\\Readmex.rtf",
+				"Docs\\en\\ReadmeX_a.rtf",
+				"Docs\\en\\TC Manual.pdf",
+				"Docs\\en\\TC Tech Tree.pdf",
+				"Docs\\en\\WHATSNEW.RTF"
+			],
+			"license":[
+				"Docs\\en\\WARRANTY.RTF"
+			],
+			"nonenglish":[
+				"launcher_res\\br\\",
+				"launcher_res\\de\\",
+				"launcher_res\\es\\",
+				"launcher_res\\fr\\",
+				"launcher_res\\it\\",
+				"launcher_res\\jp\\",
+				"launcher_res\\ko\\",
+				"launcher_res\\nl\\",
+				"launcher_res\\ru\\",
+				"launcher_res\\zh\\"
+			],
+			"other":[
+				"AI\\AI.txt",
+				"Avi\\Avi.txt",
+				"Learn\\Learn.txt",
+				"Random\\Random.txt",
+				"Support\\"
+			]
+		},
 		"40400":{
 			"license":[
 				"AIWarLicense.txt"
@@ -1739,5 +1779,5 @@
 			]
 		}
 	},
-	"release":1373741570
+	"release":1373825366
 }
