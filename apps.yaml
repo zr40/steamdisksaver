@@ -512,6 +512,10 @@ apps:
       - Dredmor
       - Dredmor-amd64
       - Dredmor-x86
+  19500: # Eternity's Child
+    editor:
+      - MapEditor.exe
+      - MapEditor.ini
   41210: # Eufloria
     redist:
       - vcredist_x64.exe

@@ -718,6 +718,12 @@
 				"Dredmor-x86"
 			]
 		},
+		"19500":{
+			"editor":[
+				"MapEditor.exe",
+				"MapEditor.ini"
+			]
+		},
 		"41210":{
 			"redist":[
 				"vcredist_x64.exe",
@@ -1779,5 +1785,5 @@
 			]
 		}
 	},
-	"release":1373825366
+	"release":1373880105
 }
