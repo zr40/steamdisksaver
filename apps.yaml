@@ -130,6 +130,11 @@ apps:
     engine:
       name: unity
       gamedir: 10000000_Data
+  223850: # 3DMark
+    redist:
+      - _CommonRedist\
+    license:
+      - eula.rtf
   209330: # A Valley Without Wind
     engine:
       name: unity

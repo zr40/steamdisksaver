@@ -161,6 +161,14 @@
 				"gamedir":"10000000_Data"
 			}
 		},
+		"223850":{
+			"redist":[
+				"_CommonRedist\\"
+			],
+			"license":[
+				"eula.rtf"
+			]
+		},
 		"209330":{
 			"engine":{
 				"name":"unity",
@@ -1785,5 +1793,5 @@
 			]
 		}
 	},
-	"release":1373880105
+	"release":1374132199
 }
