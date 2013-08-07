@@ -340,6 +340,13 @@ apps:
     other:
       - New folder\
   80350: {} # Blackwell Convergence
+  29160: # Blueberry Garden
+    redist:
+      - support\
+    license:
+      - Physics 2d License.txt
+    manual:
+      - Readme.txt
   8980: # Borderlands
     engine:
       name: unreal3

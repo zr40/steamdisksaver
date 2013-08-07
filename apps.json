@@ -444,6 +444,17 @@
 		},
 		"80350":{
 		},
+		"29160":{
+			"redist":[
+				"support\\"
+			],
+			"license":[
+				"Physics 2d License.txt"
+			],
+			"manual":[
+				"Readme.txt"
+			]
+		},
 		"8980":{
 			"engine":{
 				"name":"unreal3",
@@ -1793,5 +1804,5 @@
 			]
 		}
 	},
-	"release":1374132199
+	"release":1375909145
 }
