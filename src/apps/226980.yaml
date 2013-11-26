@@ -1,0 +1,5 @@
+# Pinball FX 2
+redist:
+  - _CommonRedist\
+other:
+  - BuildDate.txt

@@ -1,6 +1,6 @@
 {
 	"version":1,
-	"release":1385499408,
+	"release":1385499761,
 	"categories":{
 		"redist":{
 			"name":"redistributables",
@@ -1855,6 +1855,14 @@
 				"System\\Unreal2.lib",
 				"System\\UnrealEd.exp",
 				"System\\UnrealEd.lib"
+			]
+		},
+		"226980":{
+			"redist":[
+				"_CommonRedist\\"
+			],
+			"other":[
+				"BuildDate.txt"
 			]
 		},
 		"34500":{
