@@ -1,5 +1,6 @@
 {
 	"version":1,
+	"release":1385493842,
 	"categories":{
 		"redist":{
 			"name":"redistributables",
@@ -1815,6 +1816,5 @@
 				]
 			]
 		}
-	},
-	"release":1385492619
+	}
 }

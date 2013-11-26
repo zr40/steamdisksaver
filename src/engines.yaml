@@ -1,0 +1,78 @@
+unity:
+  other:
+    - <gamedir>\Mono\etc\
+    - <gamedir>\Managed\UnityEngine.dll.mdb
+unreal3:
+  nonenglish:
+    - [<gamedir>\PCTOC, startswith]
+    - [<gamedir>\PCConsoleTOC, startswith]
+    - <gamedir>\CookedPC\Startup_LOC_JPN.upk
+    - <gamedir>\CookedPC\Startup_LOC_POL.upk
+    - <gamedir>\CookedPC\Startup_LOC_RUS.upk
+    - <gamedir>\CookedPC\UDKBase_LOC_JPN.upk
+    - <gamedir>\CookedPC\UDKBase_LOC_POL.upk
+    - <gamedir>\CookedPC\UDKBase_LOC_RUS.upk
+    - <gamedir>\CookedPC\<gamedir>_LOC_DEU.upk
+    - <gamedir>\CookedPC\<gamedir>_LOC_ESN.upk
+    - <gamedir>\CookedPC\<gamedir>_LOC_FRA.upk
+    - <gamedir>\CookedPC\<gamedir>_LOC_ITA.upk
+    - <gamedir>\CookedPC\<gamedir>_LOC_POL.upk
+    - <gamedir>\CookedPC\<gamedir>_LOC_RUS.upk
+    - <gamedir>\Localization\DAN\
+    - <gamedir>\Localization\DEU\
+    - <gamedir>\Localization\DUT\
+    - <gamedir>\Localization\ESM\
+    - <gamedir>\Localization\ESN\
+    - <gamedir>\Localization\FRA\
+    - <gamedir>\Localization\ITA\
+    - <gamedir>\Localization\JPN\
+    - <gamedir>\Localization\POL\
+    - <gamedir>\Localization\POR\
+    - <gamedir>\Localization\RUS\
+    - <gamedir>\Localization\SWE\
+    - <gamedir>\Localization\TUR\
+    - Engine\Localization\CHN\
+    - Engine\Localization\CZE\
+    - Engine\Localization\DEU\
+    - Engine\Localization\ESM\
+    - Engine\Localization\ESN\
+    - Engine\Localization\FRA\
+    - Engine\Localization\HUN\
+    - Engine\Localization\ITA\
+    - Engine\Localization\JPN\
+    - Engine\Localization\KOR\
+    - Engine\Localization\POL\
+    - Engine\Localization\RUS\
+    - Engine\Localization\SLO\
+  editor:
+    - Binaries\Win32\Editor\
+    - Binaries\wxRC\
+    - Binaries\wxRes\
+    - Engine\EditorResources\
+    - Engine\Extras\3dsMaxScripts\
+    - Engine\Localization\INT\EditorMapTemplates.int
+    - Engine\Localization\INT\EditorTips.int
+    - Engine\Localization\INT\GFxUIEditor.int
+    - Engine\Localization\INT\UnrealEd.int
+    - Engine\Localization\INT\UnrealScriptTest.int
+    - <gamedir>\CookedPC\UnrealEd.u
+  other:
+    - [Engine\Localization\Readme.UDK., startswith]
+    - <gamedir>\Config\Mac\
+    - <gamedir>\Config\Mobile\
+    - <gamedir>\Config\NGP\
+    - <gamedir>\Config\PS3\
+    - <gamedir>\Config\Xbox360\
+    - Engine\Config\Mac\
+    - Engine\Config\Mobile\
+    - Engine\Config\NGP\
+    - Engine\Config\PS3\
+    - Engine\Config\Xbox360\
+    - Engine\Shaders\Mobile\
+    - Engine\Shaders\WorkingDirectory\
+    - Engine\Shaders\Xbox360\
+    - Engine\Splash\PS3\
+    - Engine\Splash\Xbox360\
+    - Engine\Stats\
+  license:
+    - [Engine\Localization\EULA.UDK., startswith]
