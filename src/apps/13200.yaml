@@ -1,0 +1,30 @@
+# Unreal 2
+redist:
+  - directx9c\
+manual:
+  - Help\Manual.pdf
+  - Help\Readme.txt
+  - Help\U2Patch2001Changes.doc
+  - Help\U2Patch2001Changes.txt
+editor:
+  - System\UnrealEd.exe
+  - System\UnrealEd.ini
+  - System\UnrealEd.int
+  - System\editorres\
+other:
+  - [.lib, contains]
+  - [.exp, contains]
+  - System\0warnerr.log
+  - System\AutoRun.inf
+  - System\Setup.exp
+  - System\Setup.lib
+  - System\System.mak
+  - System\System.vcproj
+  - System\System.vcproj.vspscc
+  - System\testapp.exe
+  - System\UCC.exp
+  - System\UCC.lib
+  - System\Unreal2.exp
+  - System\Unreal2.lib
+  - System\UnrealEd.exp
+  - System\UnrealEd.lib
