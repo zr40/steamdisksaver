@@ -1,6 +1,6 @@
 {
 	"version":1,
-	"release":1385499761,
+	"release":1385499852,
 	"categories":{
 		"redist":{
 			"name":"redistributables",
@@ -1863,6 +1863,15 @@
 			],
 			"other":[
 				"BuildDate.txt"
+			]
+		},
+		"238260":{
+			"redist":[
+				"_CommonRedist\\"
+			],
+			"other":[
+				"Log.txt",
+				"MemLog.txt"
 			]
 		},
 		"34500":{

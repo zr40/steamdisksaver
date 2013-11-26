@@ -1,0 +1,6 @@
+# Pinball Arcade
+redist:
+  - _CommonRedist\
+other:
+  - Log.txt
+  - MemLog.txt
