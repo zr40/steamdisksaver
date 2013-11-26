@@ -516,6 +516,14 @@ apps:
       - install\
     manual:
       - Manual.pdf
+  229520: # Dungeon Hearts
+    engine:
+      name: unity
+      gamedir: DungeonHearts_Data
+    redist:
+      - _CommonRedist\
+    extras:
+      - Dungeon Hearts Soundtrack\
   98800: # Dungeons of Dredmor
     other:
       - amd64\

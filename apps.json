@@ -727,6 +727,18 @@
 				"Manual.pdf"
 			]
 		},
+		"229520":{
+			"engine":{
+				"name":"unity",
+				"gamedir":"DungeonHearts_Data"
+			},
+			"redist":[
+				"_CommonRedist\\"
+			],
+			"extras":[
+				"Dungeon Hearts Soundtrack\\"
+			]
+		},
 		"98800":{
 			"other":[
 				"amd64\\",
@@ -1804,5 +1816,5 @@
 			]
 		}
 	},
-	"release":1375909145
+	"release":1385492619
 }
