@@ -1,6 +1,6 @@
 {
 	"version":1,
-	"release":1385495645,
+	"release":1385499408,
 	"categories":{
 		"redist":{
 			"name":"redistributables",
@@ -1855,6 +1855,15 @@
 				"System\\Unreal2.lib",
 				"System\\UnrealEd.exp",
 				"System\\UnrealEd.lib"
+			]
+		},
+		"34500":{
+			"redist":[
+				"DirectX\\"
+			],
+			"manual":[
+				"LoA_Manual.pdf",
+				"readme.txt"
 			]
 		}
 	}
