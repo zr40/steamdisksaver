@@ -1,0 +1,10 @@
+# Red Faction: Guerrilla
+redist:
+  - _CommonRedist\
+manual:
+  - readme_EN.txt
+logos:
+  - build\pc\cache\logo_nordic_hd.bik
+  - build\pc\cache\logo_thq_hd.bik
+  - build\pc\cache\logo_volition_hd.bik
+  - build\pc\cache\legal_hd.bik

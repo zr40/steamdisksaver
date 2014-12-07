@@ -1,6 +1,6 @@
 {
 	"version":1,
-	"release":1385499852,
+	"release":1417961166,
 	"categories":{
 		"redist":{
 			"name":"redistributables",
@@ -1291,22 +1291,6 @@
 				"video\\loadvideo_french.bik"
 			]
 		},
-		"20500":{
-			"redist":[
-				"DirectX\\",
-				"GFWLive\\",
-				"VCRedist\\"
-			],
-			"manual":[
-				"readme_EN.txt",
-				"readme_FR.txt"
-			],
-			"logos":[
-				"build\\pc\\cache\\logo_thq_hd.bik",
-				"build\\pc\\cache\\logo_volition_hd.bik",
-				"build\\pc\\cache\\legal_hd.bik"
-			]
-		},
 		"204630":{
 			"redist":[
 				"Redist\\"
@@ -1857,6 +1841,20 @@
 				"System\\UnrealEd.lib"
 			]
 		},
+		"20500":{
+			"redist":[
+				"_CommonRedist\\"
+			],
+			"manual":[
+				"readme_EN.txt"
+			],
+			"logos":[
+				"build\\pc\\cache\\logo_nordic_hd.bik",
+				"build\\pc\\cache\\logo_thq_hd.bik",
+				"build\\pc\\cache\\logo_volition_hd.bik",
+				"build\\pc\\cache\\legal_hd.bik"
+			]
+		},
 		"226980":{
 			"redist":[
 				"_CommonRedist\\"
@@ -1881,6 +1879,15 @@
 			"manual":[
 				"LoA_Manual.pdf",
 				"readme.txt"
+			]
+		},
+		"47810":{
+			"intros":[
+				"packages/core/data/movies/dragon_age_ea_logo.bik",
+				"packages/core/data/movies/dragon_age_main.bik"
+			],
+			"redist":[
+				"redist/"
 			]
 		}
 	}
